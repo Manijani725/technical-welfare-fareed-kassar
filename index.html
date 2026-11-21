@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technical Welfare Fareed Kassar — Preview</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&display=swap">
+<style>
+:root{--bg:#EEF4F1;--card:#fff;--ink:#12261B;--muted:#5B6B62;--line:#D5E3DB;--g1:#0A6B55;--g2:#0E4A2F;--gold:#F5C518;--fs:1;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1510;--card:#12211A;--ink:#E8F2EC;--muted:#9DB1A5;--line:#223529}}
+:root[data-theme="dark"]{--bg:#0B1510;--card:#12211A;--ink:#E8F2EC;--muted:#9DB1A5;--line:#223529}
+html{scroll-padding-top:env(safe-area-inset-top,0px);font-size:calc(16px*var(--fs))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;padding-bottom:6rem}
+.ur{font-family:"Noto Nastaliq Urdu",serif;direction:rtl;line-height:2}
+.num{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.bi{display:flex;flex-direction:column}.c{align-items:center;text-align:center}
+main{max-width:560px;margin:0 auto}
+.hide{display:none!important}
+.wrap{padding:0 12px}
+/* header 1080x450 */
+.hero{aspect-ratio:1080/450;background:linear-gradient(160deg,var(--g1),var(--g2));color:#fff;padding:12px 12px 16px;border-radius:0 0 28px 28px;display:grid;grid-template-columns:1.7fr 1fr;gap:8px}
+.hl{display:flex;flex-direction:column;gap:5px;min-width:0}
+.hl h1{margin:0;font-size:1rem;line-height:1.3}
+.place{font-size:1.125rem;font-weight:700;color:var(--gold);line-height:1.3}
+.dl{display:grid;grid-template-columns:1fr 66px;gap:6px;align-items:center}
+.dts{display:grid;gap:4px}
+.chip{background:rgba(255,255,255,.14);border-radius:10px;padding:3px 8px;font-size:0.75rem;line-height:1.4}
+.chip .ur{line-height:1.9}
+.qibla{border:2px solid var(--gold);border-radius:14px;display:grid;place-items:center;padding:3px;font-size:0.75rem;text-align:center;font-weight:600;background:rgba(255,255,255,.08)}
+.qibla svg{width:46px;height:46px}
+.hr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;font-size:0.875rem;background:rgba(0,0,0,.2);border-radius:18px;padding:8px 4px}
+.dp{width:58px;height:58px;border-radius:50%;background:#fff;border:3px solid var(--gold);display:grid;place-items:center;font-size:1.6rem;color:var(--g2)}
+.hr b{font-size:0.875rem;word-break:break-word}
+.users{background:var(--gold);color:#3a2e00;border-radius:999px;padding:2px 10px;font-weight:700;font-size:0.75rem}
+.ctl button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer;font:inherit}
+.ctl button[aria-pressed="true"]{background:var(--g2);color:#fff;font-weight:700}
+/* prayer 1080x360 */
+.sec{margin-top:12px;background:var(--card);border-radius:18px;border:1px solid var(--line);padding:10px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.prayer{aspect-ratio:1080/360;margin-top:-10px;display:flex;flex-direction:column;justify-content:space-between}
+.sh{font-size:0.875rem;font-weight:700;color:var(--g2);display:flex;justify-content:space-between;align-items:center;gap:6px}
+:root[data-theme="dark"] .sh{color:#7fd0a0}
+.pg{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;text-align:center;font-size:0.75rem}
+.pg div{padding:6px 2px;border-radius:12px;background:var(--bg)}
+.pg b{display:block;font-size:0.875rem}
+.pg .now{background:var(--g1);color:#fff}
+/* emergency 1080x360 */
+.emg{aspect-ratio:1080/360;display:flex;flex-direction:column;gap:6px;border:2px solid #E5A5A5;background:#FFF6F6}
+:root[data-theme="dark"] .emg{background:#2a1515;border-color:#7a3a3a}
+.eg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;flex:1}
+.eg a{display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#fff;border-radius:12px;padding:4px 2px;font-size:0.75rem;text-align:center;font-weight:600}
+.eg a b{font-size:1rem}
+/* special buttons */
+.sb{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.sb button{border:0;border-radius:18px;padding:14px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;font:inherit;font-size:0.875rem;font-weight:700;color:#1b2b24}
+.sb .e{font-size:1.6rem;line-height:1.2}
+.s1{background:#FBE6D6}.s2{background:#D9EEEA}.s3{background:#DDEBFA}.s4{background:#FBEFD6}.s5{background:#E4F3FC}.s6{background:#E7E3F7}
+/* news 1080x1080 */
+.news{aspect-ratio:1/1;display:flex;flex-direction:column;gap:8px}
+.nl{list-style:none;margin:0;padding:0;overflow:auto;flex:1;display:grid;gap:8px;align-content:start}
+.ni{display:grid;grid-template-columns:54px 1fr;gap:10px;background:var(--bg);border-radius:14px;padding:8px;font-size:0.875rem}
+.nt{width:54px;height:54px;border-radius:12px;background:var(--g1);color:#fff;display:grid;place-items:center;font-size:1.3rem}
+.ni small{color:var(--muted);display:block;font-size:0.75rem;margin-top:2px}
+.note{margin:14px 0;font-size:0.75rem;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:8px 10px}
+/* forms/settings */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:12px}
+label{font-size:0.875rem;display:block}
+input{width:100%;margin-top:4px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #58A877;outline-offset:2px}
+.btn{width:100%;padding:12px;border-radius:12px;border:0;background:var(--g2);color:#fff;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;font:inherit}
+.link{background:none;border:0;color:var(--g1);text-decoration:underline;cursor:pointer;display:flex;flex-direction:column;align-items:center;margin:0 auto;font:inherit;font-size:0.875rem}
+.ok{background:#E3F1E8;color:#093520;border-radius:10px;padding:8px;font-size:0.875rem}
+.toast{position:fixed;left:50%;bottom:5.5rem;transform:translateX(-50%);background:#12261B;color:#fff;border-radius:12px;padding:8px 14px;font-size:0.875rem;z-index:30;max-width:90%}
+/* bottom nav: 5 buttons */
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--g2);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:20}
+nav ul{list-style:none;margin:0 auto;padding:0;max-width:560px;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;align-items:end}
+nav button{width:100%;background:none;border:0;color:#fff;display:flex;flex-direction:column;align-items:center;font:inherit;font-size:0.75rem;padding:6px 0;border-radius:14px;opacity:.75;cursor:pointer}
+nav button.on{background:rgba(255,255,255,.14);opacity:1;font-weight:700;border:1px solid rgba(255,255,255,.3)}
+nav .e{font-size:1.125rem}
+nav .mid .e{background:var(--gold);width:44px;height:44px;border-radius:14px;display:grid;place-items:center;margin-top:-20px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+nav .mid{opacity:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ===== Proportions measured from the reference screenshot (722px design width) ===== */
+:root{--u:calc(min(100vw,560px)/722);--f:calc(var(--u)*var(--fs))}
+body{padding-bottom:calc(var(--u)*230)}
+.wrap{padding:0 calc(var(--u)*14)}
+.hero{aspect-ratio:722/300;padding:calc(var(--u)*18) calc(var(--u)*16) calc(var(--u)*36);border-radius:0 0 calc(var(--u)*56) calc(var(--u)*56);gap:calc(var(--u)*10)}
+.hl h1{font-size:calc(var(--f)*38)}
+.place{font-size:calc(var(--f)*32)}
+.dl{grid-template-columns:1fr calc(var(--u)*124);gap:calc(var(--u)*10)}
+.chip{font-size:calc(var(--f)*22);padding:calc(var(--u)*5) calc(var(--u)*14);border-radius:calc(var(--u)*20)}
+.qibla{border-radius:calc(var(--u)*22);font-size:calc(var(--f)*20);padding:calc(var(--u)*6)}
+.qibla svg{width:calc(var(--u)*76);height:calc(var(--u)*76)}
+.hr{border-radius:calc(var(--u)*28);padding:calc(var(--u)*10) calc(var(--u)*6)}
+.dp{width:calc(var(--u)*92);height:calc(var(--u)*92);font-size:calc(var(--u)*46)}
+.hr b{font-size:calc(var(--f)*24)}
+.users{font-size:calc(var(--f)*20);padding:calc(var(--u)*3) calc(var(--u)*14)}
+.sec{margin-top:calc(var(--u)*24);border-radius:calc(var(--u)*30);padding:calc(var(--u)*14)}
+.sh{font-size:calc(var(--f)*26)}
+.prayer{aspect-ratio:690/123;margin-top:calc(var(--u)*-26);padding:calc(var(--u)*8) calc(var(--u)*10)}
+.prayer .sh{display:none}
+.pg{grid-template-columns:repeat(5,1fr) 1.2fr;height:100%;font-size:calc(var(--f)*20);gap:calc(var(--u)*4)}
+.pg div{display:flex;flex-direction:column;justify-content:center;align-items:center;border-radius:calc(var(--u)*16);padding:0}
+.pg .ur{font-size:calc(var(--f)*22);line-height:1.5!important}
+.pg b{font-size:calc(var(--f)*30);line-height:1.1}
+.pg small{display:block;font-size:calc(var(--f)*17);font-weight:400;text-align:center}
+.pg .mq{background:none;text-align:center;font-size:calc(var(--f)*16)}
+.pg .mq .e{font-size:calc(var(--u)*42)}
+.emg{aspect-ratio:690/150}
+.emg .sh{font-size:calc(var(--f)*24)}
+.eg a{font-size:calc(var(--f)*17);border-radius:calc(var(--u)*18)}
+.eg a b{font-size:calc(var(--f)*30)}
+.sb{grid-template-columns:repeat(6,1fr);gap:calc(var(--u)*8);margin-top:calc(var(--u)*24)}
+.sb button{min-height:calc(var(--u)*130);border-radius:calc(var(--u)*22);padding:calc(var(--u)*8) 0;font-size:calc(var(--f)*16);gap:calc(var(--u)*2);justify-content:center}
+.sb .e{font-size:calc(var(--u)*44)}
+.sb .ur{font-size:calc(var(--f)*18)}
+.ni{font-size:calc(var(--f)*22);grid-template-columns:calc(var(--u)*84) 1fr;border-radius:calc(var(--u)*22)}
+.nt{width:calc(var(--u)*84);height:calc(var(--u)*84);font-size:calc(var(--u)*42)}
+.ni small{font-size:calc(var(--f)*17)}
+.note{font-size:calc(var(--f)*18)}
+h2{font-size:calc(var(--f)*32)}
+.card label{font-size:calc(var(--f)*22)}
+.card input,.btn,.link{font-size:calc(var(--f)*24)}
+nav button{font-size:calc(var(--f)*20);padding:calc(var(--u)*10) 0;border-radius:calc(var(--u)*24)}
+nav .ur{font-size:.75em}
+nav .e{font-size:calc(var(--u)*38)}
+nav .mid .e{width:calc(var(--u)*64);height:calc(var(--u)*64);border-radius:calc(var(--u)*20);margin-top:calc(var(--u)*-34)}
+/* compact header: about half the previous height */
+.hero{aspect-ratio:auto;padding:calc(var(--u)*10) calc(var(--u)*14) calc(var(--u)*30);grid-template-columns:2.2fr .85fr;gap:calc(var(--u)*8);align-items:start}
+.hl{gap:calc(var(--u)*2)}
+.hl h1{font-size:calc(var(--f)*28)}
+.place{font-size:calc(var(--f)*24)}
+.hl h1 .bi,.place .bi{flex-direction:row;align-items:center;justify-content:space-between;gap:calc(var(--u)*10)}
+.hero .ur{line-height:1.8}
+.dl{grid-template-columns:1fr calc(var(--u)*84);gap:calc(var(--u)*6);align-items:start}
+.dts{gap:calc(var(--u)*3)}
+.chip{font-size:calc(var(--f)*16);padding:calc(var(--u)*2) calc(var(--u)*10);line-height:1.5}
+.chip .bi{flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0 calc(var(--u)*8)}
+.qibla{font-size:calc(var(--f)*15);padding:calc(var(--u)*4);border-radius:calc(var(--u)*16)}
+.qibla svg{width:calc(var(--u)*52);height:calc(var(--u)*52)}
+.hr{padding:calc(var(--u)*6) calc(var(--u)*4);gap:calc(var(--u)*2);border-radius:calc(var(--u)*22)}
+.dp{width:calc(var(--u)*58);height:calc(var(--u)*58);font-size:calc(var(--u)*30);border-width:2px}
+.hr b{font-size:calc(var(--f)*20)}
+.users{display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*6);font-size:calc(var(--f)*16);padding:calc(var(--u)*2) calc(var(--u)*10)}
+.users .bi{flex-direction:row}
+/* emergency news box + help desk list */
+.emg{aspect-ratio:auto;min-height:calc(var(--u)*150);gap:calc(var(--u)*8)}
+.enews{flex:1;background:var(--card);border:1px solid #E5A5A5;border-radius:calc(var(--u)*20);padding:calc(var(--u)*12) calc(var(--u)*14);font-size:calc(var(--f)*22);line-height:1.4;display:flex;flex-direction:column;gap:calc(var(--u)*4)}
+.enews b{font-weight:600}
+.enews small{font-size:calc(var(--f)*16);color:var(--muted)}
+.hrow{display:flex;align-items:center;gap:calc(var(--u)*14);background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*22);padding:calc(var(--u)*14);margin-top:calc(var(--u)*10);text-decoration:none;color:var(--ink);font-size:calc(var(--f)*24)}
+.hrow .bi{flex:1}
+.hrow .e{font-size:calc(var(--u)*44)}
+.hrow b{font-size:calc(var(--f)*32)}
+/* compact emergency news: text box 1080x360 */
+.emg{min-height:0;padding:calc(var(--u)*10) calc(var(--u)*12);gap:calc(var(--u)*6)}
+.emg .sh{font-size:calc(var(--f)*22)}
+.emg .sh .bi{flex-direction:row;align-items:center;gap:calc(var(--u)*12)}
+.enews{flex:none;aspect-ratio:1080/360;overflow:auto;font-size:calc(var(--f)*19);padding:calc(var(--u)*10) calc(var(--u)*14);border-radius:calc(var(--u)*18);gap:calc(var(--u)*2)}
+.enews small{font-size:calc(var(--f)*14)}
+/* header: Urdu-only dates, larger Qibla compass */
+.chip{font-size:calc(var(--f)*18);text-align:center}
+.dl{grid-template-columns:1fr calc(var(--u)*128)}
+.qibla{font-size:calc(var(--f)*19);padding:calc(var(--u)*6);border-radius:calc(var(--u)*22)}
+.qibla svg{width:calc(var(--u)*92);height:calc(var(--u)*92)}
+/* Qibla compass removed from header */
+.qibla{display:none}
+.dl{grid-template-columns:1fr}
+/* header in 3 zones: left = English title + users, centre = DP + name, right = Urdu title + dates */
+.hero{display:grid;grid-template-columns:1fr auto 1.4fr;align-items:center;gap:calc(var(--u)*10);direction:ltr;padding:calc(var(--u)*12) calc(var(--u)*14) calc(var(--u)*32)}
+.h-l{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*8);min-width:0}
+.h-title{font-size:calc(var(--f)*30);font-weight:700;line-height:1.2}
+.h-users{background:var(--gold);color:#3a2e00;border-radius:calc(var(--u)*20);font-weight:700;font-size:calc(var(--f)*18);padding:calc(var(--u)*4) calc(var(--u)*12);flex-wrap:wrap;justify-content:flex-start}
+.h-c{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*4);text-align:center;max-width:calc(var(--u)*170)}
+.h-c .dp{width:calc(var(--u)*72);height:calc(var(--u)*72);font-size:calc(var(--u)*36)}
+.h-c b{font-size:calc(var(--f)*20);word-break:break-word}
+.h-r{display:flex;flex-direction:column;align-items:flex-end;gap:calc(var(--u)*4);min-width:0}
+.h-ur{font-size:calc(var(--f)*30);font-weight:600;color:var(--gold);line-height:1.6}
+.h-r .chip{font-size:calc(var(--f)*17);padding:calc(var(--u)*2) calc(var(--u)*12)}
+.h-place{font-size:calc(var(--f)*24);font-weight:700;color:var(--gold);line-height:1.2}
+.h-l{gap:calc(var(--u)*4)}
+.h-users{margin-top:calc(var(--u)*4)}
+/* emergency news: the WHOLE section (heading + box) is 1080x360 */
+.emg{aspect-ratio:1080/360;min-height:0;overflow:hidden}
+.enews{flex:1;aspect-ratio:auto;min-height:0;overflow:auto;font-size:calc(var(--f)*20);justify-content:center}
+.enews small{font-size:calc(var(--f)*15)}
+/* colours sampled from the uploaded search-banner photo */
+:root{--gold:#FACC15}
+.hero,nav{background:linear-gradient(135deg,#0E7069 0%,#0D5E57 100%)}
+/* news heading: one line, bold */
+.newsh{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*10);white-space:nowrap;direction:ltr;font-weight:700;font-size:calc(var(--f)*26)}
+.newsh .ur{line-height:1.6;font-weight:700}
+.addn{background:var(--gold);color:#3a2e00;border:0;border-radius:999px;padding:calc(var(--u)*6) calc(var(--u)*20);font:inherit;font-size:calc(var(--f)*19);font-weight:700;cursor:pointer}
+textarea{width:100%;margin-top:4px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:calc(var(--f)*24);resize:vertical}
+textarea:focus-visible{outline:3px solid #58A877;outline-offset:2px}
+/* news detail dialog */
+.dlg{position:fixed;inset:0;background:rgba(5,25,18,.62);display:flex;align-items:center;justify-content:center;padding:calc(var(--u)*24);z-index:50}
+.dlg.hide{display:none!important}
+.dlg-card{position:relative;background:var(--card);color:var(--ink);border-radius:calc(var(--u)*30);width:100%;max-width:520px;max-height:86vh;overflow:auto;padding:calc(var(--u)*28) calc(var(--u)*24) calc(var(--u)*24);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.dlg-x{position:absolute;top:calc(var(--u)*14);left:calc(var(--u)*14);width:calc(var(--u)*56);height:calc(var(--u)*56);border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:calc(var(--f)*24);cursor:pointer}
+.dlg-card h3{margin:calc(var(--u)*50) 0 calc(var(--u)*8);font-size:calc(var(--f)*32);line-height:1.8;font-weight:700;color:var(--ink)}
+.dlg-card p{margin:0 0 calc(var(--u)*18);font-size:calc(var(--f)*24);line-height:2.1}
+.dlg-card dl{margin:0 0 calc(var(--u)*18);display:grid;gap:calc(var(--u)*8)}
+.dlg-card dl>div{background:var(--bg);border-radius:calc(var(--u)*16);padding:calc(var(--u)*10) calc(var(--u)*14);display:grid;gap:2px}
+.dlg-card dt{font-size:calc(var(--f)*18);color:var(--muted)}
+.dlg-card dd{margin:0;font-size:calc(var(--f)*22);font-weight:700}
+.ni[data-news]{cursor:pointer}
+.enews[data-news]{cursor:pointer}
+.pbtns{display:grid;gap:calc(var(--u)*10);margin:calc(var(--u)*10) 0 calc(var(--u)*6)}
+.pb{border:0;border-radius:calc(var(--u)*22);padding:calc(var(--u)*16);font:inherit;font-size:calc(var(--f)*24);font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center}
+.pb.gold{background:var(--gold);color:#3a2e00}.pb.red{background:#C62828;color:#fff}.pb.gray{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.ph{margin:calc(var(--u)*22) 2px calc(var(--u)*8);font-size:calc(var(--f)*26)}
+.pl{overflow:visible!important;flex:none!important}
+.emp{list-style:none;color:var(--muted);font-size:calc(var(--f)*20);padding:calc(var(--u)*10)}
+.stb{display:inline-block;border-radius:999px;padding:calc(var(--u)*2) calc(var(--u)*12);font-size:calc(var(--f)*16);font-weight:700;margin-top:calc(var(--u)*4)}
+.stb .bi{flex-direction:row;gap:calc(var(--u)*8)}
+.s-ok{background:#DDF3E4;color:#14532D}.s-pe{background:#FFF1CC;color:#7A5200}.s-no{background:#FADADA;color:#8A1C1C}
+.arow{display:flex;gap:calc(var(--u)*8);margin-top:calc(var(--u)*8)}
+.arow .pb{flex:1;padding:calc(var(--u)*8);font-size:calc(var(--f)*18)}
+.demoadm{margin-top:calc(var(--u)*14);border:2px dashed var(--line);border-radius:calc(var(--u)*24);padding:calc(var(--u)*12)}
+input[readonly]{background:var(--bg);color:var(--muted)}
+/* header: highlighted place name, plain users text */
+.h-place{background:var(--gold);color:#3a2e00;border-radius:calc(var(--u)*14);padding:calc(var(--u)*3) calc(var(--u)*14);align-self:flex-start;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.h-users{background:none;color:#fff;font-weight:400;padding:0;border-radius:0;font-size:calc(var(--f)*20)}
+select{width:100%;margin-top:4px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:calc(var(--f)*22)}
+select:focus-visible{outline:3px solid #58A877;outline-offset:2px}
+.shop{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*24);padding:calc(var(--u)*16);display:grid;gap:calc(var(--u)*6)}
+.shh{display:flex;gap:calc(var(--u)*12);align-items:center;font-size:calc(var(--f)*24)}
+.shh .e{font-size:calc(var(--u)*50)}
+.chipt{display:inline-block;background:var(--bg);border-radius:999px;padding:calc(var(--u)*2) calc(var(--u)*12);font-size:calc(var(--f)*16);color:var(--muted);margin-top:calc(var(--u)*2)}
+.shr{display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*10);font-size:calc(var(--f)*19);border-top:1px dashed var(--line);padding-top:calc(var(--u)*6)}
+.shr span{color:var(--muted)}
+.shr .bi{flex-direction:row;gap:calc(var(--u)*6)}
+.shr b{text-align:right;direction:ltr}
+.shb{display:flex;gap:calc(var(--u)*8);margin-top:calc(var(--u)*6)}
+.shb a{flex:1;text-align:center;text-decoration:none;border-radius:calc(var(--u)*18);padding:calc(var(--u)*10);font-size:calc(var(--f)*20);font-weight:700}
+.shb .c1{background:#0E6B66;color:#fff}.shb .c2{background:#1FA85A;color:#fff}
+/* special buttons: 5 per row x 2 rows, soft tiles like the reference photo */
+.sb{grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*8);row-gap:calc(var(--u)*10)}
+.sb button{min-height:calc(var(--u)*158);border-radius:calc(var(--u)*26);padding:calc(var(--u)*10) calc(var(--u)*2);font-size:calc(var(--f)*16);line-height:1.25;text-align:center;justify-content:flex-start}
+.sb .e{font-size:calc(var(--u)*54);line-height:1.1}
+.sb .ur{font-size:calc(var(--f)*18);line-height:1.7}
+.s7{background:#FFF0B3}.s8{background:#E2F2D3}.s9{background:#F9DDE7}.s10{background:#DCE4F7}
+/* compact tiles: icon + English title on one row, Urdu on the second line */
+.sb button{min-height:calc(var(--u)*92);padding:calc(var(--u)*10) calc(var(--u)*4);gap:calc(var(--u)*2);justify-content:center;align-items:center;border-radius:calc(var(--u)*22)}
+.sb .r1{display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*4);text-align:left}
+.sb .r1 .e{font-size:calc(var(--u)*30);flex:none;line-height:1}
+.sb .en{font-size:calc(var(--f)*14);line-height:1.2;font-weight:700}
+.sb .ur{font-size:calc(var(--f)*17);line-height:1.6}
+/* shops list: compact single-line rows */
+#shList{gap:calc(var(--u)*6)}
+.srow{list-style:none;display:flex;align-items:center;gap:calc(var(--u)*8);background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*16);padding:calc(var(--u)*7) calc(var(--u)*10);font-size:max(11px,calc(var(--f)*18));white-space:nowrap;cursor:pointer}
+.srow .sn{flex:0 0 2.2em;text-align:center;color:var(--muted)}
+.srow .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.srow .mb{flex:none;direction:ltr;unicode-bidi:isolate}
+.srow .ic{flex:none;width:2.1em;height:2.1em;border-radius:50%;display:grid;place-items:center;text-decoration:none;font-size:1em;line-height:1}
+.srow .ic.c1{background:#0E6B66}.srow .ic.c2{background:#1FA85A}
+.shead{background:none;border:0;color:var(--muted);font-weight:700;cursor:default;padding-top:0;padding-bottom:0}
+.shead .bi{font-weight:700;line-height:1.3}
+.shead .ur{line-height:1.7}
+.shead .nm{overflow:visible}
+/* emergency news: yellow box, three-column layout */
+.emg{background:#FFF3C4;border-color:#F2C94C}
+.emg .sh{color:#7A5200!important}
+.enews{background:#FFFBE6;border-color:#F2C94C}
+:root[data-theme="dark"] .emg{background:#3a3310;border-color:#8a7420}
+:root[data-theme="dark"] .enews{background:#2b2608;border-color:#8a7420}
+:root[data-theme="dark"] .emg .sh{color:#F2D56B!important}
+.e3{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:calc(var(--u)*10);align-items:start;font-size:max(10px,calc(var(--f)*15));line-height:1.35;width:100%}
+.ecol{display:grid;gap:calc(var(--u)*5);align-content:start;min-width:0}
+.el{font-weight:700;word-break:break-word}
+.el span{font-weight:400;color:var(--muted)}
+.ec{text-align:center;justify-items:center;border-left:1px solid #E7D27A;border-right:1px solid #E7D27A;padding:0 calc(var(--u)*8)}
+.ec b{color:#7A5200}
+:root[data-theme="dark"] .ec b{color:#F2D56B}
+.ec .ur{font-size:max(11px,calc(var(--f)*17));line-height:1.9;font-weight:400}
+/* emergency box v2: no clipping, labels above values */
+.emg{aspect-ratio:auto;overflow:visible}
+.enews{padding:calc(var(--u)*12) calc(var(--u)*14)}
+.e3{font-size:max(11px,calc(var(--f)*15));align-items:stretch;grid-template-columns:1fr 1.35fr 1fr;gap:calc(var(--u)*12)}
+.ecol{gap:calc(var(--u)*8)}
+.eh{font-size:max(10px,calc(var(--f)*14));font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#7A5200;border-bottom:2px solid #F2C94C;padding-bottom:calc(var(--u)*4)}
+.ef{display:grid;gap:1px}
+.el1{font-size:max(9.5px,calc(var(--f)*13));color:var(--muted)}
+.ev{font-size:max(11.5px,calc(var(--f)*16));font-weight:700;line-height:1.3;word-break:break-word}
+.ec{border-left:1px solid #EBD98A;border-right:1px solid #EBD98A;padding:0 calc(var(--u)*10);justify-items:stretch;text-align:center}
+.ec .eh{text-align:center}
+.ec .ur{font-size:max(12px,calc(var(--f)*18));line-height:2.05;text-align:center}
+:root[data-theme="dark"] .eh{color:#F2D56B;border-color:#8a7420}
+:root[data-theme="dark"] .ec{border-color:#5c4e15}
+/* emergency box v3: bilingual labels on one row, bold values */
+.e3{grid-template-columns:1.1fr 1fr 1.1fr}
+.eh{text-transform:none;letter-spacing:0;font-size:max(11px,calc(var(--f)*15))}
+.el1{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:calc(var(--u)*6);font-size:max(9.5px,calc(var(--f)*13))}
+.el1 .ur{line-height:1.8;font-size:max(10.5px,calc(var(--f)*15))}
+.ev{font-weight:800!important}
+/* emergency box v4: compact, Urdu-only labels */
+.emg{padding:calc(var(--u)*8) calc(var(--u)*10);gap:calc(var(--u)*4)}
+.emg .sh{font-size:calc(var(--f)*20)}
+.enews{padding:calc(var(--u)*8) calc(var(--u)*12)}
+.e3{gap:calc(var(--u)*10);grid-template-columns:1fr 1.15fr 1fr}
+.ecol{gap:calc(var(--u)*4)}
+.eh{font-size:max(11px,calc(var(--f)*14));line-height:1.8;padding-bottom:0;border-bottom-width:2px}
+.ef{gap:0}
+.el1{display:block;font-size:max(10px,calc(var(--f)*13));line-height:1.7;color:var(--muted)}
+.ev{display:block;direction:ltr;unicode-bidi:isolate;text-align:right;font-size:max(11px,calc(var(--f)*15));line-height:1.25}
+.ec{padding:0 calc(var(--u)*8)}
+.ec .ur{font-size:max(11.5px,calc(var(--f)*16));line-height:1.9}
+/* one Urdu size for all labels, headings and news text in the emergency box */
+.eh,.el1,.ec .ur{font-size:max(12px,calc(var(--f)*15))!important;line-height:1.9!important}
+.eh{font-weight:600}
+/* smaller Urdu in the emergency box */
+.eh,.el1,.ec .ur{font-size:max(10.5px,calc(var(--f)*13))!important;line-height:1.8!important}
+.emg .sh .ur{font-size:max(12px,calc(var(--f)*16))}
+.mchip{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:calc(var(--u)*3) calc(var(--u)*12);margin:calc(var(--u)*3) calc(var(--u)*3) 0 0;font-size:calc(var(--f)*18)}
+.req::after{content:" *";color:#C62828}
+.chk{display:flex;align-items:center;gap:calc(var(--u)*12)}
+input[type=checkbox]{width:auto;margin:0;accent-color:var(--g1);transform:scale(1.35);flex:none}
+.addrow{display:flex;gap:6px;margin-top:6px;align-items:stretch}
+.addrow input{margin-top:0}
+.addb{width:auto;padding:0 14px;flex:none}
+.ok.bad{background:#FADADA;color:#8A1C1C}
+.ptotal{display:flex;gap:calc(var(--u)*8);align-items:baseline;margin:2px 2px 10px;font-size:calc(var(--f)*22);font-weight:700}
+.ptotal b{font-size:calc(var(--f)*28);color:var(--g1)}
+.srow .ad{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.shead .ad{overflow:visible;font-weight:700}
+.nm2{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25;overflow:hidden}
+.nm2 b{overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.nm2 small{overflow:hidden;text-overflow:ellipsis;color:var(--muted);font-size:.85em;font-weight:400}
+.shead .nm2{overflow:visible}
+.shead .nm2 .bi{flex-direction:column}
+.wx{background:linear-gradient(180deg,#3C98D8 0%,#4E8EDA 55%,#3A78C4 100%);color:#fff;border-radius:calc(var(--u)*34);padding:calc(var(--u)*20) calc(var(--u)*16) calc(var(--u)*14);overflow:hidden}
+.wxbig{font-size:calc(var(--f)*150);font-weight:200;line-height:1.1;text-align:center;letter-spacing:-.02em}
+.wxbig sup{font-size:.28em;font-weight:300;vertical-align:top;position:relative;top:.35em}
+.wxcond{text-align:center;font-size:calc(var(--f)*34);margin-bottom:calc(var(--u)*18)}
+.wxcond .bi{align-items:center}
+.wxhrs{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(var(--u)*4);text-align:center;margin-bottom:calc(var(--u)*16);font-size:calc(var(--f)*18)}
+.wxh1{display:grid;gap:calc(var(--u)*4);justify-items:center}
+.wxh1 span{font-size:calc(var(--u)*38)}
+.wxglass{background:rgba(255,255,255,.17);border-radius:calc(var(--u)*28);padding:calc(var(--u)*14) calc(var(--u)*18);margin-bottom:calc(var(--u)*14)}
+.wxd{display:grid;grid-template-columns:calc(var(--u)*80) 1fr calc(var(--u)*60) calc(var(--u)*50) calc(var(--u)*50);align-items:center;padding:calc(var(--u)*6) 0;font-size:calc(var(--f)*21)}
+.wxd .bi{flex-direction:row;gap:calc(var(--u)*6)}
+.wxd b{font-weight:400;text-align:right}
+.wxd .wi{font-size:calc(var(--u)*34);text-align:center}
+.wxdt{font-size:calc(var(--f)*22);margin-bottom:calc(var(--u)*6)}
+.wxarc{width:100%;display:block}
+.wxsun{display:flex;justify-content:space-between;font-size:calc(var(--f)*20);margin:calc(var(--u)*-4) 0 calc(var(--u)*12)}
+.wxstats{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*6);text-align:center;border-top:1px solid rgba(255,255,255,.3);padding-top:calc(var(--u)*12)}
+.wxs{display:grid;gap:2px}
+.wxs b{font-size:calc(var(--f)*24);font-weight:400}
+.wxs span{font-size:calc(var(--f)*15);opacity:.85}
+.wxs .bi{align-items:center}
+.wxfoot{display:flex;justify-content:space-between;font-size:calc(var(--f)*16);opacity:.85;padding:0 calc(var(--u)*4)}
+.wxban{border-radius:calc(var(--u)*18);padding:calc(var(--u)*10) calc(var(--u)*14);font-size:calc(var(--f)*18);margin-bottom:calc(var(--u)*10)}
+.wxban .bi{display:inline-flex;flex-direction:column}
+.ban-live{background:#DDF3E4;color:#14532D}
+.ban-off{background:#FFF1CC;color:#7A5200}
+/* weather v2: app-themed cards, English only */
+.wx{background:none;color:var(--ink);border-radius:0;padding:0;overflow:visible}
+.wxnow{background:linear-gradient(135deg,#0E7069 0%,#0D5E57 100%);color:#fff;border-radius:calc(var(--u)*30);padding:calc(var(--u)*20) calc(var(--u)*22);display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*12);margin-bottom:calc(var(--u)*12)}
+.wxt{font-size:calc(var(--f)*96);font-weight:300;line-height:1}
+.wxt sup{font-size:.35em;font-weight:400;vertical-align:top;position:relative;top:.2em;margin-left:2px}
+.wxc{font-size:calc(var(--f)*26);margin-top:calc(var(--u)*6)}
+.wxr{display:grid;gap:calc(var(--u)*6);justify-items:end;font-size:calc(var(--f)*19);text-align:right}
+.wxr b{color:var(--gold)}
+.wxbigi{font-size:calc(var(--u)*76);line-height:1}
+.wxcard{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*26);padding:calc(var(--u)*14) calc(var(--u)*18);margin-bottom:calc(var(--u)*12)}
+.wxct{font-size:calc(var(--f)*22);font-weight:700;color:var(--g1);margin-bottom:calc(var(--u)*8)}
+:root[data-theme="dark"] .wxct{color:#7fd0a0}
+.wxhrs{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(var(--u)*4);text-align:center;font-size:calc(var(--f)*19)}
+.wxh1{display:grid;gap:calc(var(--u)*4);justify-items:center;background:var(--bg);border-radius:calc(var(--u)*18);padding:calc(var(--u)*8) 0}
+.wxm{color:var(--muted);font-size:.9em}
+.wxi{font-size:calc(var(--u)*36)}
+.wxd{display:grid;grid-template-columns:calc(var(--u)*76) 1fr calc(var(--u)*54) calc(var(--u)*56) calc(var(--u)*56);align-items:center;padding:calc(var(--u)*7) 0;border-top:1px solid var(--line);font-size:calc(var(--f)*20)}
+.wxdh{border-top:0;color:var(--muted);font-size:calc(var(--f)*16);padding-top:0}
+.wxd b{text-align:right;font-weight:700}
+.wxd b.lo{color:var(--muted);font-weight:400}
+.wxd .wi{font-size:calc(var(--u)*32);text-align:center}
+.wxarc{width:100%;display:block}
+.wxsun{display:flex;justify-content:space-between;font-size:calc(var(--f)*19);margin:calc(var(--u)*-2) 0 calc(var(--u)*12)}
+.wxstats{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(var(--u)*8)}
+.wxs{display:grid;gap:2px;justify-items:center;text-align:center;background:var(--bg);border-radius:calc(var(--u)*18);padding:calc(var(--u)*10) calc(var(--u)*4)}
+.wxs i{font-style:normal;font-size:calc(var(--u)*32)}
+.wxs b{font-size:calc(var(--f)*19)}
+.wxs span{font-size:calc(var(--f)*15);color:var(--muted)}
+.wxfoot{display:flex;justify-content:space-between;font-size:calc(var(--f)*16);color:var(--muted);padding:0 calc(var(--u)*6)}
+/* today hot news: 4 types, one slot */
+.emg.t-missing{background:#FFE8D2;border-color:#F0A868}
+.emg.t-missing .enews{background:#FFF5EA;border-color:#F0A868}
+.emg.t-missing .sh,.emg.t-missing .eh{color:#8A4B0F!important;border-color:#F0A868}
+.emg.t-accident{background:#FBDCDC;border-color:#E58B8B}
+.emg.t-accident .enews{background:#FFF1F1;border-color:#E58B8B}
+.emg.t-accident .sh,.emg.t-accident .eh{color:#8A1C1C!important;border-color:#E58B8B}
+.emg.t-blood{background:#FFDDE5;border-color:#E5708A}
+.emg.t-blood .enews{background:#FFF0F3;border-color:#E5708A}
+.emg.t-blood .sh,.emg.t-blood .eh{color:#9B1B3D!important;border-color:#E5708A}
+.emg.t-missing .ec,.emg.t-accident .ec,.emg.t-blood .ec{border-color:#EFC9C0}
+:root[data-theme="dark"] .emg.t-missing{background:#3a2616;border-color:#8a5a2a}
+:root[data-theme="dark"] .emg.t-accident{background:#3a1b1b;border-color:#8a3a3a}
+:root[data-theme="dark"] .emg.t-blood{background:#3a1a24;border-color:#8a3a50}
+:root[data-theme="dark"] .emg.t-missing .enews,:root[data-theme="dark"] .emg.t-accident .enews,:root[data-theme="dark"] .emg.t-blood .enews{background:#1f1a16}
+:root[data-theme="dark"] .emg.t-missing .sh,:root[data-theme="dark"] .emg.t-accident .sh,:root[data-theme="dark"] .emg.t-blood .sh,:root[data-theme="dark"] .emg.t-missing .eh,:root[data-theme="dark"] .emg.t-accident .eh,:root[data-theme="dark"] .emg.t-blood .eh{color:#F2D5C0!important}
+.hotdots{display:flex;justify-content:center;gap:6px;margin-top:2px}
+.hd{width:8px;height:8px;border-radius:99px;border:0;background:rgba(0,0,0,.25);padding:0;cursor:pointer}
+.hd.on{width:20px;background:#7A5200}
+.ev.bgb{display:inline-block;background:#C62828;color:#fff;border-radius:999px;padding:0 calc(var(--u)*14);width:fit-content;margin-left:auto}
+.tl{color:var(--g1);text-decoration:none;font-weight:800}
+.hotcards{display:grid;gap:calc(var(--u)*12);margin-top:calc(var(--u)*10)}
+.hcard{border:2px solid;border-radius:calc(var(--u)*26);padding:calc(var(--u)*16);text-align:left;font:inherit;cursor:pointer;display:grid;grid-template-columns:auto 1fr;gap:2px calc(var(--u)*16);align-items:center;color:#2b2b2b}
+.hcard .e{font-size:calc(var(--u)*56);grid-row:span 3}
+.hcard b{font-size:calc(var(--f)*24)}
+.hcard .ur{font-size:calc(var(--f)*22);line-height:1.8}
+.hcard small{font-size:calc(var(--f)*16);color:#555}
+.hcard.t-death{background:#FFF3C4;border-color:#F2C94C}
+.hcard.t-missing{background:#FFE8D2;border-color:#F0A868}
+.hcard.t-accident{background:#FBDCDC;border-color:#E58B8B}
+.hcard.t-blood{background:#FFDDE5;border-color:#E5708A}
+.emg .sh{justify-content:flex-start;flex-wrap:wrap;gap:calc(var(--u)*8)}
+.hotcnt{background:#C62828;color:#fff;border-radius:999px;padding:0 calc(var(--u)*12);font-size:calc(var(--f)*18);font-weight:700;line-height:1.7;font-variant-numeric:tabular-nums}
+.hnext{margin-left:auto;background:var(--card);color:var(--ink);border:1px solid currentColor;border-radius:999px;padding:calc(var(--u)*2) calc(var(--u)*14);font:inherit;font-size:calc(var(--f)*17);font-weight:700;cursor:pointer}
+.hadd{background:var(--gold);color:#3a2e00;border:0;border-radius:999px;padding:calc(var(--u)*2) calc(var(--u)*14);font:inherit;font-size:calc(var(--f)*17);font-weight:700;cursor:pointer}
+.emg.t-wedding{background:#E2F5E5;border-color:#7BC58A}
+.emg.t-wedding .enews{background:#F4FCF5;border-color:#7BC58A}
+.emg.t-wedding .sh,.emg.t-wedding .eh{color:#1B6B34!important;border-color:#7BC58A}
+.emg.t-wedding .ec{border-color:#BFE3C7}
+.hcard.t-wedding{background:#E2F5E5;border-color:#7BC58A}
+:root[data-theme="dark"] .emg.t-wedding{background:#16301d;border-color:#3f7d4d}
+:root[data-theme="dark"] .emg.t-wedding .enews{background:#13211a}
+:root[data-theme="dark"] .emg.t-wedding .sh,:root[data-theme="dark"] .emg.t-wedding .eh{color:#B8E6C3!important}
+.sgform{display:grid;gap:calc(var(--u)*12)}
+.sgform label{display:block;font-size:calc(var(--f)*22)}
+.sgform textarea{font-size:calc(var(--f)*22)}
+.pb.sky{background:#2B6CB0;color:#fff}
+.addn.hlbtn{background:#F5B400;color:#3a2e00;box-shadow:0 0 0 3px rgba(245,180,0,.35),0 2px 8px rgba(0,0,0,.2)}
+.hero,nav{background:linear-gradient(135deg,var(--hg1,#0E7069) 0%,var(--hg2,#0D5E57) 100%)}
+.acc{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--u)*24);margin-bottom:calc(var(--u)*10);overflow:hidden}
+.acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:calc(var(--u)*14);padding:calc(var(--u)*16) calc(var(--u)*18);font-size:calc(var(--f)*22);font-weight:700}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary .ai{font-size:calc(var(--u)*38);line-height:1}
+.acc>summary .tt{flex:1}
+.acc>summary::after{content:"›";font-size:calc(var(--f)*34);line-height:1;transform:rotate(90deg);transition:transform .15s;color:var(--muted)}
+.acc[open]>summary::after{transform:rotate(-90deg)}
+.acc[open]>summary{border-bottom:1px solid var(--line)}
+.accb{padding:calc(var(--u)*14) calc(var(--u)*18) calc(var(--u)*18);display:grid;gap:calc(var(--u)*12);font-size:calc(var(--f)*20)}
+.accb textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:calc(var(--f)*17)}
+.btn.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.swatches{display:flex;gap:calc(var(--u)*12);margin-top:calc(var(--u)*8)}
+.sw{width:calc(var(--u)*76);height:calc(var(--u)*76);border-radius:50%;border:3px solid var(--card);box-shadow:0 0 0 2px var(--line);cursor:pointer}
+.adst{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*8)}
+.adst>div{background:var(--bg);border-radius:calc(var(--u)*18);text-align:center;padding:calc(var(--u)*10) calc(var(--u)*4);display:grid;gap:2px}
+.adst b{font-size:calc(var(--f)*30);color:var(--g1)}
+.adst span{font-size:calc(var(--f)*15);color:var(--muted)}
+.adst .bi{align-items:center}
+</style>
+</head>
+<body>
+<main>
+<section id="v-home">
+  <header class="hero">
+    <div class="h-l">
+      <div class="h-title" lang="en">Technical Welfare</div>
+      <div class="h-place" lang="en">Fareed Kassar</div>
+      <div class="users h-users"><span lang="en">Total Users :</span> <span class="num">1,248</span></div>
+    </div>
+    <div class="h-c">
+      <div class="dp" aria-hidden="true">👤</div>
+      <b id="uname"></b>
+    </div>
+    <div class="h-r">
+      <div class="ur h-ur" lang="ur" dir="rtl">ٹیکنیکل ویلفئیر</div>
+      <span class="chip" id="gd"></span>
+      <span class="chip" id="id"></span>
+      <span class="chip" id="dd"></span>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="sec prayer" aria-label="Prayer times">
+      <div class="sh"><span data-k="prayers"></span><span class="num" id="nextp" style="font-weight:600;font-size:0.75rem"></span></div>
+      <div class="pg" id="pg"></div>
+    </section>
+
+    <section class="sec emg" aria-label="Emergency">
+      <div class="sh"><button class="hadd" id="hotAdd" aria-label="Add new hot news">+ Add</button><span data-k="emg"></span><span class="hotcnt" id="hotCnt">00</span><span id="hotBadge">🔥</span><button class="hnext" id="hotNext" aria-label="Next news">Next ›</button></div>
+      <div class="enews" id="enews" role="status"></div>
+      <div class="hotdots" id="hotDots"></div>
+    </section>
+
+    <div class="sb" id="sb"></div>
+
+    <section class="sec news" aria-label="News">
+      <div class="sh newsh"><span lang="en">Current News</span><button class="addn" data-add="current">+ Add New</button><span class="ur" lang="ur" dir="rtl">تازہ خبریں</span></div>
+      <ul class="nl" id="nl"></ul>
+    </section>
+    <div class="note" id="demo"></div>
+  </div>
+</section>
+
+<section id="v-login" class="hide wrap" style="padding-top:16px">
+  <h2 data-k="login"></h2>
+  <form class="card" id="fLogin">
+    <label><span data-k="id"></span><input dir="ltr" placeholder="FK-000001"></label>
+    <label><span data-k="pw"></span><input type="password"></label>
+    <div class="ok hide" id="lmsg" role="alert"></div>
+    <div class="note" lang="en" style="margin:0">Demo account: FK-000100 · password demo1234 (or create your own)</div>
+    <button class="btn"><span data-k="login"></span></button>
+    <button type="button" class="link" data-go="signup"><span data-k="new"></span></button>
+  </form>
+</section>
+
+<section id="v-signup" class="hide wrap" style="padding-top:16px">
+  <h2 data-k="create"></h2>
+  <form class="card" id="fSignup" novalidate>
+    <label><b class="req" data-k="name"></b><input name="n" required></label>
+    <label><b class="req" data-k="fname"></b><input name="fn" maxlength="80"></label>
+    <label><b data-k="dob"></b><input name="dob" type="date"></label>
+    <label><b data-k="bg"></b><select name="bg"><option value="">—</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+    <div class="fld"><label><b class="req" data-k="vil"></b><select name="vil" class="lstSel" data-lst="vil"></select></label><div class="addrow hide"><input maxlength="40" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="vil"><span data-k="addB"></span></button></div></div>
+    <div class="fld"><label><b class="req" data-k="moh"></b><select name="mh" class="lstSel" data-lst="moh"></select></label><div class="addrow hide"><input maxlength="40" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="moh"><span data-k="addB"></span></button></div></div>
+    <label><b class="req" data-k="mobile"></b><input name="m" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label class="chk"><input type="checkbox" name="wasame" checked data-togi="waBox"><span data-k="waSame"></span></label>
+    <div id="waBox" class="hide"><label><b class="req" data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label></div>
+    <label class="chk"><input type="checkbox" name="abr" data-tog="abrBox"><span data-k="abrQ"></span></label>
+    <div id="abrBox" class="hide"><label><b class="req" data-k="abrC"></b><input name="abrc" maxlength="60"></label></div>
+    <label class="chk"><input type="checkbox" name="ispro" data-tog="proBox"><span data-k="proQ"></span></label>
+    <div id="proBox" class="hide"><div class="fld"><label><b class="req" data-k="profL"></b><select name="prof" class="lstSel" data-lst="prof"></select></label><div class="addrow hide"><input maxlength="50" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="prof"><span data-k="addB"></span></button></div></div></div>
+    <label class="chk"><input type="checkbox" name="isgame" data-tog="gameBox"><span data-k="gameQ"></span></label>
+    <div id="gameBox" class="hide"><div class="fld"><label><b class="req" data-k="gameL"></b><select name="game" class="lstSel" data-lst="game"></select></label><div class="addrow hide"><input maxlength="50" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="game"><span data-k="addB"></span></button></div></div></div>
+    <label class="chk"><input type="checkbox" name="pshow" checked><span data-k="showNum"></span></label>
+    <label><b class="req" data-k="pw"></b><input name="p" type="password"></label>
+    <div class="ok hide" id="msg1" role="alert"></div>
+    <button class="btn"><span data-k="create"></span></button>
+    <button type="button" class="link" data-go="login"><span data-k="have"></span></button>
+  </form>
+</section>
+
+<section id="v-acct" class="hide wrap" style="padding-top:16px">
+  <h2 data-k="myacc"></h2>
+  <div class="card"><div id="acctInfo"></div><label><b data-k="moh"></b><select id="acMoh" class="mohSel"></select></label><button class="btn" id="logout"><span data-k="logout"></span></button></div>
+</section>
+
+<section id="v-portal" class="hide wrap" style="padding-top:16px">
+  <h2 data-k="portal"></h2>
+  <div class="pbtns">
+    <button class="pb gold" data-add="current"><span data-k="addCur"></span></button>
+    <button class="pb red" data-add="emergency"><span data-k="addEmg"></span></button>
+    <button class="pb sky" data-sug="1"><span data-k="addSug"></span></button>
+  </div>
+  <h3 class="ph" data-k="myCur"></h3>
+  <ul class="nl pl" id="myCur"></ul>
+  <h3 class="ph" data-k="myEmg"></h3>
+  <ul class="nl pl" id="myEmg"></ul>
+  <h3 class="ph" data-k="mySug"></h3>
+  <ul class="nl pl" id="mySug"></ul>
+  <div class="demoadm hide" id="adm">
+    <h3 class="ph" data-k="admT" style="margin-top:0"></h3>
+    <ul class="nl pl" id="admList"></ul>
+    <div class="note" data-k="admN"></div>
+  </div>
+</section>
+
+<section id="v-addnews" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="portal" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 id="addTitle"></h2>
+  <form class="card" id="fNews" novalidate>
+    <label id="hWrap"><b data-k="nh"></b><input name="h" maxlength="120" autocomplete="off" required></label>
+    <div id="emgFields" class="hide" style="display:grid;gap:12px">
+      <label><b data-k="xn"></b><input name="xn" maxlength="80"></label>
+      <label><b data-k="xf"></b><input name="xf" maxlength="80"></label>
+      <label><b data-k="moh"></b><select name="xm" class="mohSel"></select></label>
+      <label><b data-k="xt"></b><input name="xt" type="datetime-local"></label>
+      <label><b data-k="xg"></b><input name="xg" maxlength="80"></label>
+      <label><b data-k="xp"></b><input name="xp" maxlength="80"></label>
+    </div>
+    <label><b id="txtLbl"></b><textarea name="t" rows="7" maxlength="1000" required></textarea></label>
+    <div class="note" style="margin:0" data-k="autoN"></div>
+    <label><b data-k="lby"></b><input id="rId" readonly></label>
+    <label><b data-k="lname"></b><input id="rName" readonly></label>
+    <label><b data-k="dtl"></b><input id="rDt" readonly></label>
+    <div class="ok hide" id="msg2" role="alert"></div>
+    <button class="btn"><span id="subLbl"></span></button>
+  </form>
+</section>
+
+<section id="v-shops" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:10px"><span lang="en">Shops</span><button class="addn" data-addshop="1">+ Add Shop</button><span class="ur" lang="ur" dir="rtl">دکانیں</span></div>
+  <label><b data-k="shCat"></b><select id="shFilter"></select></label>
+  <ul class="nl pl" id="shList" style="margin-top:12px"></ul>
+  <div class="note" data-k="shNote"></div>
+</section>
+
+<section id="v-addshop" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="shops" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addShopT"></h2>
+  <form class="card" id="fShop" novalidate>
+    <label><b data-k="shType"></b><select name="ty" id="shType"></select></label>
+    <label><b data-k="shName"></b><input name="nm" maxlength="80" required></label>
+    <label><b data-k="owner"></b><input name="ow" maxlength="80" required></label>
+    <label><b data-k="contact"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567" required></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="accId"></b><input id="shAcc" readonly></label>
+    <label><b data-k="moh"></b><select name="mo" class="mohSel"></select></label>
+    <label><b data-k="addr"></b><input name="ad" maxlength="140"></label>
+    <div class="ok hide" id="msg3" role="alert"></div>
+    <button class="btn"><span data-k="shSave"></span></button>
+  </form>
+</section>
+
+<section id="v-pros" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px"><span lang="en">Professionals</span><button class="addn" data-addpro="1">+ Add New Professional</button><span class="ur" lang="ur" dir="rtl">ہنرمند افراد</span></div>
+  <div class="ptotal" id="proTotal"></div>
+  <label><b data-k="selType"></b><select id="proFilter"></select></label>
+  <ul class="nl pl" id="proList" style="margin-top:12px"></ul>
+  <div class="note" data-k="proNote"></div>
+</section>
+
+<section id="v-addpro" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="pros" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addProT"></h2>
+  <form class="card" id="fPro" novalidate>
+    <div class="fld"><label><b class="req" data-k="profL"></b><select name="ty" class="lstSel" data-lst="prof"></select></label><div class="addrow hide"><input maxlength="50" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="prof"><span data-k="addB"></span></button></div></div>
+    <label><b class="req" data-k="name"></b><input name="nm" maxlength="80"></label>
+    <label><b class="req" data-k="mobile"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="accId"></b><input id="proAcc" readonly></label>
+    <label><b class="req" data-k="moh"></b><select name="mo" class="mohSel"></select></label>
+    <div class="ok hide" id="msg4" role="alert"></div>
+    <button class="btn"><span data-k="proSave"></span></button>
+  </form>
+</section>
+
+<section id="v-mosques" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px"><span lang="en">Mosques and Madrissa</span><button class="addn" data-addmq="1">+ Add New</button><span class="ur" lang="ur" dir="rtl">مساجد و مدارس</span></div>
+  <div class="ptotal" id="mqTotal"></div>
+  <label><b data-k="selMoh"></b><select id="mqFilter"></select></label>
+  <ul class="nl pl" id="mqList" style="margin-top:12px"></ul>
+  <div class="note" data-k="mqNote"></div>
+</section>
+
+<section id="v-addmosque" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="mosques" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addMqT"></h2>
+  <form class="card" id="fMq" novalidate>
+    <label><b data-k="mqType"></b><select name="ty"><option value="Mosque">Mosque — مسجد</option><option value="Madrissa">Madrissa — مدرسہ</option></select></label>
+    <label><b class="req" data-k="mqName"></b><input name="nm" maxlength="80"></label>
+    <label><b class="req" data-k="mqAdmin"></b><input name="ad" maxlength="80"></label>
+    <label><b class="req" data-k="mobile"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b class="req" data-k="moh"></b><select name="mo" class="mohSel"></select></label>
+    <label><b data-k="accId"></b><input id="moAcc" readonly></label>
+    <div class="ok hide" id="msg5" role="alert"></div>
+    <button class="btn"><span data-k="mqSave"></span></button>
+  </form>
+</section>
+
+<section id="v-schools" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px"><span lang="en">Schools</span><button class="addn" data-addsc="1">+ Add New School</button><span class="ur" lang="ur" dir="rtl">اسکول</span></div>
+  <div class="ptotal" id="scTotal"></div>
+  <label><b data-k="selType"></b><select id="scFilter"></select></label>
+  <ul class="nl pl" id="scList" style="margin-top:12px"></ul>
+  <div class="note" data-k="scNote"></div>
+</section>
+
+<section id="v-addschool" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="schools" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addScT"></h2>
+  <form class="card" id="fSc" novalidate>
+    <label><b class="req" data-k="mqType"></b><select name="ty"><option value="Government">Government — سرکاری</option><option value="Private">Private — نجی</option></select></label>
+    <label><b class="req" data-k="scName"></b><input name="nm" maxlength="80"></label>
+    <label><b class="req" data-k="scOwner"></b><input name="ow" maxlength="80"></label>
+    <label><b class="req" data-k="scLoc"></b><input name="lc" maxlength="100"></label>
+    <label><b class="req" data-k="mobile"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="accId"></b><input id="scAcc" readonly></label>
+    <div class="ok hide" id="msg6" role="alert"></div>
+    <button class="btn"><span data-k="mqSave"></span></button>
+  </form>
+</section>
+
+<section id="v-weather" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:8px"><span id="wxLoc"></span><button class="addn" id="wxChange">Change Location</button></div>
+  <div id="wxBanner" class="wxban"></div>
+  <div class="wx" id="wx"></div>
+  <div class="note" lang="en">Demo weather values (sample). The real app will fetch live weather for your location.</div>
+</section>
+
+<section id="v-vans" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px"><span lang="en">School Vans</span><button class="addn" data-addvn="1">+ Add New School Vehicle</button><span class="ur" lang="ur" dir="rtl">اسکول وینز</span></div>
+  <div class="ptotal" id="vnTotal"></div>
+  <label><b data-k="selSch"></b><select id="vnFilter"></select></label>
+  <ul class="nl pl" id="vnList" style="margin-top:12px"></ul>
+  <div class="note" data-k="vanNote"></div>
+</section>
+
+<section id="v-addvan" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="vans" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addVanT"></h2>
+  <form class="card" id="fVn" novalidate>
+    <label><b class="req" data-k="selSch"></b><select name="sc" id="vnSch"></select></label>
+    <label><b class="req" data-k="vanDrv"></b><input name="dr" maxlength="80"></label>
+    <div class="fld"><label><b class="req" data-k="vanType"></b><select name="ty" class="lstSel" data-lst="veh"></select></label><div class="addrow hide"><input maxlength="40" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="veh"><span data-k="addB"></span></button></div></div>
+    <label><b class="req" data-k="vanNo"></b><input name="no" maxlength="20" dir="ltr"></label>
+    <label><b class="req" data-k="mobile"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="accId"></b><input id="vnAcc" readonly></label>
+    <div class="ok hide" id="msg7" role="alert"></div>
+    <button class="btn"><span data-k="mqSave"></span></button>
+  </form>
+</section>
+
+<section id="v-book" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px;font-size:calc(var(--f)*21)"><span lang="en">Special Booking Vehicle</span><button class="addn" data-addbk="1" style="font-size:calc(var(--f)*17)">+ Add New Vehicle</button><span class="ur" lang="ur" dir="rtl">خصوصی بکنگ گاڑیاں</span></div>
+  <div class="ptotal" id="bkTotal"></div>
+  <label><b data-k="selVT"></b><select id="bkFilter"></select></label>
+  <ul class="nl pl" id="bkList" style="margin-top:12px"></ul>
+  <div class="note" data-k="bkNote"></div>
+</section>
+
+<section id="v-addbook" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="book" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addBkT"></h2>
+  <form class="card" id="fBk" novalidate>
+    <div class="fld"><label><b class="req" data-k="vanType"></b><select name="ty" class="lstSel" data-lst="bveh"></select></label><div class="addrow hide"><input maxlength="40" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="bveh"><span data-k="addB"></span></button></div></div>
+    <label><b class="req" data-k="vanDrv"></b><input name="dr" maxlength="80"></label>
+    <label><b class="req" data-k="vanNo"></b><input name="no" maxlength="20" dir="ltr"></label>
+    <label><b class="req" data-k="mobile"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="accId"></b><input id="bkAcc" readonly></label>
+    <div class="ok hide" id="msg8" role="alert"></div>
+    <button class="btn"><span data-k="mqSave"></span></button>
+  </form>
+</section>
+
+<section id="v-rent" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px;font-size:calc(var(--f)*22)"><span lang="en">Daily Rent Vehicles</span><button class="addn" data-addrt="1" style="font-size:calc(var(--f)*17)">+ Add New Vehicle</button><span class="ur" lang="ur" dir="rtl">عام کرایہ گاڑیاں</span></div>
+  <div class="ptotal" id="rtTotal"></div>
+  <label><b data-k="selDest"></b><select id="rtFilter"></select></label>
+  <ul class="nl pl" id="rtList" style="margin-top:12px"></ul>
+  <div class="note" data-k="rtNote"></div>
+</section>
+
+<section id="v-addrent" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="rent" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="addRtT"></h2>
+  <form class="card" id="fRt" novalidate>
+    <label><b class="req" data-k="vanDrv"></b><input name="dr" maxlength="80"></label>
+    <div class="fld"><label><b class="req" data-k="vanType"></b><select name="ty" class="lstSel" data-lst="bveh"></select></label><div class="addrow hide"><input maxlength="40" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="bveh"><span data-k="addB"></span></button></div></div>
+    <label><b class="req" data-k="vanNo"></b><input name="no" maxlength="20" dir="ltr"></label>
+    <div class="fld"><label><b class="req" data-k="vanDest"></b><select name="ds" class="lstSel" data-lst="dest"></select></label><div class="addrow hide"><input maxlength="40" placeholder="Name / نام"><button type="button" class="btn addb" data-addlst="dest"><span data-k="addB"></span></button></div></div>
+    <label><b class="req" data-k="mobile"></b><input name="ct" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="wapp"></b><input name="wa" dir="ltr" inputmode="tel" placeholder="03001234567"></label>
+    <label><b data-k="accId"></b><input id="rtAcc" readonly></label>
+    <div class="ok hide" id="msg9" role="alert"></div>
+    <button class="btn"><span data-k="mqSave"></span></button>
+  </form>
+</section>
+
+<section id="v-phdir" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:6px"><span lang="en">Phone Directory</span><span class="ur" lang="ur" dir="rtl">فون ڈائریکٹری</span></div>
+  <div class="ptotal" id="pdTotal"></div>
+  <label><b data-k="selMoh"></b><select id="pdFilter"></select></label>
+  <ul class="nl pl" id="pdList" style="margin-top:12px"></ul>
+  <div class="note" data-k="pdNote"></div>
+</section>
+
+<section id="v-find" class="hide wrap" style="padding-top:16px">
+  <div class="newsh" style="margin-bottom:10px"><span lang="en">Find</span><span class="ur" lang="ur" dir="rtl">تلاش کریں</span></div>
+  <label><b data-k="fdSearch"></b><input id="fdQ" type="search" autocomplete="off" placeholder="Name, number, Mohallah, vehicle no… / نام، نمبر، محلہ"></label>
+  <label><b data-k="fdCat"></b><select id="fdCat"></select></label>
+  <div class="ptotal" id="fdTotal"></div>
+  <ul class="nl pl" id="fdList"></ul>
+</section>
+
+<section id="v-hotpick" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="portal" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <h2 data-k="hotPick"></h2>
+  <div id="hotCards" class="hotcards"></div>
+</section>
+
+<section id="v-set" class="hide wrap" style="padding-top:16px">
+  <div class="newsh" style="margin-bottom:10px"><span lang="en">Settings</span><span class="ur" lang="ur" dir="rtl">ترتیبات</span></div>
+  <details class="acc" id="acc-acct"><summary><span class="ai">👤</span><span class="tt" data-k="sAcc"></span></summary><div class="accb"><div id="setAcct"></div></div></details>
+  <details class="acc" id="acc-priv"><summary><span class="ai">🔒</span><span class="tt" data-k="sPriv"></span></summary><div class="accb">
+    <label class="chk"><input type="checkbox" id="setShow" checked><span data-k="showNum"></span></label>
+    <form id="fPw" class="sgform" novalidate><label><b data-k="newPw"></b><input type="password" name="np" autocomplete="new-password"></label><div class="ok hide" id="pwMsg" role="alert"></div><button class="btn alt"><span data-k="chgPw"></span></button></form>
+    <div class="note" style="margin:0" data-k="privNote"></div>
+    <div><b data-k="locT"></b>
+    <div class="note" id="locStat" style="margin:0"></div>
+    <button class="btn alt" id="locReset"><span data-k="locAskAgain"></span></button>
+  </div>
+  </div></details>
+  <details class="acc" id="acc-theme"><summary><span class="ai">🎨</span><span class="tt" data-k="sTheme"></span></summary><div class="accb">
+    <div><b data-k="theme"></b><div class="ctl" style="display:flex;gap:6px;margin-top:6px"><button data-t="light">☀</button><button data-t="dark">☾</button></div></div>
+    <div><b data-k="colT"></b><div class="swatches"><button class="sw" data-col="teal" aria-label="Teal" style="background:linear-gradient(135deg,#0E7069,#0D5E57)"></button><button class="sw" data-col="green" aria-label="Green" style="background:linear-gradient(135deg,#1B8A3E,#14672D)"></button><button class="sw" data-col="blue" aria-label="Blue" style="background:linear-gradient(135deg,#1E6FB8,#154F8A)"></button><button class="sw" data-col="purple" aria-label="Purple" style="background:linear-gradient(135deg,#6B46C1,#4B2F94)"></button></div></div>
+    <div><b data-k="tsize"></b><div class="ctl" style="display:flex;gap:6px;margin-top:6px"><button data-s="1">100%</button><button data-s="1.15">115%</button><button data-s="1.3">130%</button></div></div>
+    <div><b data-k="lang"></b><div class="ctl" style="display:flex;gap:6px"><button data-m="en">English</button><button data-m="both">EN+اردو</button><button data-m="ur">اردو</button></div></div>
+  </div></details>
+  <details class="acc" id="acc-back"><summary><span class="ai">💾</span><span class="tt" data-k="sBack"></span></summary><div class="accb">
+    <div class="note" style="margin:0" data-k="bkNote"></div>
+    <button class="btn" id="bkMake"><span data-k="bkMk"></span></button>
+    <textarea id="bkTxt" rows="6" spellcheck="false" placeholder="{ }"></textarea>
+    <div style="display:flex;gap:8px"><button class="btn alt" id="bkCopy"><span data-k="bkCp"></span></button><button class="btn alt" id="bkRestore"><span data-k="bkRs"></span></button></div>
+    <div class="ok hide" id="bkMsg" role="alert"></div>
+  </div></details>
+  <details class="acc" id="acc-admin"><summary><span class="ai">🛡️</span><span class="tt" data-k="sAdm"></span></summary><div class="accb"><div id="setAdmin"></div><div id="setMoh" class="hide"><b data-k="mohT"></b>
+    <div style="display:flex;gap:6px;align-items:stretch"><input id="mohNew" maxlength="40" placeholder="Mohallah / محلہ" style="margin-top:0"><button class="btn" id="mohAdd" style="width:auto;padding:0 16px;flex:none"><span data-k="mohAddB"></span></button></div>
+    <div class="ok hide" id="mohMsg" role="alert"></div>
+    <div id="mohList"></div>
+    <div class="note" style="margin:0" data-k="mohNote"></div>
+  </div></div></details>
+  <details class="acc" id="acc-port"><summary><span class="ai">🗂️</span><span class="tt" data-k="portal"></span></summary><div class="accb">
+    <button class="btn" data-go="portal"><span data-k="portal"></span></button>
+    <button class="btn alt" data-add="current"><span data-k="addCur"></span></button>
+    <button class="btn alt" data-add="emergency"><span data-k="addEmg"></span></button>
+    <button class="btn alt" data-sug="1"><span data-k="addSug"></span></button>
+  </div></details>
+  <details class="acc" id="acc-help"><summary><span class="ai">🆘</span><span class="tt" data-k="sHelp"></span></summary><div class="accb">
+    <button class="btn" data-go="help"><span data-k="sHelp"></span></button>
+    <button class="btn alt" data-sug="1"><span data-k="sugT"></span></button>
+  </div></details>
+  <details class="acc" id="acc-contact"><summary><span class="ai">☎️</span><span class="tt" data-k="sCU"></span></summary><div class="accb">
+    <div class="note" style="margin:0" data-k="cuNote"></div>
+    <div style="font-weight:700;direction:ltr;unicode-bidi:isolate">📞 0300-0000000</div>
+    <a class="btn" href="tel:03000000000" style="text-decoration:none"><span data-k="cuCall"></span></a>
+    <a class="btn alt" href="https://wa.me/923000000000" target="_blank" rel="noopener" style="text-decoration:none"><span data-k="cuWa"></span></a>
+    <button class="btn alt" data-sug="1"><span data-k="cuMsg"></span></button>
+  </div></details>
+  <details class="acc" id="acc-share"><summary><span class="ai">📤</span><span class="tt" data-k="sShare"></span></summary><div class="accb">
+    <button class="btn" id="shNative"><span data-k="shBtn"></span></button>
+    <a class="btn alt" id="shWaLink" href="https://wa.me/" target="_blank" rel="noopener" style="text-decoration:none"><span data-k="shWa"></span></a>
+    <button class="btn alt" id="shCopy"><span data-k="shCp"></span></button>
+    <div class="ok hide" id="shMsg" role="status"></div>
+  </div></details>
+  <details class="acc" id="acc-about"><summary><span class="ai">ℹ️</span><span class="tt" data-k="sAbout"></span></summary><div class="accb">
+    <div><b>Technical Welfare Fareed Kassar</b></div>
+    <div class="note" style="margin:0" lang="en">Our Village, Our Community, Our Responsibility.<br>Preview version 0.1 · demo data</div>
+  </div></details>
+</section>
+
+<section id="v-help" class="hide wrap" style="padding-top:16px">
+  <button class="link" data-go="home" style="margin:0 0 8px"><span data-k="back"></span></button>
+  <div class="newsh" style="margin-bottom:8px"><span lang="en">Help Desk</span><button class="addn hlbtn" data-sug="1">+ New Suggestion</button><span class="ur" lang="ur" dir="rtl">مددگار</span></div>
+  <label><b data-k="selHelp"></b><select id="hdFilter"></select></label>
+  <ul class="nl pl" id="hdList" style="margin-top:12px"></ul>
+  <div id="hlist" class="hide"></div>
+  <div class="note" data-k="hdNote"></div>
+</section>
+
+<section id="v-set-legacy" class="hide" hidden style="display:none">
+  <h2 data-k="settings"></h2>
+  <div class="card">
+    <div><b data-k="lang"></b><div class="ctl" style="display:flex;gap:6px;margin-top:6px"><button data-m="en">English</button><button data-m="both">EN+اردو</button><button data-m="ur">اردو</button></div></div>
+    <div><b data-k="theme"></b><div class="ctl" style="display:flex;gap:6px;margin-top:6px"><button data-t="light">☀</button><button data-t="dark">☾</button></div></div>
+    <div><b data-k="tsize"></b><div class="ctl" style="display:flex;gap:6px;margin-top:6px"><button data-s="1">100%</button><button data-s="1.15">115%</button><button data-s="1.3">130%</button></div></div>
+    <div><b data-k="mohT"></b>
+      <div style="display:flex;gap:6px;margin-top:6px;align-items:stretch"><input id="mohNew" maxlength="40" placeholder="Mohallah / محلہ" style="margin-top:0"><button class="btn" id="mohAdd" style="width:auto;padding:0 16px;flex:none"><span data-k="mohAddB"></span></button></div>
+      <div class="ok hide" id="mohMsg" role="alert" style="margin-top:6px"></div>
+      <div id="mohList" style="margin-top:8px"></div>
+      <div class="note" style="margin:8px 0 0" data-k="mohNote"></div>
+    </div>
+    <div><b data-k="locT"></b>
+      <div class="note" id="locStat" style="margin:6px 0"></div>
+      <button class="btn" id="locReset" style="width:auto;padding:8px 16px"><span data-k="locAskAgain"></span></button>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="dlg" class="dlg hide" role="dialog" aria-modal="true" aria-labelledby="dlgH">
+  <div class="dlg-card">
+    <button class="dlg-x" id="dlgX" aria-label="Close">✕</button>
+    <h3 id="dlgH" class="ur" lang="ur" dir="rtl"></h3>
+    <p id="dlgT" class="ur" lang="ur" dir="auto"></p>
+    <dl id="dlgM"></dl>
+    <button class="btn" id="dlgClose"><span data-k="close"></span></button>
+  </div>
+</div>
+
+<div id="locDlg" class="dlg hide" role="dialog" aria-modal="true" aria-labelledby="locH">
+  <div class="dlg-card">
+    <h3 id="locH" data-k="locH" style="margin-top:0"></h3>
+    <p data-k="locP"></p>
+    <div class="arow"><button class="pb gold" id="locAllow"><span data-k="locYes"></span></button><button class="pb gray" id="locNo"><span data-k="locNo"></span></button></div>
+  </div>
+</div>
+<div id="chgDlg" class="dlg hide" role="dialog" aria-modal="true" aria-labelledby="chgH">
+  <div class="dlg-card">
+    <h3 id="chgH" data-k="wxChg" style="margin-top:0"></h3>
+    <select id="chgSel"></select>
+    <div class="arow" style="margin-top:14px"><button class="pb gold" id="chgApply"><span data-k="wxApply"></span></button><button class="pb gray" id="chgCancel"><span data-k="wxCancel"></span></button></div>
+  </div>
+</div>
+
+<div id="sgDlg" class="dlg hide" role="dialog" aria-modal="true" aria-labelledby="sgH">
+  <div class="dlg-card">
+    <button class="dlg-x" id="sgX" aria-label="Close">✕</button>
+    <h3 id="sgH" data-k="sugT"></h3>
+    <form id="fSug" class="sgform" novalidate>
+      <div class="note" style="margin:0"><b data-k="sugBy"></b></div>
+      <label><span data-k="accS"></span><input id="sgId" readonly></label>
+      <label><span data-k="name"></span><input id="sgName" readonly></label>
+      <label><b class="req" data-k="sugSubj"></b><input name="s" maxlength="120" style="font-weight:700" autocomplete="off"></label>
+      <label><b class="req" data-k="sugDet"></b><textarea name="d" rows="6" maxlength="1500"></textarea></label>
+      <div class="ok hide" id="msgS" role="alert"></div>
+      <button class="btn"><span data-k="sugSend"></span></button>
+    </form>
+  </div>
+</div>
+
+<nav aria-label="Main"><ul id="nav"></ul></nav>
+<div class="toast hide" id="toast" role="status"></div>
+
+<script>
+var T={
+ tw:["Technical Welfare","ٹیکنیکل ویلفیئر"],place:["Fareed Kassar","فرید کسار"],qibla:["Qibla","قبلہ"],
+ users:["Total Users","کل ممبران"],guest:["Guest","مہمان"],
+ prayers:["Prayer Timings","اوقاتِ نماز"],emg:["Emergency News","ہنگامی اطلاع"],
+ rescue:["Rescue","ریسکیو"],police:["Police","پولیس"],fire:["Fire","فائر"],edhi:["Edhi","ایدھی"],
+ shops:["Shops","دکانیں"],pro:["Professional","پروفیشنل"],mosques:["Mosques","مساجد"],schools:["Schools","اسکول"],weather:["Weather","موسم"],help:["Help Desk","مدد"],
+ news:["Current News","تازہ خبریں"],soon:["Demo","ڈیمو"],
+ portal:["My Portal","میرا پورٹل"],find:["Find","تلاش"],home:["Home","ہوم"],myacc:["My Account","میرا اکاؤنٹ"],settings:["Settings","سیٹنگز"],
+ login:["Login","لاگ اِن"],create:["Create Account","اکاؤنٹ بنائیں"],logout:["Logout","لاگ آؤٹ"],
+ name:["Full Name","پورا نام"],mobile:["Mobile Number","موبائل نمبر"],pw:["Password","پاس ورڈ"],
+ id:["Account ID / Mobile / Email","اکاؤنٹ آئی ڈی / موبائل / ای میل"],
+ have:["Already Registered? Login","پہلے سے رجسٹرڈ ہیں؟ لاگ اِن"],new:["Create New Account","نیا اکاؤنٹ بنائیں"],
+ lang:["Language","زبان"],theme:["Theme","تھیم"],tsize:["Text Size","تحریر کا سائز"],
+ demo:["Design preview. Prayer times, user count, news and the Qibla angle are demo values; emergency numbers are Pakistan national numbers. Nothing is saved.","ڈیزائن کا نمونہ۔ نماز کے اوقات، ممبران کی تعداد، خبریں اور قبلہ ڈیمو ہیں۔"],
+ done:["Demo account created. Your Account ID would be FK-000001.","ڈیمو اکاؤنٹ بن گیا۔ آپ کی اکاؤنٹ آئی ڈی FK-000001 ہوتی۔"],
+ later:["Opens in the next build phase","اگلے مرحلے میں کھلے گا"],
+ back:["◂ Back","◂ واپس"],helpT:["Help Desk — Emergency Numbers","ہیلپ ڈیسک — ہنگامی نمبرز"],
+ hnote:["Hospitals, doctors, blood donors and pharmacies will be added here by administrators.","ہسپتال، ڈاکٹر، بلڈ ڈونرز اور فارمیسیاں انتظامیہ یہاں شامل کرے گی۔"],
+ enewsT:["Heavy rain expected tonight. Please avoid low-lying streets and keep children indoors.","آج رات تیز بارش کا امکان ہے۔ براہ کرم نشیبی گلیوں سے گریز کریں اور بچوں کو گھر میں رکھیں۔"],
+ enewsBy:["Posted by Administration • Demo","انتظامیہ کی جانب سے • ڈیمو"],
+ ptitle:["Add Current News","تازہ خبر شامل کریں"],
+ nh:["News Heading","خبر کی سرخی"],
+ ntxt:["News Text","خبر کا متن"],
+ nsub:["Submit News","خبر جمع کروائیں"],
+ nok:["Added to Current News (demo). In the real app it waits for administrator approval first.","خبر شامل ہو گئی (ڈیمو)۔ اصل ایپ میں پہلے انتظامیہ کی منظوری ہو گی۔"],
+ nerr:["Please enter a heading and the news text.","براہ کرم سرخی اور خبر کا متن لکھیں۔"],
+ close:["Close","بند کریں"],
+ lby:["News Loaded By — Account ID","خبر لوڈ کرنے والا — اکاؤنٹ آئی ڈی"],
+ lname:["Loaded By — Account Name","لوڈ کرنے والے کا نام"],
+ dtl:["Date & Time","تاریخ اور وقت"],
+ addCur:["+ Add New — Current News","+ نئی تازہ خبر"],
+ addEmg:["+ Add New — Emergency News","+ نئی ہنگامی اطلاع"],
+ myCur:["My Current News","میری تازہ خبریں"],
+ myEmg:["My Emergency News Requests","میری ہنگامی اطلاع کی درخواستیں"],
+ admT:["Admin Approval (Demo)","ایڈمن کی منظوری (ڈیمو)"],
+ admN:["In the real app only administrators will see this.","اصل ایپ میں یہ صرف ایڈمن کو نظر آئے گا۔"],
+ approve:["Approve","منظور کریں"],reject:["Reject","مسترد کریں"],
+ stPend:["Pending approval","منظوری کا انتظار"],stOk:["Approved","منظور شدہ"],stNo:["Rejected","مسترد"],stPub:["Published","شائع شدہ"],
+ ptEmg:["Add Emergency News","ہنگامی اطلاع شامل کریں"],
+ nsubE:["Send to Admin for Approval","منظوری کے لیے ایڈمن کو بھیجیں"],
+ nokE:["Request sent to Admin. It will appear on the Home screen after approval.","درخواست ایڈمن کو بھیج دی گئی۔ منظوری کے بعد ہوم اسکرین پر نظر آئے گی۔"],
+ empty:["Nothing here yet","ابھی کچھ نہیں"],
+ badLogin:["Wrong ID or password.","آئی ڈی یا پاس ورڈ درست نہیں۔"],
+ needLogin:["Please log in first. News is saved under your account.","پہلے لاگ اِن کریں۔ خبر آپ کے اکاؤنٹ کے نام سے محفوظ ہوگی۔"],
+ autoN:["These three fields are filled automatically from your login account.","یہ تین خانے آپ کے لاگ اِن اکاؤنٹ سے خود بخود بھرے جاتے ہیں۔"],
+ shType:["Shop Type","دکان کی قسم"],
+ shName:["Shop Name","دکان کا نام"],
+ owner:["Owner Name","مالک کا نام"],
+ contact:["Contact No","رابطہ نمبر"],
+ wapp:["WhatsApp No","واٹس ایپ نمبر"],
+ accId:["Account ID (automatic)","اکاؤنٹ آئی ڈی (خودکار)"],
+ accS:["Account ID","اکاؤنٹ آئی ڈی"],
+ moh:["Mohallah","محلہ"],
+ addr:["Address","پتہ"],
+ shSave:["Save Shop","دکان محفوظ کریں"],
+ addShopT:["Add Shop","دکان شامل کریں"],
+ shNote:["Shop list is demo data. Shops will be added by their owners and checked by administrators.","دکانوں کی فہرست ڈیمو ہے۔ دکانیں مالکان خود شامل کریں گے اور ایڈمن جانچیں گے۔"],
+ shNone:["No shops found","کوئی دکان نہیں ملی"],
+ shCall:["Call","کال"],shWa:["WhatsApp","واٹس ایپ"],
+ shOk:["Shop added (demo).","دکان شامل ہو گئی (ڈیمو)۔"],
+ shErr:["Please fill shop type, name, owner, contact and mohallah.","براہ کرم دکان کی قسم، نام، مالک، رابطہ نمبر اور محلہ درج کریں۔"],
+ vans:["School Vans","اسکول وینز"],
+ booking:["Special Booking","خصوصی بکنگ"],
+ rent:["Daily Rent Vehicles","عام کرایہ گاڑیاں"],
+ phdir:["Phone Directory","فون ڈائریکٹری"],
+ pro:["Professionals","ہنرمند افراد"],
+ help:["Help Desk","مددگار"],
+ helpT:["Help Desk — Emergency Numbers","مددگار — ہنگامی نمبرز"],
+ shCat:["Shop Category","دکان کی کیٹگری"],
+ shSn:["Shop Name","دکان کا نام"],
+ shMb:["Mobile No","موبائل نمبر"],
+ xn:["Name","نام"],
+ xf:["Father Name","ولدیت"],
+ xt:["Janaza At","نمازِ جنازہ کا وقت"],
+ xg:["Janazagah","جنازہ گاہ"],
+ xp:["Place / Area","علاقہ / مقام"],
+ ndet:["News Details","خبر کی تفصیل"],
+ xn:["Deceased Name","مرحوم کا نام"],
+ xf:["Deceased Father","مرحوم کے والد"],
+ xt:["Janaza Time","نمازِ جنازہ کا وقت"],
+ xp:["Area / Place","علاقہ / مقام"],
+ xf:["Deceased Father","مرحوم کا باپ"],
+ xt:["Janaza Time","وقت جنازہ"],
+ xp:["Area / Place","علاقہ یا گاؤں"],
+ xt:["Janaza Date & Time","جنازہ تاریخ اور وقت"],
+ mohT:["Mohallah List","محلہ کی فہرست"],
+ mohAddB:["Add Mohallah","محلہ شامل کریں"],
+ mohDup:["This Mohallah already exists.","یہ محلہ پہلے سے موجود ہے۔"],
+ mohOk:["Mohallah added.","محلہ شامل ہو گیا۔"],
+ mohNote:["The list feeds the Mohallah drop-down in sign-up, My Account, Emergency News and Shops. In the real app only administrators can add or remove Mohallahs.","یہ فہرست سائن اپ، میرا اکاؤنٹ، ہنگامی اطلاع اور دکانوں میں محلے کی ڈراپ ڈاؤن میں استعمال ہوگی۔ اصل ایپ میں محلے صرف ایڈمن شامل یا ختم کر سکیں گے۔"],
+ fname:["Father Name","والد کا نام"],
+ dob:["Date of Birth","تاریخ پیدائش"],
+ bg:["Blood Group","بلڈ گروپ"],
+ vil:["Village","گاؤں"],
+ addB:["Add","شامل کریں"],
+ waSame:["WhatsApp number is the same as mobile","واٹس ایپ نمبر وہی ہے جو موبائل نمبر ہے"],
+ abrQ:["Working abroad? (tick = Yes)","کیا آپ بیرون ملک کام کرتے ہیں؟ (نشان = ہاں)"],
+ abrC:["Abroad Country","ملک کا نام"],
+ proQ:["Are you a professional? (tick = Yes)","کیا آپ پروفیشنل ہیں؟ (نشان = ہاں)"],
+ profL:["Profession","پیشہ"],
+ gameQ:["Are you a game player? (tick = Yes)","کیا آپ کھلاڑی ہیں؟ (نشان = ہاں)"],
+ gameL:["Game Name","کھیل کا نام"],
+ reqErr:["Please fill all required fields marked *","براہ کرم * والے تمام خانے پُر کریں۔"],
+ selType:["Select Type","قسم منتخب کریں"],
+ addProT:["Add New Professional","نیا پروفیشنل شامل کریں"],
+ proSave:["Save Professional","پروفیشنل محفوظ کریں"],
+ proOk:["Professional added (demo).","پروفیشنل شامل ہو گیا (ڈیمو)۔"],
+ proNote:["Demo list. Members who tick 'Are you a professional?' at sign-up are added automatically.","ڈیمو فہرست۔ جن میمبرز نڒ رجسٹریشن میں پروفیشنل کا نشان لگایا وہ خود بخود شامل ہو جاتے ہیں۔"],
+ selMoh:["Select Mohallah","محلہ منتخب کریں"],
+ mqType:["Type","قسم"],
+ mqName:["Mosque / Madrissa Name","مسجد / مدرسہ کا نام"],
+ mqAdmin:["Admin Name","منتظم کا نام"],
+ addMqT:["Add Mosque / Madrissa","مسجد / مدرسہ شامل کریں"],
+ mqSave:["Save","محفوظ کریں"],
+ mqOk:["Added (demo).","شامل ہو گیا (ڈیمو)۔"],
+ mqNote:["Demo list. Mosques and Madrissas will be added by their admins and checked by administrators.","ڈیمو فہرست۔ مساجد و مدارس ان کے منتظمین شامل کریں گے اور ایڈمن جانچیں گے۔"],
+ scName:["School Name","اسکول کا نام"],
+ scOwner:["Owner Name","مالک کا نام"],
+ scLoc:["Location","مقام"],
+ addScT:["Add School","اسکول شامل کریں"],
+ scNote:["Demo list. Schools will be added by their owners or headmasters and checked by administrators.","ڈیمو فہرست۔ اسکول مالکان یا ہیڈ ماسٹر شامل کریں گے اور ایڈمن جانچیں گے۔"],
+ locH:["Allow location access?","کیا مقام کی اجازت دیں؟"],
+ locP:["Technical Welfare uses your location to show the weather for your area. The app checks your location each time you open or use it. Your choice is saved once, and you can change it in Settings.","ٹیکنیکل ویلفئیر آپ کے علاقے کا موسم دکھانے کے لیے آپ کا مقام استعمال کرتا ہے۔ ہر بار ایپ کھولنے یا استعمال کرنے پر مقام چیک ہوگا۔ آپ کا فیصلہ ایک بار محفوظ ہوگا اور سیٹنگز میں بدلا جا سکے گا۔"],
+ locYes:["Allow","اجازت دیں"],locNo:["Not now","ابھی نہیں"],
+ locT:["Location","مقام"],locAskAgain:["Ask permission again","دوبارہ اجازت مانگیں"],
+ locY:["Location permission: allowed. Checked each time the app is used.","مقام کی اجازت: دی گئی۔ ہر استعمال پر چیک ہوگا۔"],
+ locN:["Location permission: not allowed. Showing the last stored location.","مقام کی اجازت: نہیں دی گئی۔ آخری محفوظ مقام دکھایا جائے گا۔"],
+ locU:["Location permission: not asked yet.","مقام کی اجازت: ابھی نہیں مانگی گئی۔"],
+ wxChg:["Change Location","مقام تبدیل کریں"],wxApply:["Apply","لاگو کریں"],wxCancel:["Cancel","منسوخ کریں"],
+ wxFeels:["Feels like","محسوس حرارت"],wxHum:["Humidity","نمی"],wxWind:["Wind","ہوا"],wxPres:["Pressure","دباؤ"],wxDet:["Details","تفصیل"],
+ wxLive:["Live location, updated","لائیو مقام، اپ ڈیٹ"],
+ wxOff:["Location is off. Showing the last stored location","مقام بند ہے۔ آخری محفوظ مقام دکھایا جا رہا ہے"],
+ wxDef:["Location is off and none is stored yet. Showing the default: Fareed Kassar","مقام بند ہے اور کوئی محفوظ نہیں۔ ڈیفالٹ: فرید کسار"],
+ wxMan:["Location chosen manually","مقام ہاتھ سے منتخب کیا گیا"],
+ wxTurn:["Turn on location","مقام آن کریں"],
+ wxNote:["Demo weather values (sample). The real app will fetch live weather for your location.","موسم کے ڈیمو اعدادوشمار۔ اصل ایپ آپ کے مقام کا لائیو موسم لے گا۔"],
+ selSch:["Select School Location","اسکول کا مقام منتخب کریں"],
+ vanDrv:["Driver Name","ڈرائیور کا نام"],
+ vanType:["Vehicle Type","گاڑی کی قسم"],
+ vanNo:["Vehicle No","گاڑی نمبر"],
+ vanSch:["School","اسکول"],
+ addVanT:["Add School Vehicle","اسکول گاڑی شامل کریں"],
+ vanNote:["Demo list. School vehicles will be added by their drivers or owners and checked by administrators.","ڈیمو فہرست۔ اسکول گاڑیاں ڈرائیور یا مالکان شامل کریں گے اور ایڈمن جانچیں گے۔"],
+ selVT:["Select Vehicle Type","گاڑی کی قسم منتخب کریں"],
+ addBkT:["Add Booking Vehicle","بکنگ گاڑی شامل کریں"],
+ bkNote:["Demo list. Vehicles will be added by their drivers or owners and checked by administrators.","ڈیمو فہرست۔ گاڑیاں ڈرائیور یا مالکان شامل کریں گے اور ایڈمن جانچیں گے۔"],
+ selDest:["Select Route Destination","روٹ کی منزل منتخب کریں"],
+ vanDest:["Route Destination","روٹ کی منزل"],
+ addRtT:["Add Rental Vehicle","کرایے کی گاڑی شامل کریں"],
+ rtNote:["Demo list. Vehicles will be added by their drivers or owners and checked by administrators.","ڈیمو فہرست۔ گاڑیاں ڈرائیور یا مالکان شامل کریں گے اور ایڈمن جانچیں گے۔"],
+ pdNote:["Every registered member who chose to show their number appears here. Members control this in their privacy settings.","جن رجسٹرڈ ممبرز نے نمبر دکھانے کی اجازت دی وہ یہاں دکھائے جاتے ہیں۔ ممبرز اپنی پرائیویسی سیٹنگز میں اسے کنٹرول کرتے ہیں۔"],
+ showNum:["Show my number in the Phone Directory","میرا نمبر فون ڈائریکٹری میں دکھائیں"],
+ fdSearch:["Search","تلاش"],
+ fdCat:["Select Search Category","تلاش کی قسم منتخب کریں"],
+ fdNone:["Nothing found. Try a different word or category.","کچھ نہیں ملا۔ کوئی اور لفظ یا قسم آزمائیں۔"],
+ nok:["Request sent to Admin. It will appear in Current News after approval.","درخواست ایڈمن کو بھیج دی گئی۔ منظوری کے بعد تازہ خبروں میں نظر آئے گی۔"],
+ emg:["Today Hot News","آج کی اہم خبر"],
+ myEmg:["My Today Hot News Requests","میری آج کی اہم خبر کی درخواستیں"],
+ addEmg:["+ Add New — Today Hot News","+ نئی آج کی اہم خبر"],
+ hotPick:["Choose the type of news","خبر کی قسم منتخب کریں"],
+ selHelp:["Select Help Type","مدد کی قسم منتخب کریں"],
+ hdLl:["Landline","لینڈ لائن"],
+ hdTy:["Type","قسم"],
+ hdNote:["Demo directory. Emergency numbers are Pakistan national numbers. Administrators will keep all other numbers up to date.","ڈیمو ڈائریکٹری۔ ہنگامی نمبر پاکستان کے قومی نمبر ہیں۔ باقی نمبر ایڈمن اپ ڈیٹ رکھیں گے۔"],
+ sugT:["New Suggestion","نئی تجویز"],
+ sugBy:["By","بذریعہ"],
+ sugSubj:["Subject","موضوع"],
+ sugDet:["Suggestion Details","تجویز کی تفصیل"],
+ sugSend:["Send Suggestion for Approval","منظوری کے لیے تجویز بھیجیں"],
+ sugOk:["Suggestion sent to Admin for approval.","تجویز منظوری کے لیے ایڈمن کو بھیج دی گئی۔"],
+ sugErr:["Please write a subject and the details.","براہ کرم موضوع اور تفصیل لکھیں۔"],
+ mySug:["My Suggestions","میری تجاویز"],
+ addSug:["+ Add New Suggestion","+ نئی تجویز شامل کریں"],
+ sAcc:["Account Information","اکاؤنٹ کی معلومات"],
+ sPriv:["Privacy and Security","رازداری اور تحفظ"],
+ sTheme:["Theme and Colors","تھیم اور رنگ"],
+ sBack:["Backup and Restore","بیک اپ اور بحالی"],
+ sAdm:["Admin Panel","ایڈمن پینل"],
+ sHelp:["Help Desk","مددگار"],
+ sCU:["Contact Us","ہم سے رابطہ"],
+ sShare:["Share This App","ایپ شیئر کریں"],
+ sAbout:["About App","ایپ کے بارے میں"],
+ cuNote:["Reach the Technical Welfare administration. The number below is a demo; the real contact will be added by the administrators.","ٹیکنیکل ویلفئیر انتظامیہ سے رابطہ کریں۔ نیچے دیا گیا نمبر ڈیمو ہے۔ اصل نمبر ایڈمن شامل کریں گے۔"],
+ cuCall:["Call Administration","انتظامیہ کو کال کریں"],
+ cuWa:["WhatsApp Administration","انتظامیہ کو واٹس ایپ کریں"],
+ cuMsg:["Send a message (suggestion)","پیغام بھیجیں (تجویز)"],
+ shBtn:["Share…","شیئر کریں…"],
+ shWa:["Share on WhatsApp","واٹس ایپ پر شیئر کریں"],
+ shCp:["Copy link","لنک کاپی کریں"],
+ shOk:["Link copied.","لنک کاپی ہو گیا۔"],
+ colT:["Colors","رنگ"],
+ newPw:["New Password","نیا پاس ورڈ"],
+ chgPw:["Change Password","پاس ورڈ تبدیل کریں"],
+ pwLogin:["Please log in first.","پہلے لاگ اِن کریں۔"],
+ pwOk:["Password changed.","پاس ورڈ تبدیل ہو گیا۔"],
+ privNote:["Private welfare records are never shown publicly. Only administrators can see them.","نجی فلاحی ریکارڈ کبھی عوامی طور پر نہیں دکھائے جاتے۔ صرف ایڈمن دیکھ سکتے ہیں۔"],
+ bkNote:["Create a backup of your settings, news and suggestions. Keep the text safe and paste it back to restore. Passwords are never included. In the real app, backup is automatic in the cloud.","اپنی سیٹنگز، خبروں اور تجاویز کا بیک اپ بنائیں۔ متن محفوظ رکھیں اور بحال کرنے کے لیے واپس پیسٹ کریں۔ پاس ورڈ شامل نہیں ہوتے۔"],
+ bkMk:["Create backup","بیک اپ بنائیں"],
+ bkCp:["Copy","کاپی"],
+ bkRs:["Restore from text","متن سے بحال کریں"],
+ bkOk:["Restored.","بحال ہو گیا۔"],
+ bkErr:["That text is not a valid backup.","یہ متن درست بیک اپ نہیں ہے۔"],
+ ntN:["Village News","گاؤں کی خبریں"],
+ ntH:["Today Hot News","آج کی اہم خبر"],
+ ntJ:["Job Alerts","ملازمتوں کے مواقع"],
+ ntW:["Welfare Updates","فلاحی اطلاعات"],
+ ntS:["Application Status","درخواست کی حیثیت"],
+ sShare:["Share Technical Welfare","ٹیکنیکل ویلفئیر شیئر کریں"],
+ cuNote:["Demo Administrator — Administrator, Technical Welfare Fareed Kassar","ڈیمو ایڈمن — ایڈمنسٹریٹر، ٹیکنیکل ویلفئیر فرید کسار"]
+};
+var NEWS=[["📢",["Village meeting after Jumu’ah prayer","جمعہ کی نماز کے بعد گاؤں کا اجلاس"],"Today"],
+ ["💧",["Water filtration plant: site survey done","واٹر فلٹریشن پلانٹ: جگہ کا سروے مکمل"],"Yesterday"],
+ ["🎓",["Free computer course registrations open","مفت کمپیوٹر کورس کی رجسٹریشن شروع"],"2 days ago"],
+ ["🛣️",["Main street repair work begins","مرکزی گلی کی مرمت کا آغاز"],"3 days ago"],
+ ["🩸",["Blood donation camp planned","بلڈ ڈونیشن کیمپ کا اعلان"],"5 days ago"],
+ ["🌱",["Tree plantation drive by volunteers","رضاکاروں کی شجرکاری مہم"],"1 week ago"]];
+var SB=[["s1","🏪","shops"],["s2","👔","pro"],["s3","🕌","mosques"],["s4","🏫","schools"],["s5","⛅","weather"],["s6","🎧","help"],["s7","🚌","vans"],["s8","🚖","booking"],["s9","🚗","rent"],["s10","📒","phdir"]];
+var NAV=[["portal","🗂️"],["find","🔍"],["home","🏠"],["myacc","👤"],["settings","⚙️"]];
+var DM=[[1,13,"Magh","ماگھ"],[2,12,"Phagan","پھگن"],[3,13,"Chet","چیت"],[4,13,"Vaisakh","ویساکھ"],[5,14,"Jeth","جیٹھ"],[6,14,"Harh","ہاڑ"],[7,15,"Sawan","ساون"],[8,15,"Bhadon","بھادوں"],[9,15,"Assu","اسوج"],[10,15,"Katak","کاتک"],[11,14,"Maghar","مگھر"],[12,14,"Poh","پوہ"]];
+var UN=[],IT=[],ND=[
+ ["تمام اہلِ علاقہ سے گزارش ہے کہ جمعہ کی نماز کے بعد مسجد کے صحن میں ہونے والے اجلاس میں شریک ہوں۔ اجلاس میں گاؤں کے ترقیاتی کاموں پر مشاورت ہوگی۔","FK-000001","Village Admin"],
+ ["صاف پانی منصوبے کے لیے فلٹریشن پلانٹ کی جگہ کا سروے مکمل ہو گیا ہے۔ اگلے مرحلے میں لاگت اور چندے کی تفصیلات جاری کی جائیں گی۔","FK-000027","Welfare Team"],
+ ["نوجوانوں کے لیے مفت کمپیوٹر کورس کی رجسٹریشن شروع ہو گئی ہے۔ خواہشمند طلبہ اپنا نام فلاحی دفتر میں درج کروائیں۔","FK-000014","Ahmed Raza"],
+ ["مرکزی گلی کی مرمت کا کام شروع ہو چکا ہے۔ کام کے دوران گاڑیوں کا گزر محدود رہے گا، تعاون کی درخواست ہے۔","FK-000001","Village Admin"],
+ ["اگلے ہفتے گاؤں میں بلڈ ڈونیشن کیمپ لگایا جائے گا۔ تمام صحت مند افراد خون کا عطیہ دے کر ثواب حاصل کریں۔","FK-000027","Welfare Team"],
+ ["رضاکاروں کی جانب سے شجرکاری مہم کا آغاز کیا جا رہا ہے۔ ہر گھرانہ کم از کم ایک پودا لگائے اور اس کی حفاظت کرے۔","FK-000031","Bilal Khan"]
+];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function fmtE(dt){var n=new Date(),a=new Date(n.getFullYear(),n.getMonth(),n.getDate()),b=new Date(dt.getFullYear(),dt.getMonth(),dt.getDate()),df=Math.round((a-b)/864e5);return (df===0?"Today • ":df===1?"Yesterday • ":"")+dt.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"short",year:"numeric"})+" • "+dt.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"})}
+var EM=[{h:"تیز بارش کا امکان",t:T.enewsT[1],id:"FK-000001",name:"Village Admin",ts:(function(){var d=new Date();d.setHours(8,30,0,0);return d})(),st:"ok",own:false}],addType="current",pendAdd=null,nextId=101,ACC=[{id:"FK-000100",name:"Demo Member",mobile:"03001234567",pw:"demo1234",moh:"Main Bazar",p:{fn:"Demo Father",dob:"1990-01-01",bg:"O+",vil:"Fareed Kassar",mobile:"03001234567",wa:"03001234567",abr:false,abrc:"",prof:"",game:""}}];
+function row(u,ic,badge){IT.push(u);return '<li class="ni" dir="rtl" tabindex="0" role="button" data-news="'+(IT.length-1)+'"><div class="nt">'+ic+'</div><div><div class="ur" lang="ur" dir="rtl"><b>'+esc(u.h)+'</b></div><small dir="ltr" lang="en" style="text-align:right">'+fmtE(u.ts)+'</small>'+(badge||"")+'</div></li>'}
+var ST=[["General Store","جنرل اسٹور","🏪"],["Barber Shop","حجام / باربر شاپ","💈"],["Cloth Shop","کپڑے کی دکان","👕"],["Shoes Shop","جوتوں کی دکان","👟"],["Dairy","ڈیری","🥛"],["Stationery Shop","اسٹیشنری کی دکان","✏️"],["Medical Store","میڈیکل اسٹور","💊"],["Bakery","بیکری","🍞"],["Mobile Shop","موبائل شاپ","📱"],["Hardware Shop","ہارڈویئر کی دکان","🔧"],["Tailor","درزی","🧵"],["Butcher","گوشت کی دکان","🥩"],["Fruit & Vegetables","سبزی و پھل","🥬"],["Tea Stall / Restaurant","چائے / ہوٹل","🍵"],["Other","دیگر","🏬"]];
+var SHOPS=[
+ {ty:0,nm:"Madina General Store",ow:"Demo Owner 1",ct:"03000000001",wa:"03000000001",id:"FK-000014",mo:"Mohallah Madina",ad:"Main Bazaar"},
+ {ty:1,nm:"Al-Noor Barber Shop",ow:"Demo Owner 2",ct:"03000000002",wa:"03000000002",id:"FK-000027",mo:"Mohallah Iqbal",ad:"Near Mosque"},
+ {ty:2,nm:"Rehman Cloth House",ow:"Demo Owner 3",ct:"03000000003",wa:"03000000003",id:"FK-000031",mo:"Mohallah Jinnah",ad:"Main Road"},
+ {ty:4,nm:"Fresh Dairy Point",ow:"Demo Owner 4",ct:"03000000004",wa:"03000000004",id:"FK-000040",mo:"Mohallah Madina",ad:"Street 3"},
+ {ty:5,nm:"Iqra Stationers",ow:"Demo Owner 5",ct:"03000000005",wa:"03000000005",id:"FK-000052",mo:"Mohallah Iqbal",ad:"Near School"},
+ {ty:3,nm:"City Shoes",ow:"Demo Owner 6",ct:"03000000006",wa:"03000000006",id:"FK-000063",mo:"Mohallah Jinnah",ad:"Main Bazaar"}
+];
+function sbIn(x){var p=T[x[2]],e=mode!=="ur"?'<span class="en" lang="en">'+p[0]+'</span>':"",u=mode!=="en"?'<span class="ur" lang="ur" dir="rtl">'+p[1]+'</span>':"";
+ return '<span class="r1"><span class="e">'+x[1]+'</span>'+(mode==="ur"?u:e)+'</span>'+(mode==="both"?u:"")}
+function optTxt(p){return mode==="ur"?p[1]:mode==="en"?p[0]:p[0]+" — "+p[1]}
+function fillSel(el,all){var cur=el.value;el.innerHTML=(all?'<option value="all">'+optTxt(["All Shop Types","تمام اقسام"])+'</option>':"")+ST.map(function(t,i){return '<option value="'+i+'">'+optTxt(t)+'</option>'}).join("");if(cur)el.value=cur}
+function renderShops(){
+ fillSel(document.getElementById("shFilter"),true);fillSel(document.getElementById("shType"),false);
+ var v=document.getElementById("shFilter").value||"all",h="";
+ SHOPS.filter(function(s){return v==="all"||String(s.ty)===v}).forEach(function(s){var t=ST[s.ty],wd=s.wa.replace(/\D/g,"").replace(/^0/,"92");
+  function r(k,val){return '<div class="shr"><span>'+html(k)+'</span><b class="num">'+esc(val||"—")+'</b></div>'}
+  h+='<li class="shop"><div class="shh"><span class="e">'+t[2]+'</span><div><b>'+esc(s.nm)+'</b><div class="chipt">'+optTxt(t)+'</div></div></div>'+r("owner",s.ow)+r("contact",s.ct)+r("wapp",s.wa)+r("accS",s.id)+r("moh",s.mo)+r("addr",s.ad)+'<div class="shb"><a class="c1" href="tel:'+esc(s.ct)+'">📞 '+html("shCall")+'</a><a class="c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener">💬 '+html("shWa")+'</a></div></li>'});
+ document.getElementById("shList").innerHTML=h||'<li class="emp">'+html("shNone")+'</li>'}
+function renderShops(){
+ fillSel(document.getElementById("shFilter"),true);fillSel(document.getElementById("shType"),false);
+ var v=document.getElementById("shFilter").value||"all",h="",n=0;
+ SHOPS.forEach(function(s,i){if(!(v==="all"||String(s.ty)===v))return;n++;
+  var wd=s.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-shop="'+i+'"><span class="sn">'+n+'</span><span class="nm">'+ST[s.ty][2]+' '+esc(s.nm)+'</span><span class="mb">'+esc(s.ct)+'</span><a class="ic c1" href="tel:'+esc(s.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm">'+html("shSn")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("shList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+EM[0].h="وفات: Muhammad Wali";EM[0].t="مرحوم آج صبح ایکسیڈنٹ کی وجہ سے پنڈی کے ویب وفات پا گئے ہیں، میت 3 بجے پہنچے گی";
+EM[0].x={jt:"04:30 PM",jg:"Maghraib Qabristan",pa:"Fareed Kassar",nm:"Muhammad Wali",fn:"Kamran Ali",mo:"Main Bazar"};
+function fmtT(v){if(!v)return"";var p=v.split(":"),h=+p[0],ap=h>=12?"PM":"AM";h=h%12||12;return ("0"+h).slice(-2)+":"+p[1]+" "+ap}
+function xRows(u){if(!u.x)return"";var x=u.x;function r(a,b,v){return '<div><dt>'+pair(a,b)+'</dt><dd>'+esc(v||"—")+'</dd></div>'}
+ return r("Name","نام",x.nm)+r("Father Name","ولدیت",x.fn)+r("Mohallah","محلہ",x.mo)+r("Janaza At","نمازِ جنازہ کا وقت",x.jt)+r("Janazagah","جنازہ گاہ",x.jg)+r("Place / Area","علاقہ / مقام",x.pa)}
+function enHtml(a){var x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function l(k,v){return '<div class="el"><span>'+k+'</span> '+esc(v||"—")+'</div>'}
+ return '<div class="e3"><div class="ecol" dir="ltr">'+l("Janaza At :",x.jt)+l("Janazagah:",x.jg)+l("Place/ Area:",x.pa)+'</div><div class="ecol ec"><b lang="en">News Details</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="ltr">'+l("Name :",x.nm)+l("Father Name :",x.fn)+l("Mohallah :",x.mo)+'</div></div>'}
+function xRows(u){if(!u.x)return"";var x=u.x;function r(a,b,v){return '<div><dt>'+pair(a,b)+'</dt><dd>'+esc(v||"—")+'</dd></div>'}
+ return r("Deceased Name","مرحوم کا نام",x.nm)+r("Deceased Father","مرحوم کے والد",x.fn)+r("Mohallah","محلہ",x.mo)+r("Janaza Time","نمازِ جنازہ کا وقت",x.jt)+r("Janazagah","جنازہ گاہ",x.jg)+r("Area / Place","علاقہ / مقام",x.pa)}
+function enHtml(a){var x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function f(k,v){return '<div class="ef"><span class="el1">'+k+'</span><b class="ev">'+esc(v||"—")+'</b></div>'}
+ return '<div class="e3"><div class="ecol" dir="ltr"><div class="eh">Janaza Information</div>'+f("Janaza Time",x.jt)+f("Janazagah",x.jg)+f("Area / Place",x.pa)+'</div><div class="ecol ec"><div class="eh">News Details</div><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="ltr"><div class="eh">Deceased Information</div>'+f("Deceased Name",x.nm)+f("Deceased Father",x.fn)+f("Mohallah",x.mo)+'</div></div>'}
+function xRows(u){if(!u.x)return"";var x=u.x;function r(a,b,v){return '<div><dt>'+pair(a,b)+'</dt><dd>'+esc(v||"—")+'</dd></div>'}
+ return r("Deceased Name","مرحوم کا نام",x.nm)+r("Deceased Father","مرحوم کا باپ",x.fn)+r("Mohallah","محلہ",x.mo)+r("Janaza Time","وقت جنازہ",x.jt)+r("Janazagah","جنازہ گاہ",x.jg)+r("Area / Place","علاقہ یا گاؤں",x.pa)}
+function enHtml(a){var x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function f(en,ur,v){return '<div class="ef"><div class="el1"><span lang="en">'+en+'</span><span class="ur" lang="ur" dir="rtl">'+ur+'</span></div><b class="ev">'+esc(v||"—")+'</b></div>'}
+ return '<div class="e3"><div class="ecol" dir="ltr"><div class="eh">Janaza Info</div>'+f("Janaza Time","وقت جنازہ",x.jt)+f("Janazagah","جنازہ گاہ",x.jg)+f("Area / Place","علاقہ یا گاؤں",x.pa)+'</div><div class="ecol ec"><div class="eh">News Details</div><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="ltr"><div class="eh">Deceased Info</div>'+f("Deceased Name","مرحوم کا نام",x.nm)+f("Deceased Father","مرحوم کا باپ",x.fn)+f("Mohallah","محلہ",x.mo)+'</div></div>'}
+function fmtT(v){if(!v)return"";var m=/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(v);
+ if(!m){var p=v.split(":"),h0=+p[0];return ("0"+(h0%12||12)).slice(-2)+":"+p[1]+" "+(h0>=12?"PM":"AM")}
+ var d=new Date(+m[1],+m[2]-1,+m[3],+m[4],+m[5]),h=d.getHours();
+ return d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"})+" • "+("0"+(h%12||12)).slice(-2)+":"+m[5]+" "+(h>=12?"PM":"AM")}
+(function(){var d=new Date();EM[0].x.jt=fmtT(d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)+"T16:30")})();
+function xRows(u){if(!u.x)return"";var x=u.x;function r(a,b,v){return '<div><dt>'+pair(a,b)+'</dt><dd>'+esc(v||"—")+'</dd></div>'}
+ return r("Deceased Name","مرحوم کا نام",x.nm)+r("Deceased Father","مرحوم کا باپ",x.fn)+r("Mohallah","محلہ",x.mo)+r("Janaza Date & Time","جنازہ تاریخ اور وقت",x.jt)+r("Janazagah","جنازہ گاہ",x.jg)+r("Area / Place","علاقہ یا گاؤں",x.pa)}
+function enHtml(a){var x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function f(en,ur,v){return '<div class="ef"><div class="el1"><span lang="en">'+en+'</span><span class="ur" lang="ur" dir="rtl">'+ur+'</span></div><b class="ev">'+esc(v||"—")+'</b></div>'}
+ return '<div class="e3"><div class="ecol" dir="ltr"><div class="eh">Janaza Info</div>'+f("Janaza Date & Time","جنازہ تاریخ اور وقت",x.jt)+f("Janazagah","جنازہ گاہ",x.jg)+f("Area / Place","علاقہ یا گاؤں",x.pa)+'</div><div class="ecol ec"><div class="eh">News Details</div><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="ltr"><div class="eh">Deceased Info</div>'+f("Deceased Name","مرحوم کا نام",x.nm)+f("Deceased Father","مرحوم کا باپ",x.fn)+f("Mohallah","محلہ",x.mo)+'</div></div>'}
+function enHtml(a){var x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function f(ur,v){return '<div class="ef"><div class="el1 ur" lang="ur" dir="rtl">'+ur+'</div><b class="ev">'+esc(v||"—")+'</b></div>'}
+ function hd(t){return '<div class="eh ur" lang="ur" dir="rtl">'+t+'</div>'}
+ return '<div class="e3"><div class="ecol" dir="rtl">'+hd("جنازہ کی معلومات")+f("جنازہ تاریخ اور وقت",x.jt)+f("جنازہ گاہ",x.jg)+f("علاقہ یا گاؤں",x.pa)+'</div><div class="ecol ec">'+hd("خبر کی تفصیل")+'<span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="rtl">'+hd("مرحوم کی معلومات")+f("مرحوم کا نام",x.nm)+f("مرحوم کا باپ",x.fn)+f("محلہ",x.mo)+'</div></div>'}
+var MOH=["Main Bazar","Mohallah Madina","Mohallah Iqbal","Mohallah Jinnah"];
+function fillMoh(){document.querySelectorAll("select.mohSel").forEach(function(el){var cur=el.value;el.innerHTML='<option value="">'+optTxt(["Select Mohallah","محلہ منتخب کریں"])+'</option>'+MOH.map(function(m){return '<option value="'+esc(m)+'">'+esc(m)+'</option>'}).join("");if(cur)el.value=cur})}
+function addMoh(){var i=document.getElementById("mohNew"),v=i.value.trim().replace(/\s+/g," "),m=document.getElementById("mohMsg");
+ if(v.length<2)return;
+ if(MOH.some(function(x){return x.toLowerCase()===v.toLowerCase()})){m.innerHTML=html("mohDup");m.classList.remove("hide");return}
+ MOH.push(v);i.value="";m.innerHTML=html("mohOk");m.classList.remove("hide");render();setTimeout(function(){m.classList.add("hide")},1500)}
+var VIL=["Fareed Kassar"],PROF=["Doctor / Healthcare — ڈاکٹر / طبی عملہ","Engineer / Technician — انجنیئر / ٹیکنیشن","Teacher — استاد","IT Professional — آئی ٹی ماہر","Computer Expert — کمپیوٹر ماہر","Electrician — الیکٹریشن","Plumber — پلمبر","Mechanic — مکینک","Carpenter — بڑھئی","Freelancer — فری لانسر","Lawyer — وکیل","Other Skilled Worker — دیگر ہنرمند"],GAME=["Cricket — کرکٹ","Football — فٹ بال","Volleyball — والی بال","Kabaddi — کبڈی","Badminton — بیڈمنٹن","Hockey — ہاکی","Chess — شطرنج","Ludo — لوڈو","Carrom — کیرم","Table Tennis — ٹیبل ٹینس","Other — دیگر"],LISTS={vil:VIL,moh:MOH,prof:PROF,game:GAME};
+function fillLists(){document.querySelectorAll("select.lstSel").forEach(function(el){var k=el.dataset.lst,cur=el.value,ph=k==="vil"?"":'<option value="">'+optTxt(["Select","منتخب کریں"])+'</option>';
+ el.innerHTML=ph+LISTS[k].map(function(v){return '<option value="'+esc(v)+'">'+esc(v)+'</option>'}).join("")+'<option value="__new">'+optTxt(["+ Add new","+ نیا شامل کریں"])+'</option>';
+ if(cur&&cur!=="__new")el.value=cur})}
+function syncTog(){document.querySelectorAll("[data-tog]").forEach(function(c){document.getElementById(c.dataset.tog).classList.toggle("hide",!c.checked)});document.querySelectorAll("[data-togi]").forEach(function(c){document.getElementById(c.dataset.togi).classList.toggle("hide",c.checked)})}
+function acInfo(){var u=user,p=u.p||{};function r(en,ur,v){return v?'<div class="shr"><span>'+pair(en,ur)+'</span><b class="num">'+esc(v)+'</b></div>':""}
+ return '<b>'+esc(u.name)+'</b><br>ID <span class="num">'+u.id+'</span><div style="margin-top:8px;display:grid;gap:4px">'+r("Father Name","والد کا نام",p.fn)+r("Date of Birth","تاریخ پیدائش",p.dob)+r("Blood Group","بلڈ گروپ",p.bg)+r("Village","گاؤں",p.vil)+r("Mobile","موبائل",p.mobile)+r("WhatsApp","واٹس ایپ",p.wa)+r("Working Abroad","بیرون ملک",p.abr?p.abrc:"")+r("Profession","پیشہ",p.prof)+r("Game","کھیل",p.game)+'</div>'}
+var PROS=[
+ {ty:PROF[2],nm:"Demo Teacher 1",ct:"03000000101",wa:"03000000101",id:"FK-000071",mo:"Main Bazar"},
+ {ty:PROF[2],nm:"Demo Teacher 2",ct:"03000000102",wa:"03000000102",id:"FK-000072",mo:"Mohallah Iqbal"},
+ {ty:PROF[2],nm:"Demo Teacher 3",ct:"03000000103",wa:"03000000103",id:"FK-000073",mo:"Mohallah Madina"},
+ {ty:PROF[0],nm:"Demo Doctor 1",ct:"03000000104",wa:"03000000104",id:"FK-000074",mo:"Main Bazar"},
+ {ty:PROF[5],nm:"Demo Electrician 1",ct:"03000000105",wa:"03000000105",id:"FK-000075",mo:"Mohallah Jinnah"},
+ {ty:PROF[5],nm:"Demo Electrician 2",ct:"03000000106",wa:"03000000106",id:"FK-000076",mo:"Mohallah Iqbal"},
+ {ty:PROF[6],nm:"Demo Plumber 1",ct:"03000000107",wa:"03000000107",id:"FK-000077",mo:"Mohallah Madina"},
+ {ty:PROF[7],nm:"Demo Mechanic 1",ct:"03000000108",wa:"03000000108",id:"FK-000078",mo:"Main Bazar"},
+ {ty:PROF[7],nm:"Demo Mechanic 2",ct:"03000000109",wa:"03000000109",id:"FK-000079",mo:"Mohallah Jinnah"},
+ {ty:PROF[3],nm:"Demo IT Expert 1",ct:"03000000110",wa:"03000000110",id:"FK-000080",mo:"Mohallah Iqbal"},
+ {ty:PROF[3],nm:"Demo IT Expert 2",ct:"03000000111",wa:"03000000111",id:"FK-000081",mo:"Main Bazar"},
+ {ty:PROF[10],nm:"Demo Lawyer 1",ct:"03000000112",wa:"03000000112",id:"FK-000082",mo:"Mohallah Madina"}
+];
+function renderPros(){
+ var f=document.getElementById("proFilter"),cur=f.value||"all",types=[];
+ PROS.forEach(function(p){if(types.indexOf(p.ty)<0)types.push(p.ty)});
+ function cnt(t){return PROS.filter(function(p){return p.ty===t}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Types","تمام اقسام"])+' ('+PROS.length+')</option>'+types.map(function(t){return '<option value="'+esc(t)+'">'+esc(t)+' ('+cnt(t)+')</option>'}).join("");
+ f.value=(cur==="all"||types.indexOf(cur)>=0)?cur:"all";
+ document.getElementById("proTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+PROS.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ PROS.forEach(function(p,i){if(v!=="all"&&p.ty!==v)return;n++;var wd=p.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-pro="'+i+'"><span class="sn">'+n+'</span><span class="nm">👔 '+esc(p.nm)+'</span><span class="mb">'+esc(p.ct)+'</span><a class="ic c1" href="tel:'+esc(p.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm">'+pair("Name","نام")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("proList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openPro(i){var p=PROS[i];if(!p)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=p.nm;
+ document.getElementById("dlgT").textContent=p.ty;
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("contact",p.ct)+r("wapp",p.wa)+r("accS",p.id)+r("moh",p.mo);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var MOSQ=[
+ {ty:"Mosque",nm:"Demo Jamia Masjid",ad:"Demo Admin 1",ct:"03000000201",wa:"03000000201",id:"FK-000091",mo:"Main Bazar"},
+ {ty:"Mosque",nm:"Demo Madina Masjid",ad:"Demo Admin 2",ct:"03000000202",wa:"03000000202",id:"FK-000092",mo:"Mohallah Madina"},
+ {ty:"Mosque",nm:"Demo Iqbal Masjid",ad:"Demo Admin 3",ct:"03000000203",wa:"03000000203",id:"FK-000093",mo:"Mohallah Iqbal"},
+ {ty:"Mosque",nm:"Demo Jinnah Masjid",ad:"Demo Admin 4",ct:"03000000204",wa:"03000000204",id:"FK-000094",mo:"Mohallah Jinnah"},
+ {ty:"Madrissa",nm:"Demo Madrissa Tahfiz",ad:"Demo Admin 5",ct:"03000000205",wa:"03000000205",id:"FK-000095",mo:"Main Bazar"},
+ {ty:"Mosque",nm:"Demo Bilal Masjid",ad:"Demo Admin 6",ct:"03000000206",wa:"03000000206",id:"FK-000096",mo:"Mohallah Madina"},
+ {ty:"Madrissa",nm:"Demo Madrissa Banat",ad:"Demo Admin 7",ct:"03000000207",wa:"03000000207",id:"FK-000097",mo:"Mohallah Iqbal"},
+ {ty:"Mosque",nm:"Demo Noor Masjid",ad:"Demo Admin 8",ct:"03000000208",wa:"03000000208",id:"FK-000098",mo:"Mohallah Jinnah"}
+];
+function renderMosques(){
+ var f=document.getElementById("mqFilter"),cur=f.value||"all";
+ function cnt(m){return MOSQ.filter(function(x){return x.mo===m}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Mohallahs","تمام محلے"])+' ('+MOSQ.length+')</option>'+MOH.map(function(m){return '<option value="'+esc(m)+'">'+esc(m)+' ('+cnt(m)+')</option>'}).join("");
+ f.value=(cur==="all"||MOH.indexOf(cur)>=0)?cur:"all";
+ document.getElementById("mqTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+MOSQ.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ MOSQ.forEach(function(x,i){if(v!=="all"&&x.mo!==v)return;n++;var wd=x.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-mq="'+i+'"><span class="sn">'+n+'</span><span class="nm">'+(x.ty==="Madrissa"?"📚":"🕌")+' '+esc(x.nm)+'</span><span class="ad">'+esc(x.ad)+'</span><span class="mb">'+esc(x.ct)+'</span><a class="ic c1" href="tel:'+esc(x.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm">'+pair("Mosque Name","مسجد کا نام")+'</span><span class="ad">'+pair("Admin Name","منتظم کا نام")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("mqList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openMq(i){var x=MOSQ[i];if(!x)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.nm;
+ document.getElementById("dlgT").textContent=x.ty==="Madrissa"?"Madrissa — مدرسہ":"Mosque — مسجد";
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("mqAdmin",x.ad)+r("contact",x.ct)+r("wapp",x.wa)+r("moh",x.mo)+r("accS",x.id);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var SCH=[
+ {ty:"Government",nm:"Demo Govt Primary School",ow:"Demo Headmaster 1",lc:"Main Bazar",ct:"03000000301",wa:"03000000301",id:"FK-000111"},
+ {ty:"Government",nm:"Demo Govt High School",ow:"Demo Principal 2",lc:"Near Mosque",ct:"03000000302",wa:"03000000302",id:"FK-000112"},
+ {ty:"Private",nm:"Demo Private Academy",ow:"Demo Owner 3",lc:"Mohallah Iqbal",ct:"03000000303",wa:"03000000303",id:"FK-000113"}
+];
+function scType(t){return t==="Government"?"Government — سرکاری":"Private — نجی"}
+function renderSchools(){
+ var f=document.getElementById("scFilter"),cur=f.value||"all";
+ function cnt(t){return SCH.filter(function(x){return x.ty===t}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Types","تمام اقسام"])+' ('+SCH.length+')</option><option value="Government">'+scType("Government")+' ('+cnt("Government")+')</option><option value="Private">'+scType("Private")+' ('+cnt("Private")+')</option>';
+ f.value=cur;
+ document.getElementById("scTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+SCH.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ SCH.forEach(function(x,i){if(v!=="all"&&x.ty!==v)return;n++;var wd=x.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-sc="'+i+'"><span class="sn">'+n+'</span><span class="nm2"><b>'+(x.ty==="Government"?"🏛️":"🏫")+' '+esc(x.nm)+'</b><small>'+esc(x.ow)+' · '+esc(x.lc)+'</small></span><span class="mb">'+esc(x.ct)+'</span><a class="ic c1" href="tel:'+esc(x.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm2">'+pair("School · Owner · Location","اسکول · مالک · مقام")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("scList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openSc(i){var x=SCH[i];if(!x)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.nm;
+ document.getElementById("dlgT").textContent=scType(x.ty);
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("scOwner",x.ow)+r("scLoc",x.lc)+r("contact",x.ct)+r("wapp",x.wa)+r("accS",x.id);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var PLACES=[{n:"Fareed Kassar",u:"فرید کسار",la:32.93,lo:72.85},{n:"Chakwal",u:"چکوال",la:32.93,lo:72.86},{n:"Dhudial",u:"ڈھڈیال",la:32.88,lo:72.97},{n:"Talagang",u:"تلہ گنگ",la:32.93,lo:72.42},{n:"Jhelum",u:"جہلم",la:32.93,lo:73.73},{n:"Rawalpindi",u:"راولپنڈی",la:33.57,lo:73.14},{n:"Islamabad",u:"اسلام آباد",la:33.68,lo:73.05},{n:"Lahore",u:"لاہور",la:31.55,lo:74.34}];
+var LOC=null,LOCSTATE="";
+function sget(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function sset(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function sdel(k){try{localStorage.removeItem(k)}catch(e){}}
+function hav(a,b,c,d){var t=Math.PI/180,x=(c-a)*t,y=(d-b)*t,z=Math.sin(x/2)*Math.sin(x/2)+Math.cos(a*t)*Math.cos(c*t)*Math.sin(y/2)*Math.sin(y/2);return 12742*Math.asin(Math.sqrt(z))}
+function nearest(la,lo){var b=null,k=1e9;PLACES.forEach(function(p){var d=hav(la,lo,p.la,p.lo);if(d<k){k=d;b=p}});return b}
+function liveLoc(la,lo){var p=nearest(la,lo);LOC={n:p.n,u:p.u,la:la,lo:lo,ts:Date.now()};LOCSTATE="live";sset("fk-loc-last",JSON.stringify(LOC));renderWeather()}
+function storedLoc(){var l=null;try{l=JSON.parse(sget("fk-loc-last")||"null")}catch(e){}
+ if(l){LOC=l;LOCSTATE="stored"}else{var p=PLACES[0];LOC={n:p.n,u:p.u,la:p.la,lo:p.lo,ts:0};LOCSTATE="default"}renderWeather()}
+function getPos(){if(!navigator.geolocation){storedLoc();return}
+ try{navigator.geolocation.getCurrentPosition(function(p){liveLoc(p.coords.latitude,p.coords.longitude)},function(){storedLoc()},{timeout:8000,maximumAge:60000})}catch(e){storedLoc()}}
+function openLocDlg(){document.getElementById("locDlg").classList.remove("hide")}
+function refreshLoc(){var c=sget("fk-loc-consent");if(!c){openLocDlg();storedLoc();return}if(c==="yes")getPos();else storedLoc()}
+function renderWeather(){
+ var el=document.getElementById("wx");if(!el)return;
+ var c=sget("fk-loc-consent"),st=document.getElementById("locStat");if(st)st.innerHTML=html(c==="yes"?"locY":c==="no"?"locN":"locU");
+ if(!LOC){el.innerHTML="";return}
+ document.getElementById("wxLoc").innerHTML='📍 '+esc(LOC.n)+(mode!=="en"?' <span class="ur" lang="ur" dir="rtl">'+esc(LOC.u)+'</span>':"");
+ var ban=document.getElementById("wxBanner"),tm=LOC.ts?new Date(LOC.ts).toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"}):"",cls="ban-off",tx;
+ if(LOCSTATE==="live"){cls="ban-live";tx=html("wxLive")+' <b class="num">'+tm+'</b>'}
+ else if(LOCSTATE==="manual")tx=html("wxMan");
+ else if(LOCSTATE==="stored")tx=html("wxOff")+(tm?' <b class="num">('+new Date(LOC.ts).toLocaleDateString("en-GB",{day:"numeric",month:"short"})+' '+tm+')</b>':"");
+ else tx=html("wxDef");
+ ban.className="wxban "+cls;
+ ban.innerHTML='<div>'+tx+'</div>'+(LOCSTATE!=="live"?'<button class="addn" id="locAsk" style="margin-top:6px">'+html("wxTurn")+'</button>':"");
+ var now=new Date(),h0=now.getHours(),T6=[22,23,23,24,23,23],H="",D="";
+ for(var i=0;i<6;i++){H+='<div class="wxh1"><b class="num">'+("0"+((h0+1+i)%24)).slice(-2)+':00</b><span>⛅</span><b>'+T6[i]+'°C</b></div>'}
+ var DY=[[24,16,"🌬️"],[20,15,"🌧️"],[22,14,"🌬️"],[22,13,"🌬️"],[23,11,"☀️"],[24,9,"⛅"],[30,7,"🌬️"],[29,7,"⛅"]];
+ DY.forEach(function(x,i){var d=new Date();d.setDate(d.getDate()+i);
+  var dn=i===0?pair("Today","آج"):i===1?pair("Tomorrow","کل"):'<span>'+d.toLocaleDateString("en-GB",{weekday:"short"})+'</span>';
+  D+='<div class="wxd"><span class="num">'+("0"+(d.getMonth()+1)).slice(-2)+'/'+("0"+d.getDate()).slice(-2)+'</span><span>'+dn+'</span><span class="wi">'+x[2]+'</span><b>'+x[0]+'</b><b>'+x[1]+'</b></div>'});
+ var sr=396,ss=1028,m=now.getHours()*60+now.getMinutes(),f=Math.max(0,Math.min(1,(m-sr)/(ss-sr))),sx=150+130*Math.cos(Math.PI*(1-f)),sy=100-90*Math.sin(Math.PI*f);
+ var arc='<svg viewBox="0 0 300 112" class="wxarc" aria-hidden="true"><path d="M20 100A130 90 0 0 1 280 100" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2" stroke-dasharray="5 5"/><path pathLength="100" d="M20 100A130 90 0 0 1 280 100" fill="none" stroke="#FFC933" stroke-width="3" stroke-dasharray="'+(f*100)+' 100"/><line x1="20" y1="100" x2="280" y2="100" stroke="rgba(255,255,255,.5)"/><circle cx="'+sx+'" cy="'+sy+'" r="9" fill="#FFC933"/></svg>';
+ function st2(v,k){return '<div class="wxs"><b>'+v+'</b><span>'+html(k)+'</span></div>'}
+ el.innerHTML='<div class="wxbig">19<sup>°C</sup></div><div class="wxcond">'+pair("Mostly cloudy","زیادہ تر ابر آلود")+'</div><div class="wxhrs">'+H+'</div><div class="wxglass">'+D+'</div><div class="wxglass"><div class="wxdt">'+html("wxDet")+'</div>'+arc+'<div class="wxsun"><span>🌅 <b class="num">06:36</b></span><span><b class="num">17:08</b> 🌇</span></div><div class="wxstats">'+st2("19°C","wxFeels")+st2("74%","wxHum")+st2("Force 1 N","wxWind")+st2("1017 hPa","wxPres")+'</div></div><div class="wxfoot"><span>Demo data</span><span>09:42 Publish</span></div>'}
+function renderWeather(){
+ var el=document.getElementById("wx");if(!el)return;
+ var c=sget("fk-loc-consent"),st=document.getElementById("locStat");if(st)st.innerHTML=html(c==="yes"?"locY":c==="no"?"locN":"locU");
+ if(!LOC){el.innerHTML="";return}
+ document.getElementById("wxLoc").innerHTML='📍 '+esc(LOC.n);
+ var ban=document.getElementById("wxBanner"),tm=LOC.ts?new Date(LOC.ts).toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"}):"",cls="ban-off",tx;
+ if(LOCSTATE==="live"){cls="ban-live";tx="Live location · updated "+tm}
+ else if(LOCSTATE==="manual")tx="Location chosen manually";
+ else if(LOCSTATE==="stored")tx="Location is off. Showing the last stored location"+(tm?" ("+new Date(LOC.ts).toLocaleDateString("en-GB",{day:"numeric",month:"short"})+", "+tm+")":"");
+ else tx="Location is off and none is stored yet. Showing the default: Fareed Kassar";
+ ban.className="wxban "+cls;
+ ban.innerHTML='<div>'+tx+'</div>'+(LOCSTATE!=="live"?'<button class="addn" id="locAsk" style="margin-top:6px">Turn on location</button>':"");
+ var now=new Date(),h0=now.getHours(),T6=[22,23,23,24,23,23],H="",D='<div class="wxd wxdh"><span>Date</span><span>Day</span><span></span><b>High</b><b>Low</b></div>';
+ for(var i=0;i<6;i++){H+='<div class="wxh1"><span class="wxm num">'+("0"+((h0+1+i)%24)).slice(-2)+':00</span><span class="wxi">⛅</span><b>'+T6[i]+'°</b></div>'}
+ var DY=[[24,16,"🌬️"],[20,15,"🌧️"],[22,14,"🌬️"],[22,13,"🌬️"],[23,11,"☀️"],[24,9,"⛅"],[30,7,"🌬️"],[29,7,"⛅"]];
+ DY.forEach(function(x,i){var d=new Date();d.setDate(d.getDate()+i);
+  var dn=i===0?"Today":i===1?"Tomorrow":d.toLocaleDateString("en-GB",{weekday:"long"});
+  D+='<div class="wxd"><span class="num">'+("0"+d.getDate()).slice(-2)+'/'+("0"+(d.getMonth()+1)).slice(-2)+'</span><span>'+dn+'</span><span class="wi">'+x[2]+'</span><b>'+x[0]+'°</b><b class="lo">'+x[1]+'°</b></div>'});
+ var sr=396,ss=1028,m=now.getHours()*60+now.getMinutes(),f=Math.max(0,Math.min(1,(m-sr)/(ss-sr))),sx=150+130*Math.cos(Math.PI*(1-f)),sy=100-90*Math.sin(Math.PI*f);
+ var arc='<svg viewBox="0 0 300 112" class="wxarc" aria-hidden="true"><path d="M20 100A130 90 0 0 1 280 100" fill="none" stroke="#B9D3CB" stroke-width="2" stroke-dasharray="5 5"/><path pathLength="100" d="M20 100A130 90 0 0 1 280 100" fill="none" stroke="#F5B400" stroke-width="3" stroke-dasharray="'+(f*100)+' 100"/><line x1="20" y1="100" x2="280" y2="100" stroke="#B9D3CB"/><circle cx="'+sx+'" cy="'+sy+'" r="9" fill="#FACC15" stroke="#F5B400" stroke-width="2"/></svg>';
+ function st2(ic,v,k){return '<div class="wxs"><i>'+ic+'</i><b>'+v+'</b><span>'+k+'</span></div>'}
+ el.innerHTML='<div class="wxnow"><div class="wxl"><div class="wxt">19<sup>°C</sup></div><div class="wxc">Mostly cloudy</div></div><div class="wxr"><span class="wxbigi">⛅</span><span>Feels like <b>19°C</b></span><span>Humidity <b>74%</b></span></div></div>'
+ +'<div class="wxcard"><div class="wxct">Hourly forecast</div><div class="wxhrs">'+H+'</div></div>'
+ +'<div class="wxcard"><div class="wxct">8-day forecast</div>'+D+'</div>'
+ +'<div class="wxcard"><div class="wxct">Sun &amp; conditions</div>'+arc+'<div class="wxsun"><span>🌅 Sunrise <b class="num">06:36</b></span><span>Sunset <b class="num">17:08</b> 🌇</span></div><div class="wxstats">'+st2("🌡️","19°C","Feels like")+st2("💧","74%","Humidity")+st2("🌬️","Force 1 N","Wind")+st2("⏲️","1017 hPa","Pressure")+'</div></div>'
+ +'<div class="wxfoot"><span>Demo data (sample)</span><span>Published 09:42</span></div>'}
+var VEH=["Van — وین","Hiace — ہائی ایس","Coaster — کوسٹر","Bus — بس","Rickshaw — رکشہ","Other — دیگر"];LISTS.veh=VEH;
+var VANS=[];(function(){var s=["Demo Govt Primary School","Demo Govt High School","Demo Private Academy"];for(var i=1;i<=15;i++){var n="030000004"+("0"+i).slice(-2);VANS.push({sc:s[i%3],dr:"Demo Driver "+i,ty:VEH[i%4],no:"DEM-"+(100+i),ct:n,wa:n,id:"FK-000"+(200+i)})}})();
+function renderVans(){
+ var f=document.getElementById("vnFilter"),cur=f.value||"all";
+ function cnt(s){return VANS.filter(function(v){return v.sc===s}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Schools","تمام اسکول"])+' ('+VANS.length+')</option>'+SCH.map(function(s){return '<option value="'+esc(s.nm)+'">'+esc(s.nm)+' · '+esc(s.lc)+' ('+cnt(s.nm)+')</option>'}).join("");
+ f.value=cur;if(f.value!==cur)f.value="all";
+ var vs=document.getElementById("vnSch");if(vs){var cv=vs.value;vs.innerHTML='<option value="">'+optTxt(["Select","منتخب کریں"])+'</option>'+SCH.map(function(s){return '<option value="'+esc(s.nm)+'">'+esc(s.nm)+' · '+esc(s.lc)+'</option>'}).join("");if(cv)vs.value=cv}
+ document.getElementById("vnTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+VANS.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ VANS.forEach(function(x,i){if(v!=="all"&&x.sc!==v)return;n++;var wd=x.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-vn="'+i+'"><span class="sn">'+n+'</span><span class="nm2"><b>🚐 '+esc(x.dr)+'</b><small>'+esc(x.ty.split(" — ")[0])+' · '+esc(x.no)+'</small></span><span class="mb">'+esc(x.ct)+'</span><a class="ic c1" href="tel:'+esc(x.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm2">'+pair("Driver · Vehicle Type · Vehicle No","ڈرائیور · گاڑی کی قسم · نمبر")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("vnList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openVn(i){var x=VANS[i];if(!x)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.dr;
+ document.getElementById("dlgT").textContent=x.ty;
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("vanSch",x.sc)+r("vanNo",x.no)+r("contact",x.ct)+r("wapp",x.wa)+r("accS",x.id);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var BVEH=["Car — کار","Taxi — ٹیکسی","Jeep — جیپ","Hiace — ہائی ایس","Coaster — کوسٹر","Bus — بس","Van — وین","Other — دیگر"];LISTS.bveh=BVEH;
+var BOOK=[];(function(){for(var i=1;i<=10;i++){var n="030000005"+("0"+i).slice(-2);BOOK.push({dr:"Demo Driver "+i,ty:BVEH[i%6],no:"BKG-"+(100+i),ct:n,wa:n,id:"FK-000"+(300+i)})}})();
+function renderBook(){
+ var f=document.getElementById("bkFilter"),cur=f.value||"all",types=[];
+ BOOK.forEach(function(b){if(types.indexOf(b.ty)<0)types.push(b.ty)});
+ function cnt(t){return BOOK.filter(function(b){return b.ty===t}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Types","تمام اقسام"])+' ('+BOOK.length+')</option>'+types.map(function(t){return '<option value="'+esc(t)+'">'+esc(t)+' ('+cnt(t)+')</option>'}).join("");
+ f.value=cur;if(f.value!==cur)f.value="all";
+ document.getElementById("bkTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+BOOK.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ BOOK.forEach(function(x,i){if(v!=="all"&&x.ty!==v)return;n++;var wd=x.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-bk="'+i+'"><span class="sn">'+n+'</span><span class="nm2"><b>🚖 '+esc(x.dr)+'</b><small>'+esc(x.ty.split(" — ")[0])+' · '+esc(x.no)+'</small></span><span class="mb">'+esc(x.ct)+'</span><a class="ic c1" href="tel:'+esc(x.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm2">'+pair("Driver · Vehicle Type · Vehicle No","ڈرائیور · گاڑی کی قسم · نمبر")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("bkList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openBk(i){var x=BOOK[i];if(!x)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.dr;
+ document.getElementById("dlgT").textContent=x.ty;
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("vanNo",x.no)+r("contact",x.ct)+r("wapp",x.wa)+r("accS",x.id);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var DEST=["Chakwal — چکوال","Dhudial — ڈھڈیال","Talagang — تلہ گنگ","Rawalpindi — راولپنڈی","Islamabad — اسلام آباد","Jhelum — جہلم","Lahore — لاہور"];LISTS.dest=DEST;
+var RENT=[];(function(){for(var i=1;i<=8;i++){var n="030000006"+("0"+i).slice(-2);RENT.push({dr:"Demo Driver "+i,ty:BVEH[i%6],no:"RNT-"+(100+i),ds:DEST[i%4],ct:n,wa:n,id:"FK-000"+(400+i)})}})();
+function renderRent(){
+ var f=document.getElementById("rtFilter"),cur=f.value||"all";
+ function cnt(t){return RENT.filter(function(b){return b.ds===t}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Destinations","تمام منزلیں"])+' ('+RENT.length+')</option>'+DEST.map(function(t){return '<option value="'+esc(t)+'">'+esc(t)+' ('+cnt(t)+')</option>'}).join("");
+ f.value=cur;if(f.value!==cur)f.value="all";
+ document.getElementById("rtTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+RENT.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ RENT.forEach(function(x,i){if(v!=="all"&&x.ds!==v)return;n++;var wd=x.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-rt="'+i+'"><span class="sn">'+n+'</span><span class="nm2"><b>🚗 '+esc(x.dr)+'</b><small>'+esc(x.ty.split(" — ")[0])+' · '+esc(x.no)+'</small><small style="color:var(--g1);font-weight:600">➜ '+esc(x.ds.split(" — ")[0])+'</small></span><span class="mb">'+esc(x.ct)+'</span><a class="ic c1" href="tel:'+esc(x.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm2">'+pair("Driver · Vehicle Type · Vehicle No · Route Destination","ڈرائیور · گاڑی کی قسم · نمبر · منزل")+'</span><span class="mb">'+html("shMb")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("rtList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openRt(i){var x=RENT[i];if(!x)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.dr;
+ document.getElementById("dlgT").textContent=x.ty;
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("vanNo",x.no)+r("vanDest",x.ds)+r("contact",x.ct)+r("wapp",x.wa)+r("accS",x.id);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var DEMO_M=[
+ {id:"FK-000014",nm:"Demo Member 1",fn:"Demo Father 1",ct:"03000000701",wa:"03000000701",mo:"Main Bazar"},
+ {id:"FK-000027",nm:"Demo Member 2",fn:"Demo Father 2",ct:"03000000702",wa:"03000000799",mo:"Mohallah Madina"},
+ {id:"FK-000031",nm:"Demo Member 3",fn:"Demo Father 3",ct:"03000000703",wa:"03000000703",mo:"Mohallah Iqbal"},
+ {id:"FK-000040",nm:"Demo Member 4",fn:"Demo Father 4",ct:"03000000704",wa:"03000000704",mo:"Mohallah Jinnah"},
+ {id:"FK-000052",nm:"Demo Member 5",fn:"Demo Father 5",ct:"03000000705",wa:"03000000705",mo:"Main Bazar"},
+ {id:"FK-000063",nm:"Demo Member 6",fn:"Demo Father 6",ct:"03000000706",wa:"03000000706",mo:"Mohallah Madina"},
+ {id:"FK-000071",nm:"Demo Member 7",fn:"Demo Father 7",ct:"03000000707",wa:"03000000707",mo:"Mohallah Iqbal"}
+];
+function dirList(){var L=DEMO_M.slice();ACC.forEach(function(a){var p=a.p||{};if(p.show===false)return;L.push({id:a.id,nm:a.name,fn:p.fn||"",ct:a.mobile,wa:p.wa||a.mobile,mo:a.moh||""})});L.sort(function(a,b){return a.id<b.id?-1:a.id>b.id?1:0});return L}
+function renderDir(){
+ var L=dirList(),f=document.getElementById("pdFilter"),cur=f.value||"all";
+ function cnt(m){return L.filter(function(x){return x.mo===m}).length}
+ f.innerHTML='<option value="all">'+optTxt(["All Mohallahs","تمام محلے"])+' ('+L.length+')</option>'+MOH.map(function(m){return '<option value="'+esc(m)+'">'+esc(m)+' ('+cnt(m)+')</option>'}).join("");
+ f.value=cur;if(f.value!==cur)f.value="all";
+ document.getElementById("pdTotal").innerHTML='<span lang="en">Total :</span> <b class="num">'+L.length+'</b> <span class="ur" lang="ur" dir="rtl">کل تعداد</span>';
+ var v=f.value,h="",n=0;
+ L.forEach(function(x){if(v!=="all"&&x.mo!==v)return;n++;var wd=x.wa.replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-pd="'+esc(x.id)+'"><span class="sn">'+n+'</span><span class="nm2"><b>'+esc(x.nm)+'</b><small>'+esc(x.id)+' · Father: '+esc(x.fn||"—")+'</small></span><span class="mb">'+esc(x.ct)+(x.wa!==x.ct?'<small style="display:block;color:var(--muted);font-size:.85em">WA '+esc(x.wa)+'</small>':"")+'</span><a class="ic c1" href="tel:'+esc(x.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm2">'+pair("Full Name · Account ID · Father Name","نام · اکاؤنٹ آئی ڈی · والد کا نام")+'</span><span class="mb">'+pair("Mobile · WhatsApp","موبائل · واٹس ایپ")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("pdList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openPd(id){var x=dirList().filter(function(m){return m.id===id})[0];if(!x)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.nm;
+ document.getElementById("dlgT").textContent=x.id;
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("fname",x.fn)+r("contact",x.ct)+r("wapp",x.wa)+r("moh",x.mo);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var FDC=[["shops","Shops","دکانیں","🏪"],["pros","Professionals","ہنرمند افراد","👔"],["vans","School Vans","اسکول وینز","🚐"],["mosques","Mosques & Madrissa","مساجد و مدارس","🕌"],["book","Special Booking Vehicles","خصوصی بکنگ گاڑیاں","🚖"],["rent","Daily Rent Vehicles","عام کرایہ گاڑیاں","🚗"],["phdir","Phone Directory","فون ڈائریکٹری","📒"],["schools","Schools","اسکول","🏫"]];
+function fdAll(){var A=[];
+ function add(c,i,t,s,ct,wa,f){A.push({c:c,i:i,t:t,s:s,ct:ct,wa:wa,h:(t+" "+s+" "+ct+" "+wa+" "+f).toLowerCase()})}
+ function en(v){return String(v).split(" — ")[0]}
+ SHOPS.forEach(function(x,i){add("shops",i,x.nm,ST[x.ty][0]+" · "+x.ow+" · "+x.mo,x.ct,x.wa,ST[x.ty][1]+" "+x.id+" "+(x.ad||""))});
+ PROS.forEach(function(x,i){add("pros",i,x.nm,en(x.ty)+" · "+x.mo,x.ct,x.wa,x.ty+" "+x.id)});
+ VANS.forEach(function(x,i){add("vans",i,x.dr,en(x.ty)+" · "+x.no+" · "+x.sc,x.ct,x.wa,x.ty+" "+x.id)});
+ MOSQ.forEach(function(x,i){add("mosques",i,x.nm,x.ty+" · "+x.ad+" · "+x.mo,x.ct,x.wa,x.id)});
+ BOOK.forEach(function(x,i){add("book",i,x.dr,en(x.ty)+" · "+x.no,x.ct,x.wa,x.ty+" "+x.id)});
+ RENT.forEach(function(x,i){add("rent",i,x.dr,en(x.ty)+" · "+x.no+" · ➜ "+en(x.ds),x.ct,x.wa,x.ty+" "+x.ds+" "+x.id)});
+ dirList().forEach(function(x){add("phdir",x.id,x.nm,x.id+" · Father: "+(x.fn||"—")+" · "+x.mo,x.ct,x.wa,(x.fn||""))});
+ SCH.forEach(function(x,i){add("schools",i,x.nm,scType(x.ty).split(" — ")[0]+" · "+x.ow+" · "+x.lc,x.ct,x.wa,scType(x.ty)+" "+x.id)});
+ return A}
+function renderFind(){
+ var sel=document.getElementById("fdCat");if(!sel)return;
+ var cur=sel.value||"all",ALL=fdAll();
+ function cnt(c){return ALL.filter(function(a){return a.c===c}).length}
+ sel.innerHTML='<option value="all">'+optTxt(["All Categories","تمام اقسام"])+' ('+ALL.length+')</option>'+FDC.map(function(c){return '<option value="'+c[0]+'">'+c[3]+' '+optTxt([c[1],c[2]])+' ('+cnt(c[0])+')</option>'}).join("");
+ sel.value=cur;if(sel.value!==cur)sel.value="all";
+ var toks=document.getElementById("fdQ").value.toLowerCase().trim().split(/\s+/).filter(Boolean),v=sel.value;
+ var R=ALL.filter(function(a){if(v!=="all"&&a.c!==v)return false;var hd=a.h.replace(/\D/g,"");return toks.every(function(t){var td=t.replace(/\D/g,"");return a.h.indexOf(t)>=0||(td.length>=3&&hd.indexOf(td)>=0)})});
+ document.getElementById("fdTotal").innerHTML='<span lang="en">Results :</span> <b class="num">'+R.length+'</b> <span class="ur" lang="ur" dir="rtl">نتائج</span>';
+ var h="";
+ R.slice(0,200).forEach(function(a,n){var c=FDC.filter(function(x){return x[0]===a.c})[0],wd=String(a.wa).replace(/\D/g,"").replace(/^0/,"92");
+  h+='<li class="srow" tabindex="0" role="button" data-fd="'+a.c+':'+esc(a.i)+'"><span class="sn">'+(n+1)+'</span><span class="nm2"><b>'+c[3]+' '+esc(a.t)+'</b><small>'+esc(a.s)+'</small>'+(v==="all"?'<small style="color:var(--g1);font-weight:600">'+esc(c[1])+'</small>':"")+'</span><span class="mb">'+esc(a.ct)+'</span><a class="ic c1" href="tel:'+esc(a.ct)+'" aria-label="Call">📞</a><a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></li>'});
+ document.getElementById("fdList").innerHTML=h||'<li class="emp">'+html("fdNone")+'</li>'}
+function openFd(k){var p=k.split(":"),c=p[0],i=p.slice(1).join(":"),m={shops:openShop,pros:openPro,vans:openVn,mosques:openMq,book:openBk,rent:openRt,schools:openSc};
+ if(c==="phdir")openPd(i);else if(m[c])m[c](+i)}
+var HOT={
+ death:{ic:"🕊️",en:"Death News",ur:"وفات کی خبر",hk:"nm",lt:"جنازہ کی معلومات",rt:"مرحوم کی معلومات",L:["jt","jg","pa"],R:["nm","fn","mo"],sum:"Name · Father · Mohallah · Janaza time · Janazagah · Place",
+  f:[["nm","Deceased Name","مرحوم کا نام","t",1],["fn","Deceased Father","مرحوم کا باپ","t",1],["mo","Mohallah","محلہ","m",1],["jt","Janaza Date & Time","جنازہ تاریخ اور وقت","dt",1],["jg","Janazagah","جنازہ گاہ","t",1],["pa","Area / Place","علاقہ یا گاؤں","t",1]]},
+ missing:{ic:"🔎",en:"Missing Person Announcement",ur:"اعلان گمشدگی",hk:"nm",lt:"گمشدگی کی معلومات",rt:"گمشدہ کی معلومات",L:["lp","lt","cm"],R:["nm","fn","ag"],sum:"Name · Father/Guardian · Age · Clothes · Last seen place & time · Contact",
+  f:[["nm","Missing Person Name","گمشدہ کا نام","t",1],["fn","Father / Guardian","والد / سرپرست","t",1],["ag","Age","عمر","n",0],["ds","Description / Clothes","حلیہ / لباس","t",0],["lp","Last Seen Place","آخری بار کہاں دیکھا","t",1],["lt","Last Seen Date & Time","آخری بار کب دیکھا","dt",1],["mo","Mohallah","محلہ","m",0],["cm","Contact Mobile","رابطہ نمبر","tel",1]]},
+ accident:{ic:"🚑",en:"Accident",ur:"ایکسیڈنٹ",hk:"pl",lt:"حادثے کی معلومات",rt:"متاثرہ افراد",L:["pl","at","vh"],R:["inj","hs","cm"],sum:"Place · Date & time · Vehicles · Injured · Hospital · Contact",
+  f:[["pl","Accident Place","حادثے کی جگہ","t",1],["at","Date & Time","تاریخ اور وقت","dt",1],["vh","Vehicles Involved","گاڑیاں","t",0],["inj","Injured / People Involved","زخمی / متاثرہ افراد","t",1],["hs","Hospital","ہسپتال","t",0],["cm","Contact Mobile","رابطہ نمبر","tel",1]]},
+ blood:{ic:"🩸",en:"Blood Donation",ur:"بلڈ ڈونیشن",hk:"pn",lt:"مریض کی معلومات",rt:"مقام اور رابطہ",L:["pn","bg","un"],R:["hs","nb","cm"],sum:"Patient · Blood group · Units · Hospital · Needed by · Contact",
+  f:[["pn","Patient Name","مریض کا نام","t",1],["bg","Blood Group Needed","درکار بلڈ گروپ","bg",1],["un","Units Needed","درکار بوتلیں","n",1],["hs","Hospital / Place","ہسپتال / جگہ","t",1],["nb","Needed By","کب تک درکار","dt",1],["cp","Contact Person","رابطہ کرنے والا","t",0],["cm","Contact Mobile","رابطہ نمبر","tel",1]]}
+};
+var hotIdx=0,hotType="death";
+EM[0].k="death";
+function dts(h,m){var d=new Date();return fmtT(d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)+"T"+("0"+h).slice(-2)+":"+("0"+m).slice(-2))}
+EM.push({k:"missing",h:"Demo Person",t:"ایک بزرگ آج صبح سے لاپتہ ہیں۔ جس کسی کو معلومات ہوں براہ کرم فوراً دیے گئے نمبر پر رابطہ کریں۔",id:"FK-000001",name:"Village Admin",ts:new Date(),st:"ok",own:false,x:{nm:"Demo Person",fn:"Demo Father",ag:"70",ds:"White shalwar kameez",lp:"Main Bazar",lt:dts(8,30),mo:"Main Bazar",cm:"03000000801"}});
+EM.push({k:"accident",h:"Main Road near Bazar",t:"مین روڈ پر موٹر سائیکل اور وین کے درمیان ٹکر ہوئی۔ دو افراد زخمی ہیں اور ہسپتال منتقل کر دیے گئے ہیں۔ دعا کی اپیل ہے۔",id:"FK-000001",name:"Village Admin",ts:new Date(),st:"ok",own:false,x:{pl:"Main Road near Bazar",at:dts(7,45),vh:"Motorcycle and Van",inj:"2 injured",hs:"Demo Hospital",cm:"03000000802"}});
+EM.push({k:"blood",h:"Demo Patient",t:"مریض کو فوری طور پر بی پازیٹو خون کی ضرورت ہے۔ جو بھائی خون دے سکتے ہیں براہ کرم دیے گئے نمبر پر رابطہ کریں۔",id:"FK-000001",name:"Village Admin",ts:new Date(),st:"ok",own:false,x:{pn:"Demo Patient",bg:"B+",un:"2",hs:"Demo Hospital",nb:dts(17,0),cp:"Demo Contact",cm:"03000000803"}});
+function hotField(f){var lbl='<b'+(f[4]?' class="req"':'')+'>'+pair(f[1],f[2])+'</b>',n="x_"+f[0],inp;
+ if(f[3]==="dt")inp='<input name="'+n+'" type="datetime-local">';
+ else if(f[3]==="m")inp='<select name="'+n+'" class="mohSel"></select>';
+ else if(f[3]==="bg")inp='<select name="'+n+'"><option value="">—</option>'+["A+","A-","B+","B-","AB+","AB-","O+","O-"].map(function(b){return '<option>'+b+'</option>'}).join("")+'</select>';
+ else if(f[3]==="n")inp='<input name="'+n+'" type="number" min="0" inputmode="numeric">';
+ else if(f[3]==="tel")inp='<input name="'+n+'" dir="ltr" inputmode="tel" placeholder="03001234567">';
+ else inp='<input name="'+n+'" maxlength="120">';
+ return '<label>'+lbl+inp+'</label>'}
+function openHotForm(k){hotType=k;addType="emergency";var C=HOT[k];show("addnews");
+ document.getElementById("addTitle").innerHTML=C.ic+' '+pair(C.en,C.ur);
+ var ef=document.getElementById("emgFields");ef.innerHTML=C.f.map(hotField).join("");ef.classList.remove("hide");
+ document.getElementById("hWrap").classList.add("hide");
+ document.getElementById("txtLbl").innerHTML=html("ndet");document.getElementById("subLbl").innerHTML=html("nsubE");
+ document.getElementById("fNews").reset();document.getElementById("msg2").classList.add("hide");
+ document.getElementById("rId").value=user.id;document.getElementById("rName").value=user.name;document.getElementById("rDt").value=fmtE(new Date());fillMoh()}
+function submitHot(F){var C=HOT[hotType],m=document.getElementById("msg2");
+ if(!user){pendAdd="emergency";show("login");return}
+ var x={},ok=true;
+ C.f.forEach(function(f){var el=F.elements["x_"+f[0]],v=el?el.value.trim():"";if(f[3]==="dt"&&v)v=fmtT(v);if(f[3]==="tel"&&v&&v.replace(/\D/g,"").length<10)ok=false;x[f[0]]=v;if(f[4]&&!v)ok=false});
+ var t=F.t.value.trim();
+ if(!ok||t.length<3){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ EM.unshift({k:hotType,h:x[C.hk],t:t,ts:new Date(),id:user.id,name:user.name,x:x,st:"pend",own:true});
+ F.reset();m.classList.remove("bad");m.innerHTML=html("nokE");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("portal")},1800)}
+function hotCur(){var A=EM.filter(function(m){return m.st==="ok"}).slice(0,5),sec=document.querySelector(".emg"),dots=document.getElementById("hotDots"),bd=document.getElementById("hotBadge");
+ document.getElementById("hotCards").innerHTML=Object.keys(HOT).map(function(k){var C=HOT[k];return '<button class="hcard t-'+k+'" data-hot="'+k+'"><span class="e">'+C.ic+'</span><b>'+C.en+'</b><span class="ur" lang="ur" dir="rtl">'+C.ur+'</span><small>'+C.sum+'</small></button>'}).join("");
+ if(!A.length){sec.className="sec emg t-death";bd.textContent="🔥";dots.innerHTML="";return null}
+ var i=hotIdx%A.length,a=A[i],k=a.k||"death";sec.className="sec emg t-"+k;bd.innerHTML=HOT[k].ic+' <span class="ur" lang="ur" dir="rtl">'+HOT[k].ur+'</span>';
+ dots.innerHTML=A.length>1?A.map(function(_,j){return '<button class="hd'+(j===i?' on':'')+'" data-hd="'+j+'" aria-label="News '+(j+1)+'"></button>'}).join(""):"";
+ return a}
+function xRows(u){if(!u.x)return"";var C=HOT[u.k||"death"];return C.f.map(function(f){return '<div><dt>'+pair(f[1],f[2])+'</dt><dd>'+esc(u.x[f[0]]||"—")+'</dd></div>'}).join("")}
+function enHtml(a){var C=HOT[a.k||"death"],x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function fld(key){var f=C.f.filter(function(q){return q[0]===key})[0],v=x[key],val=esc(v||"—");
+  if(f[3]==="tel"&&v)val='<a class="tl" href="tel:'+esc(v)+'">📞 '+esc(v)+'</a>';
+  return '<div class="ef"><div class="el1 ur" lang="ur" dir="rtl">'+f[2]+'</div><b class="ev'+(f[3]==="bg"?' bgb':'')+'">'+val+'</b></div>'}
+ function hd(t){return '<div class="eh ur" lang="ur" dir="rtl">'+t+'</div>'}
+ return '<div class="e3"><div class="ecol" dir="rtl">'+hd(C.lt)+C.L.map(fld).join("")+'</div><div class="ecol ec">'+hd("خبر کی تفصیل")+'<span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="rtl">'+hd(C.rt)+C.R.map(fld).join("")+'</div></div>'}
+function hotCur(){var now=new Date(),A=EM.filter(function(m){var d=new Date(m.ts);return m.st==="ok"&&d.getFullYear()===now.getFullYear()&&d.getMonth()===now.getMonth()&&d.getDate()===now.getDate()}),sec=document.querySelector(".emg"),dots=document.getElementById("hotDots"),bd=document.getElementById("hotBadge"),cn=document.getElementById("hotCnt"),nx=document.getElementById("hotNext");
+ document.getElementById("hotCards").innerHTML=Object.keys(HOT).map(function(k){var C=HOT[k];return '<button class="hcard t-'+k+'" data-hot="'+k+'"><span class="e">'+C.ic+'</span><b>'+C.en+'</b><span class="ur" lang="ur" dir="rtl">'+C.ur+'</span><small>'+C.sum+'</small></button>'}).join("");
+ cn.textContent=("0"+A.length).slice(-2);nx.style.display=A.length>1?"":"none";
+ if(!A.length){sec.className="sec emg t-death";bd.textContent="🔥";dots.innerHTML="";return null}
+ var i=hotIdx%A.length,a=A[i],k=a.k||"death";sec.className="sec emg t-"+k;bd.innerHTML=HOT[k].ic+' <span class="ur" lang="ur" dir="rtl">'+HOT[k].ur+'</span>';
+ dots.innerHTML=A.length>1?A.map(function(_,j){return '<button class="hd'+(j===i?' on':'')+'" data-hd="'+j+'" aria-label="News '+(j+1)+'"></button>'}).join(""):"";
+ return a}
+HOT.wedding={ic:"💍",en:"Wedding",ur:"شادی بیاہ",hk:"gn",lt:"تقریب کی معلومات",rt:"دولہا دلہن",ct:"بارات کی تفصیل",ctEn:"Baraat Details",L:["hl","wt","wp"],R:["gn","fn","bn"],sum:"Groom · Father · Bride · Wedding hall · Date & time · Place",
+ f:[["gn","Groom Name","دولہا کا نام","t",1],["fn","Father Name","والد کا نام","t",1],["bn","Bride Name","دلہن کا نام","t",1],["hl","Wedding Hall Name","شادی ہال کا نام","t",1],["wt","Date & Time","تاریخ اور وقت","dt",1],["wp","Place","مقام","t",1]]};
+EM.push({k:"wedding",h:"Demo Groom",t:"بارات شام کو روانہ ہوگی۔ تمام اہلِ علاقہ کو شادی کی تقریب میں شرکت کی دعوت ہے۔",id:"FK-000001",name:"Village Admin",ts:new Date(),st:"ok",own:false,x:{gn:"Demo Groom",fn:"Demo Father",bn:"Demo Bride",hl:"Demo Marriage Hall",wt:dts(18,0),wp:"Main Bazar"}});
+function openHotForm(k){hotType=k;addType="emergency";var C=HOT[k];show("addnews");
+ document.getElementById("addTitle").innerHTML=C.ic+' '+pair(C.en,C.ur);
+ var ef=document.getElementById("emgFields");ef.innerHTML=C.f.map(hotField).join("");ef.classList.remove("hide");
+ document.getElementById("hWrap").classList.add("hide");
+ document.getElementById("txtLbl").innerHTML=C.ct?pair(C.ctEn,C.ct):html("ndet");document.getElementById("subLbl").innerHTML=html("nsubE");
+ document.getElementById("fNews").reset();document.getElementById("msg2").classList.add("hide");
+ document.getElementById("rId").value=user.id;document.getElementById("rName").value=user.name;document.getElementById("rDt").value=fmtE(new Date());fillMoh()}
+function enHtml(a){var C=HOT[a.k||"death"],x=a.x;
+ if(!x)return '<b class="ur" lang="ur" dir="rtl">'+esc(a.h)+'</b><span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span>';
+ function fld(key){var f=C.f.filter(function(q){return q[0]===key})[0],v=x[key],val=esc(v||"—");
+  if(f[3]==="tel"&&v)val='<a class="tl" href="tel:'+esc(v)+'">📞 '+esc(v)+'</a>';
+  return '<div class="ef"><div class="el1 ur" lang="ur" dir="rtl">'+f[2]+'</div><b class="ev'+(f[3]==="bg"?' bgb':'')+'">'+val+'</b></div>'}
+ function hd(t){return '<div class="eh ur" lang="ur" dir="rtl">'+t+'</div>'}
+ return '<div class="e3"><div class="ecol" dir="rtl">'+hd(C.lt)+C.L.map(fld).join("")+'</div><div class="ecol ec">'+hd(C.ct||"خبر کی تفصیل")+'<span class="ur" lang="ur" dir="rtl">'+esc(a.t)+'</span></div><div class="ecol" dir="rtl">'+hd(C.rt)+C.R.map(fld).join("")+'</div></div>'}
+var HC=[["emergency","Emergency Numbers","ہنگامی نمبرز","🚨"],["technical","Technical Welfare","ٹیکنیکل ویلفئیر","🛠️"],["markazi","Markazi Welfare Trust","مرکزی ویلفئیر ٹرسٹ","🤝"],["fkw","Fareed Kassar Welfare","فرید کسار ویلفئیر","🏘️"],["doke","Doke Usmaniya Welfare","ڈوکے عثمانیہ ویلفئیر","🕌"],["ucchak","UC - Chak Umra","یو سی — چک عمرہ","🏛️"],["dhudial","Dhudial City","ڈھڈیال سٹی","🏙️"],["chakwal","Chakwal City","چکوال سٹی","🏙️"]];
+var HTAG={Ind:"Individual — فرد",Off:"Office — دفتر",Org:"Organization — ادارہ"};
+var HELP=[
+ {c:"emergency",t:"Off",nm:"Rescue 1122",ll:"1122",mb:""},{c:"emergency",t:"Off",nm:"Police",ll:"15",mb:""},{c:"emergency",t:"Off",nm:"Fire Brigade",ll:"16",mb:""},{c:"emergency",t:"Org",nm:"Edhi Ambulance",ll:"115",mb:""}
+];
+(function(){var names=[["technical","Technical Welfare"],["markazi","Markazi Welfare Trust"],["fkw","Fareed Kassar Welfare"],["doke","Doke Usmaniya Welfare"],["ucchak","UC Chak Umra"],["dhudial","Dhudial City"],["chakwal","Chakwal City"]],tg=[["Off","Demo Office"],["Ind","Demo Person"],["Org","Demo Organization"]],n=0;
+ names.forEach(function(p){tg.forEach(function(g,j){n++;var m="030000009"+("0"+n).slice(-2);HELP.push({c:p[0],t:g[0],nm:g[1]+" · "+p[1],ll:"0543-00001"+("0"+n).slice(-2),mb:j===0?"":m})})})})();
+function renderHelp(){
+ var f=document.getElementById("hdFilter"),cur=f.value||"emergency";
+ function cnt(c){return HELP.filter(function(x){return x.c===c}).length}
+ f.innerHTML=HC.map(function(c){return '<option value="'+c[0]+'">'+c[3]+' '+optTxt([c[1],c[2]])+' ('+cnt(c[0])+')</option>'}).join("");
+ f.value=cur;if(f.value!==cur)f.value="emergency";
+ var v=f.value,h="",n=0;
+ HELP.forEach(function(x,i){if(x.c!==v)return;n++;var call=x.mb||x.ll,wd=x.mb?x.mb.replace(/\D/g,"").replace(/^0/,"92"):"";
+  h+='<li class="srow" tabindex="0" role="button" data-hp="'+i+'"><span class="sn">'+n+'</span><span class="nm2"><b>'+esc(x.nm)+'</b><small>'+esc(HTAG[x.t].split(" — ")[0])+'</small></span><span class="mb">'+esc(x.ll||"—")+'<small style="display:block;color:var(--muted);font-size:.85em">'+esc(x.mb||"—")+'</small></span><a class="ic c1" href="tel:'+esc(call)+'" aria-label="Call">📞</a>'+(wd?'<a class="ic c2" href="https://wa.me/'+wd+'" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>':'<span class="ic" style="visibility:hidden"></span>')+'</li>'});
+ var head='<li class="srow shead"><span class="sn">#</span><span class="nm2">'+pair("Individual / Office / Organization","فرد / دفتر / ادارہ")+'</span><span class="mb">'+pair("Landline · Mobile","لینڈ لائن · موبائل")+'</span><span class="ic" style="visibility:hidden"></span><span class="ic" style="visibility:hidden"></span></li>';
+ document.getElementById("hdList").innerHTML=h?head+h:'<li class="emp">'+html("shNone")+'</li>'}
+function openHp(i){var x=HELP[i];if(!x)return;var c=HC.filter(function(q){return q[0]===x.c})[0];
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=x.nm;
+ document.getElementById("dlgT").textContent=c[1]+" — "+c[2];
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("hdTy",HTAG[x.t])+r("hdLl",x.ll)+r("mobile",x.mb);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var SUG=[];
+function renderSug(){var el=document.getElementById("mySug");if(!el)return;
+ el.innerHTML=SUG.length?SUG.map(function(s){var k=s.st==="ok"?["stOk","s-ok"]:s.st==="no"?["stNo","s-no"]:["stPend","s-pe"];return '<li class="ni" dir="auto"><div class="nt">💡</div><div><b>'+esc(s.h)+'</b><div style="font-weight:400;font-size:.9em">'+esc(s.t.length>90?s.t.slice(0,90)+"…":s.t)+'</div><small dir="ltr" lang="en">'+fmtE(s.ts)+'</small><span class="stb '+k[1]+'">'+html(k[0])+'</span></div></li>'}).join(""):'<li class="emp">'+html("empty")+'</li>'}
+function openSug(){var f=document.getElementById("fSug");f.reset();document.getElementById("sgId").value=user.id;document.getElementById("sgName").value=user.name;document.getElementById("msgS").classList.add("hide");document.getElementById("sgDlg").classList.remove("hide");document.body.style.overflow="hidden";setTimeout(function(){f.s.focus()},50)}
+function closeSug(){document.getElementById("sgDlg").classList.add("hide");document.body.style.overflow=""}
+ACC.push({id:"FK-000001",name:"Demo Administrator",mobile:"03000000000",pw:"admin1234",moh:"Main Bazar",role:"admin",p:{fn:"",vil:"Fareed Kassar",mobile:"03000000000",wa:"03000000000",show:false}});
+var COLS={teal:["#0E7069","#0D5E57"],green:["#1B8A3E","#14672D"],blue:["#1E6FB8","#154F8A"],purple:["#6B46C1","#4B2F94"]};
+function applyCol(k){var c=COLS[k]||COLS.teal,r=document.documentElement.style;r.setProperty("--hg1",c[0]);r.setProperty("--hg2",c[1]);r.setProperty("--g1",c[0]);r.setProperty("--g2",c[1]);sset("fk-col",k)}
+function renderSettings(){var el=document.getElementById("setAcct");if(!el)return;
+ if(user){el.innerHTML=acInfo()+'<div style="display:grid;gap:8px;margin-top:10px"><button class="btn" data-go="acct">'+html("myacc")+'</button><button class="btn alt" id="setLogout">'+html("logout")+'</button></div>'}
+ else el.innerHTML='<div class="note" style="margin:0 0 8px">'+html("guest")+'</div><div style="display:grid;gap:8px"><button class="btn" data-go="login">'+html("login")+'</button><button class="btn alt" data-go="signup">'+html("create")+'</button></div>';
+ var sh=document.getElementById("setShow");if(sh){sh.checked=user?!(user.p&&user.p.show===false):true;sh.disabled=!user}
+ document.querySelectorAll("[data-nt]").forEach(function(c){c.checked=sget("fk-nt-"+c.dataset.nt)!=="0"});
+ var wl=document.getElementById("shWaLink");if(wl)wl.href="https://wa.me/?text="+encodeURIComponent("Technical Welfare Fareed Kassar — Our Village, Our Community, Our Responsibility. "+location.href);
+ var sm=document.getElementById("setMoh");if(sm)sm.classList.toggle("hide",!(user&&user.role==="admin"));
+ var ad=document.getElementById("setAdmin");
+ if(user&&user.role==="admin"){var pc=EM.filter(function(m){return m.st==="pend"}).length+UN.filter(function(m){return m.st==="pend"}).length+SUG.filter(function(m){return m.st==="pend"}).length,tn=new Date(),td=EM.filter(function(m){var d=new Date(m.ts);return m.st==="ok"&&d.toDateString()===tn.toDateString()}).length;
+  function st(n,k){return '<div><b>'+n+'</b><span>'+k+'</span></div>'}
+  ad.innerHTML='<div class="adst">'+st(DEMO_M.length+ACC.length,pair("Members","ممبرز"))+st(pc,pair("Pending","زیر التواء"))+st(td,pair("Hot news today","آج کی اہم خبریں"))+'</div><div style="display:grid;gap:8px;margin-top:10px"><button class="btn" data-go="portal">'+pair("Review pending approvals","منظوری کے منتظر")+'</button><button class="btn alt" data-open="setMoh">'+pair("Manage Mohallah list","محلہ کی فہرست")+'</button><button class="btn alt" data-soon="1">'+pair("Manage members","ممبرز کا انتظام")+'</button><button class="btn alt" data-soon="1">'+pair("Send notification","اطلاع بھیجیں")+'</button><button class="btn alt" data-soon="1">'+pair("Activity log","سرگرمی کا ریکارڈ")+'</button></div>'}
+ else ad.innerHTML='<div class="note" style="margin:0 0 8px">'+pair("Only administrators can open this panel.","یہ پینل صرف ایڈمن کھول سکتے ہیں۔")+'</div>'}
+function bkMake(){var d={v:1,settings:{mode:mode,theme:document.documentElement.dataset.theme||"light",size:(document.documentElement.style.getPropertyValue("--fs")||"1").trim(),col:sget("fk-col")||"teal"},news:UN,suggestions:SUG,hot:EM.filter(function(x){return x.own})};
+ var t=document.getElementById("bkTxt");t.value=JSON.stringify(d,null,1);t.focus();t.select()}
+function doRestore(){var m=document.getElementById("bkMsg");
+ try{var d=JSON.parse(document.getElementById("bkTxt").value);if(!d||d.v!==1)throw 0;
+  var s=d.settings||{};if(s.mode){mode=s.mode;sset("fk-mode",mode)}if(s.theme){document.documentElement.dataset.theme=s.theme;sset("fk-theme",s.theme)}if(s.size){document.documentElement.style.setProperty("--fs",s.size);sset("fk-size",s.size)}if(s.col)applyCol(s.col);
+  function rev(a){return (a||[]).map(function(x){x.ts=new Date(x.ts);return x})}
+  UN.length=0;rev(d.news).forEach(function(x){UN.push(x)});SUG.length=0;rev(d.suggestions).forEach(function(x){SUG.push(x)});
+  for(var i=EM.length-1;i>=0;i--){if(EM[i].own)EM.splice(i,1)}rev(d.hot).forEach(function(x){EM.unshift(x)});
+  m.classList.remove("bad");m.innerHTML=html("bkOk");m.classList.remove("hide");render()}
+ catch(e){m.classList.add("bad");m.innerHTML=html("bkErr");m.classList.remove("hide")}}
+function openShop(i){var s=SHOPS[i];if(!s)return;
+ document.getElementById("dlgH").setAttribute("dir","auto");document.getElementById("dlgH").textContent=s.nm;
+ document.getElementById("dlgT").textContent=optTxt(ST[s.ty]);
+ function r(k,val){return '<div><dt>'+html(k)+'</dt><dd>'+esc(val||"—")+'</dd></div>'}
+ document.getElementById("dlgM").innerHTML=r("owner",s.ow)+r("contact",s.ct)+r("wapp",s.wa)+r("accS",s.id)+r("moh",s.mo)+r("addr",s.ad);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+var mode="both",user=null,view="home";
+function html(k){var p=T[k],o="";
+ if(mode!=="ur")o+='<span lang="en">'+p[0]+'</span>';
+ if(mode!=="en")o+='<span class="ur" lang="ur" dir="rtl">'+p[1]+'</span>';
+ return '<span class="bi">'+o+'</span>';}
+function pair(en,ur){var o="";if(mode!=="ur")o+='<span lang="en">'+en+'</span>';if(mode!=="en")o+='<span class="ur" lang="ur" dir="rtl">'+ur+'</span>';return '<span class="bi">'+o+'</span>';}
+function desi(d){var m=d.getMonth()+1,day=d.getDate(),i=m-1,cur=DM[i];
+ if(day<cur[1]){cur=DM[(i+11)%12];var st=new Date(d.getFullYear(),cur[0]-1,cur[1]);if(st>d)st=new Date(d.getFullYear()-1,cur[0]-1,cur[1]);return [Math.floor((d-st)/864e5)+1,cur]}
+ return [day-cur[1]+1,cur]}
+function dates(){var d=new Date(),h="",hu="";
+ var g=d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"});
+ try{h=new Intl.DateTimeFormat("en-u-ca-islamic-umalqura",{day:"numeric",month:"long",year:"numeric"}).format(d);
+  hu=new Intl.DateTimeFormat("ur-u-ca-islamic-umalqura",{day:"numeric",month:"long",year:"numeric"}).format(d)}catch(e){}
+ var ds=desi(d);
+ document.getElementById("gd").innerHTML='<span class="ur" lang="ur" dir="rtl">📅 '+d.toLocaleDateString("ur-PK",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+'</span>';
+ document.getElementById("id").innerHTML='<span class="ur" lang="ur" dir="rtl">🌙 '+(hu||h)+'</span>';
+ document.getElementById("dd").innerHTML='<span class="ur" lang="ur" dir="rtl">🌾 '+ds[0]+' '+ds[1][3]+' (دیسی)</span>';}
+function render(){
+ document.querySelectorAll("[data-k]").forEach(function(e){e.innerHTML=html(e.dataset.k)});
+ document.getElementById("demo").innerHTML=html("demo");
+ document.querySelectorAll("[data-m]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.m===mode)});
+ dates();
+ var P=[["Fajr","فجر","5:12 AM"],["Dhuhr","ظہر","11:58 AM"],["Asr","عصر","3:44 PM"],["Maghrib","مغرب","5:22 PM"],["Isha","عشاء","6:44 PM"]],pr="";
+ P.forEach(function(p,i){pr+='<div class="'+(i===1?"now":"")+'">'+(mode!=="ur"?p[0]:"")+(mode!=="en"?'<span class="ur" style="display:block;line-height:1.8">'+p[1]+'</span>':"")+'<b class="num">'+p[2].split(' ')[0]+'<small>'+p[2].split(' ')[1]+'</small></b></div>'});
+ document.getElementById("pg").innerHTML=pr+'<div class="mq"><span class="e">🕌</span>'+html("prayers").replace('class="bi"','class="bi c"')+'</div>';document.getElementById("nextp").textContent="Asr 3:44 PM ▸";
+ var s="";SB.forEach(function(x){s+='<button class="'+x[0]+'" '+(x[2]==="help"?'data-go="help"':x[2]==="shops"?'data-go="shops"':x[2]==="pro"?'data-go="pros"':x[2]==="mosques"?'data-go="mosques"':x[2]==="schools"?'data-go="schools"':x[2]==="weather"?'data-go="weather"':x[2]==="vans"?'data-go="vans"':x[2]==="booking"?'data-go="book"':x[2]==="rent"?'data-go="rent"':x[2]==="phdir"?'data-go="phdir"':'data-soon="1"')+'>'+sbIn(x)+'</button>'});
+ document.getElementById("sb").innerHTML=s;
+ var UM=["جنوری","فروری","مارچ","اپریل","مئی","جون","جولائی","اگست","ستمبر","اکتوبر","نومبر","دسمبر"],UD="۰۱۲۳۴۵۶۷۸۹";
+ function ud(s){return String(s).replace(/\d/g,function(c){return UD[c]})}
+ var NT=[[0,11,40],[1,16,20],[2,9,15],[3,18,5],[5,14,30],[7,10,0]],n="";IT=[];
+ UN.forEach(function(u){if(u.st!=="ok")return;IT.push(u);n+='<li class="ni" dir="rtl" tabindex="0" role="button" data-news="'+(IT.length-1)+'"><div class="nt">📰</div><div><div class="ur" lang="ur" dir="auto"><b>'+esc(u.h)+'</b><div style="font-weight:400">'+esc(u.t)+'</div></div><small dir="ltr" lang="en" style="text-align:right">'+fmtE(u.ts)+'</small></div></li>'});
+ NEWS.forEach(function(x,i){var t=NT[i],dt=new Date();dt.setDate(dt.getDate()-t[0]);dt.setHours(t[1],t[2],0,0);
+  var h=dt.getHours(),p=h<12?"صبح":h<16?"دوپہر":h<19?"شام":"رات",h12=h%12||12,m=("0"+dt.getMinutes()).slice(-2);
+  var lab=t[0]===0?"آج • ":t[0]===1?"گزشتہ کل • ":"";
+  var line=lab+ud(dt.getDate())+" "+UM[dt.getMonth()]+" "+ud(dt.getFullYear())+" • "+p+" "+ud(h12+":"+m)+" بجے";
+  var eline=(t[0]===0?"Today • ":t[0]===1?"Yesterday • ":"")+dt.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"short",year:"numeric"})+" • "+dt.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"});
+  var dd=ND[i];IT.push({h:x[1][1],t:dd[0],id:dd[1],name:dd[2],ts:dt});n+='<li class="ni" dir="rtl" tabindex="0" role="button" data-news="'+(IT.length-1)+'"><div class="nt">'+x[0]+'</div><div><div class="ur" lang="ur" dir="rtl"><b>'+x[1][1]+'</b></div><small dir="ltr" lang="en" style="text-align:right">'+eline+'</small></div></li>'});
+ document.getElementById("nl").innerHTML=n;
+ var ea=hotCur(),en=document.getElementById("enews");
+ if(ea){IT.push(ea);en.setAttribute("data-news",IT.length-1);en.setAttribute("tabindex","0");en.innerHTML=enHtml(ea)}
+ else{en.removeAttribute("data-news");en.innerHTML='<span class="ur" lang="ur" dir="rtl">اس وقت کوئی ہنگامی اطلاع نہیں۔</span>'}
+ var emp='<li class="emp">'+html("empty")+'</li>';
+ document.getElementById("myCur").innerHTML=UN.length?UN.map(function(u){var k=u.st==="ok"?["stPub","s-ok"]:u.st==="no"?["stNo","s-no"]:["stPend","s-pe"];return row(u,"📰",'<span class="stb '+k[1]+'">'+html(k[0])+'</span>')}).join(""):emp;
+ var mine=EM.filter(function(m){return m.own});
+ document.getElementById("myEmg").innerHTML=mine.length?mine.map(function(m){var k=m.st==="ok"?["stOk","s-ok"]:m.st==="no"?["stNo","s-no"]:["stPend","s-pe"];return row(m,(HOT[m.k||"death"]||HOT.death).ic,'<span class="stb '+k[1]+'">'+html(k[0])+'</span>')}).join(""):emp;
+ var pend=EM.filter(function(m){return m.st==="pend"}),pendC=UN.filter(function(m){return m.st==="pend"}),pendS=SUG.filter(function(m){return m.st==="pend"});
+ document.getElementById("adm").classList.toggle("hide",!(pend.length+pendC.length+pendS.length));
+ document.getElementById("admList").innerHTML=pendS.map(function(m){var i=SUG.indexOf(m);return '<li class="ni" dir="auto"><div class="nt">💡</div><div><b>'+esc(m.h)+'</b><div style="font-weight:400;font-size:.9em">'+esc(m.t.length>90?m.t.slice(0,90)+"…":m.t)+'</div><small dir="ltr" lang="en">'+esc(m.name)+' • '+fmtE(m.ts)+'</small><div class="arow"><button class="pb gold" data-aps="'+i+'">'+html("approve")+'</button><button class="pb gray" data-rjs="'+i+'">'+html("reject")+'</button></div></div></li>'}).join("")+pendC.map(function(m){var i=UN.indexOf(m);return '<li class="ni" dir="rtl"><div class="nt">📰</div><div><div class="ur" lang="ur" dir="rtl"><b>'+esc(m.h)+'</b></div><small dir="ltr" lang="en" style="text-align:right">'+esc(m.name)+' • '+fmtE(m.ts)+'</small><div class="arow"><button class="pb gold" data-apc="'+i+'">'+html("approve")+'</button><button class="pb gray" data-rjc="'+i+'">'+html("reject")+'</button></div></div></li>'}).join("")+pend.map(function(m){var i=EM.indexOf(m);return '<li class="ni" dir="rtl"><div class="nt">🚨</div><div><div class="ur" lang="ur" dir="rtl"><b>'+esc(m.h)+'</b></div><small dir="ltr" lang="en" style="text-align:right">'+esc(m.name)+' • '+fmtE(m.ts)+'</small><div class="arow"><button class="pb gold" data-ap="'+i+'">'+html("approve")+'</button><button class="pb gray" data-rj="'+i+'">'+html("reject")+'</button></div></div></li>'}).join("");
+ var H=[["🚑","rescue","1122","#C62828"],["👮","police","15","#1565C0"],["🔥","fire","16","#E65100"],["🏥","edhi","115","#2E7D32"]],hl="";
+ H.forEach(function(x){hl+='<a class="hrow" href="tel:'+x[2]+'" style="border-left:6px solid '+x[3]+'"><span class="e">'+x[0]+'</span>'+html(x[1])+'<b class="num">'+x[2]+'</b></a>'});
+ document.getElementById("hlist").innerHTML=hl;renderShops();fillMoh();fillLists();renderPros();renderMosques();renderSchools();renderVans();renderBook();renderRent();renderDir();renderHelp();renderSug();renderSettings();renderFind();renderWeather();
+ var am=document.getElementById("acMoh");if(user&&am)am.value=user.moh||"";
+ document.getElementById("mohList").innerHTML=MOH.map(function(m){return '<span class="mchip">'+esc(m)+'</span>'}).join("");
+ var nv="";NAV.forEach(function(x){var on=(x[0]==="home"&&view==="home")||(x[0]==="portal"&&/portal|addnews/.test(view))||(x[0]==="find"&&view==="find")||(x[0]==="myacc"&&/acct|login|signup/.test(view))||(x[0]==="settings"&&view==="set");
+  nv+='<li><button class="'+(on?"on ":"")+(x[0]==="home"?"mid":"")+'" data-nav="'+x[0]+'"><span class="e">'+x[1]+'</span>'+html(x[0]).replace('class="bi"','class="bi c"')+'</button></li>'});
+ document.getElementById("nav").innerHTML=nv;
+ var un=document.getElementById("uname");un.innerHTML=user?user.name.replace(/[<>&]/g,"")+'<br><span class="num" style="font-weight:400">'+user.id+'</span>':html("guest");
+ document.getElementById("acctInfo").innerHTML=user?acInfo():"";
+}
+function show(v){view=v;["home","login","signup","acct","set","help","portal","addnews","shops","addshop","pros","addpro","mosques","addmosque","schools","addschool","weather","vans","addvan","book","addbook","rent","addrent","phdir","find","hotpick"].forEach(function(s){document.getElementById("v-"+s).classList.toggle("hide",s!==v)});render();window.scrollTo(0,0)}
+function toast(){var t=document.getElementById("toast");t.innerHTML=html("later");t.classList.remove("hide");clearTimeout(window._t);window._t=setTimeout(function(){t.classList.add("hide")},1800)}
+function openNews(i){var u=IT[i];if(!u)return;
+ document.getElementById("dlgH").textContent=u.h;document.getElementById("dlgT").textContent=u.t;
+ document.getElementById("dlgM").innerHTML='<div><dt>'+html("lby")+'</dt><dd class="num">'+esc(u.id)+'</dd></div><div><dt>'+html("lname")+'</dt><dd>'+esc(u.name)+'</dd></div><div><dt>'+html("dtl")+'</dt><dd lang="en" dir="ltr">'+fmtE(u.ts)+'</dd></div>'+xRows(u);
+ document.getElementById("dlg").classList.remove("hide");document.getElementById("dlgClose").focus();document.body.style.overflow="hidden"}
+function closeNews(){document.getElementById("dlg").classList.add("hide");document.body.style.overflow=""}
+function openAdd(type){if(!user){pendAdd=type;show("login");var lm=document.getElementById("lmsg");lm.innerHTML=html("needLogin");lm.classList.remove("hide");return}if(type==="suggest"){openSug();return}
+if(type==="emergency"){show("hotpick");return}
+if(type==="rent"){show("addrent");document.getElementById("rtAcc").value=user.id;return}
+if(type==="book"){show("addbook");document.getElementById("bkAcc").value=user.id;return}
+if(type==="van"){show("addvan");document.getElementById("vnAcc").value=user.id;return}
+if(type==="school"){show("addschool");document.getElementById("scAcc").value=user.id;return}
+if(type==="mosque"){show("addmosque");document.getElementById("moAcc").value=user.id;return}
+if(type==="pro"){show("addpro");document.getElementById("proAcc").value=user.id;return}
+if(type==="shop"){show("addshop");document.getElementById("shAcc").value=user.id;return}
+addType=type;show("addnews");
+ document.getElementById("addTitle").innerHTML=html(type==="emergency"?"ptEmg":"ptitle");
+ document.getElementById("emgFields").classList.toggle("hide",type!=="emergency");
+ document.getElementById("hWrap").classList.toggle("hide",type==="emergency");
+ document.getElementById("txtLbl").innerHTML=html(type==="emergency"?"ndet":"ntxt");
+ document.getElementById("subLbl").innerHTML=html("nsubE");
+ var f=document.getElementById("fNews");f.reset();document.getElementById("msg2").classList.add("hide");
+ document.getElementById("rId").value=user.id;
+ document.getElementById("rName").value=user.name;
+ document.getElementById("rDt").value=fmtE(new Date())}
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeNews();closeSug()}if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.shop)openShop(+e.target.dataset.shop);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.pro)openPro(+e.target.dataset.pro);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.mq)openMq(+e.target.dataset.mq);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.sc)openSc(+e.target.dataset.sc);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.vn)openVn(+e.target.dataset.vn);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.bk)openBk(+e.target.dataset.bk);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.rt)openRt(+e.target.dataset.rt);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.pd)openPd(e.target.dataset.pd);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.fd)openFd(e.target.dataset.fd);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.hp)openHp(+e.target.dataset.hp);if(e.key==="Enter"&&e.target.dataset&&e.target.dataset.news)openNews(+e.target.dataset.news)});
+document.addEventListener("click",function(e){var b;
+ var fd=e.target.closest("[data-fd]");if(fd&&!e.target.closest("a")){openFd(fd.dataset.fd);return}
+ var pd=e.target.closest("[data-pd]");if(pd&&!e.target.closest("a")){openPd(pd.dataset.pd);return}
+ var rt=e.target.closest("[data-rt]");if(rt&&!e.target.closest("a")){openRt(+rt.dataset.rt);return}
+ var ar=e.target.closest("[data-addrt]");if(ar){openAdd("rent");return}
+ var bk=e.target.closest("[data-bk]");if(bk&&!e.target.closest("a")){openBk(+bk.dataset.bk);return}
+ var ab=e.target.closest("[data-addbk]");if(ab){openAdd("book");return}
+ var vn=e.target.closest("[data-vn]");if(vn&&!e.target.closest("a")){openVn(+vn.dataset.vn);return}
+ var av=e.target.closest("[data-addvn]");if(av){openAdd("van");return}
+ var wg=e.target.closest('[data-go="weather"]');if(wg){show("weather");refreshLoc();return}
+ var sc=e.target.closest("[data-sc]");if(sc&&!e.target.closest("a")){openSc(+sc.dataset.sc);return}
+ var as3=e.target.closest("[data-addsc]");if(as3){openAdd("school");return}
+ var mq=e.target.closest("[data-mq]");if(mq&&!e.target.closest("a")){openMq(+mq.dataset.mq);return}
+ var am2=e.target.closest("[data-addmq]");if(am2){openAdd("mosque");return}
+ var pr=e.target.closest("[data-pro]");if(pr&&!e.target.closest("a")){openPro(+pr.dataset.pro);return}
+ var ap2=e.target.closest("[data-addpro]");if(ap2){openAdd("pro");return}
+ if(e.target.closest("#mohAdd")){addMoh();return}
+ var sr=e.target.closest("[data-shop]");if(sr&&!e.target.closest("a")){openShop(+sr.dataset.shop);return}
+ var asd=e.target.closest("[data-addshop]");if(asd){openAdd("shop");return}
+ var ad=e.target.closest("[data-add]");if(ad){openAdd(ad.dataset.add);return}
+ var aps=e.target.closest("[data-aps]");if(aps){SUG[+aps.dataset.aps].st="ok";render();return}
+ var rjs=e.target.closest("[data-rjs]");if(rjs){SUG[+rjs.dataset.rjs].st="no";render();return}
+ var apc=e.target.closest("[data-apc]");if(apc){UN[+apc.dataset.apc].st="ok";render();return}
+ var rjc=e.target.closest("[data-rjc]");if(rjc){UN[+rjc.dataset.rjc].st="no";render();return}
+ var ap=e.target.closest("[data-ap]");if(ap){var mm=EM.splice(+ap.dataset.ap,1)[0];mm.st="ok";EM.unshift(mm);render();return}
+ var rj=e.target.closest("[data-rj]");if(rj){EM[+rj.dataset.rj].st="no";render();return}
+ var sgb=e.target.closest("[data-sug]");if(sgb){openAdd("suggest");return}
+ if(e.target.closest("#sgX")||e.target.id==="sgDlg"){closeSug();return}
+ var hp=e.target.closest("[data-hp]");if(hp&&!e.target.closest("a")){openHp(+hp.dataset.hp);return}
+ if(e.target.closest("#hotAdd")){openAdd("emergency");return}
+ if(e.target.closest("#hotNext")){hotIdx++;render();return}
+ var hc=e.target.closest("[data-hot]");if(hc){openHotForm(hc.dataset.hot);return}
+ var hdot=e.target.closest("[data-hd]");if(hdot){hotIdx=+hdot.dataset.hd;render();return}
+ var li=e.target.closest("[data-news]");if(li&&!e.target.closest("a")){openNews(+li.dataset.news);return}
+ if(e.target.closest("#dlgX,#dlgClose")||e.target.id==="dlg"){closeNews();return}
+ if(b=e.target.closest("[data-m]")){mode=b.dataset.m;render();return}
+ if(b=e.target.closest("[data-t]")){document.documentElement.dataset.theme=b.dataset.t;return}
+ if(b=e.target.closest("[data-s]")){document.documentElement.style.setProperty("--fs",b.dataset.s);return}
+ if(b=e.target.closest("[data-go]")){show(b.dataset.go);return}
+ if(e.target.closest("[data-soon]")){toast();return}
+ if(b=e.target.closest("[data-nav]")){var k=b.dataset.nav;
+  if(k==="home")show("home");else if(k==="settings")show("set");else if(k==="myacc")show(user?"acct":"login");else if(k==="portal")show("portal");else if(k==="find")show("find");else toast();return}
+ if(e.target.closest("#logout")){user=null;show("home")}
+});
+document.getElementById("fSignup").addEventListener("submit",function(e){e.preventDefault();
+ var F=this,n=F.n.value.trim(),fn=F.fn.value.trim(),mo=F.m.value.replace(/\D/g,""),pw=F.p.value,mh=F.mh.value,vil=F.vil.value,bad=document.getElementById("msg1");
+ var abr=F.abr.checked,isP=F.ispro.checked,isG=F.isgame.checked,wsame=F.wasame.checked,wa=wsame?mo:F.wa.value.replace(/\D/g,"");
+ function fail(el){bad.innerHTML=html("reqErr");bad.classList.add("bad");bad.classList.remove("hide");if(el)el.focus()}
+ if(n.length<2)return fail(F.n);if(fn.length<2)return fail(F.fn);if(!vil||vil==="__new")return fail(F.vil);if(!mh||mh==="__new")return fail(F.mh);
+ if(mo.length<10)return fail(F.m);if(!wsame&&wa.length<10)return fail(F.wa);
+ if(abr&&!F.abrc.value.trim())return fail(F.abrc);if(isP&&(!F.prof.value||F.prof.value==="__new"))return fail(F.prof);if(isG&&(!F.game.value||F.game.value==="__new"))return fail(F.game);
+ if(pw.length<8)return fail(F.p);
+ bad.classList.remove("bad");
+ var id="FK-"+("000000"+(nextId++)).slice(-6);var pf={show:F.pshow.checked,fn:fn,dob:F.dob.value,bg:F.bg.value,vil:vil,mobile:mo,wa:wa,abr:abr,abrc:abr?F.abrc.value.trim():"",prof:isP?F.prof.value:"",game:isG?F.game.value:""};ACC.push({id:id,name:n,mobile:mo,pw:pw,moh:mh,p:pf});user={id:id,name:n,moh:mh,p:pf};if(isP)PROS.unshift({ty:F.prof.value,nm:n,ct:mo,wa:wa,id:id,mo:mh});
+ var m=document.getElementById("msg1");m.innerHTML=pair("Account created. Your Account ID is "+id,"اکاؤنٹ بن گیا۔ آپ کی اکاؤنٹ آئی ڈی "+id+" ہے۔");m.classList.remove("hide");
+ var go=pendAdd;pendAdd=null;this.reset();syncTog();fillLists();
+ setTimeout(function(){m.classList.add("hide");if(go)openAdd(go);else show("home")},1200)});
+document.getElementById("fLogin").addEventListener("submit",function(e){e.preventDefault();
+ var ins=this.querySelectorAll("input"),idv=ins[0].value.trim().toLowerCase(),pw=ins[1].value,dg=idv.replace(/\D/g,""),lm=document.getElementById("lmsg");
+ var a=ACC.filter(function(c){return c.id.toLowerCase()===idv||(dg.length>=10&&c.mobile.replace(/\D/g,"").slice(-10)===dg.slice(-10))})[0];
+ if(!a||a.pw!==pw){lm.innerHTML=html("badLogin");lm.classList.remove("hide");return}
+ lm.classList.add("hide");user={id:a.id,name:a.name,moh:a.moh,p:a.p,role:a.role};this.reset();
+ if(pendAdd){var pt=pendAdd;pendAdd=null;openAdd(pt)}else show("home")});
+setInterval(function(){if(view==="addnews")document.getElementById("rDt").value=fmtE(new Date())},15000);
+document.getElementById("fNews").addEventListener("submit",function(e){e.preventDefault();if(addType==="emergency"){submitHot(this);return}
+ var h=(addType==="emergency"?this.xn.value:this.h.value).trim(),t=this.t.value.trim(),m=document.getElementById("msg2");
+ if(h.length<3||t.length<3){m.innerHTML=html("nerr");m.classList.remove("hide");return}
+ if(!user){pendAdd=addType;show("login");return}
+ var rec={h:h,t:t,ts:new Date(),id:user.id,name:user.name};
+ if(addType==="emergency"){rec.x={jt:fmtT(this.xt.value),jg:this.xg.value.trim(),pa:this.xp.value.trim(),nm:h,fn:this.xf.value.trim(),mo:this.xm.value.trim()};rec.st="pend";rec.own=true;EM.unshift(rec)}else{rec.st="pend";rec.own=true;UN.unshift(rec)}
+ this.reset();m.innerHTML=html(addType==="emergency"?"nokE":"nok");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("portal")},1800)});
+document.getElementById("fShop").addEventListener("submit",function(e){e.preventDefault();
+ var ty=this.ty.value,nm=this.nm.value.trim(),ow=this.ow.value.trim(),ct=this.ct.value.trim(),wa=this.wa.value.trim()||ct,mo=this.mo.value.trim(),ad=this.ad.value.trim(),m=document.getElementById("msg3");
+ if(!user){pendAdd="shop";show("login");return}
+ if(ty===""||nm.length<2||ow.length<2||ct.replace(/\D/g,"").length<10||mo.length<2){m.innerHTML=html("shErr");m.classList.remove("hide");return}
+ SHOPS.unshift({ty:+ty,nm:nm,ow:ow,ct:ct,wa:wa,id:user.id,mo:mo,ad:ad});this.reset();
+ m.innerHTML=html("shOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("shops")},1200)});
+document.addEventListener("change",function(e){if(e.target.id==="shFilter")renderShops();if(e.target.id==="acMoh"&&user){user.moh=e.target.value;var ac=ACC.filter(function(c){return c.id===user.id})[0];if(ac)ac.moh=user.moh}});
+document.addEventListener("change",function(e){var t=e.target;
+ if(t.classList&&t.classList.contains("lstSel")&&t.value==="__new"){var fl=t.closest(".fld"),ar=fl.querySelector(".addrow");ar.classList.remove("hide");ar.querySelector("input").focus();t.value=t.dataset.lst==="vil"?VIL[0]:""}
+ if(t.dataset&&t.dataset.tog)document.getElementById(t.dataset.tog).classList.toggle("hide",!t.checked);
+ if(t.dataset&&t.dataset.togi)document.getElementById(t.dataset.togi).classList.toggle("hide",t.checked)});
+document.addEventListener("click",function(e){var b=e.target.closest("[data-addlst]");if(!b)return;
+ var k=b.dataset.addlst,fl=b.closest(".fld"),inp=fl.querySelector(".addrow input"),v=inp.value.trim().replace(/\s+/g," "),L=LISTS[k];
+ if(v.length<2)return;
+ var ex=L.filter(function(x){return x.toLowerCase()===v.toLowerCase()})[0];
+ if(!ex)L.push(v);
+ fillLists();fl.querySelector("select").value=ex||v;inp.value="";fl.querySelector(".addrow").classList.add("hide");render()});
+(function(){var di=document.querySelector("#fSignup [name=dob]"),d0=new Date();if(di)di.max=d0.getFullYear()+"-"+("0"+(d0.getMonth()+1)).slice(-2)+"-"+("0"+d0.getDate()).slice(-2)})();
+document.getElementById("fPro").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msg4");
+ if(!user){pendAdd="pro";show("login");return}
+ var ty=F.ty.value,nm=F.nm.value.trim(),ct=F.ct.value.trim(),wa=F.wa.value.trim()||ct,mo=F.mo.value;
+ if(!ty||ty==="__new"||nm.length<2||ct.replace(/\D/g,"").length<10||!mo){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ PROS.unshift({ty:ty,nm:nm,ct:ct,wa:wa,id:user.id,mo:mo});F.reset();fillLists();m.classList.remove("bad");m.innerHTML=html("proOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("pros")},1200)});
+document.addEventListener("change",function(e){var i=e.target.id;if(i==="proFilter")renderPros();if(i==="mqFilter")renderMosques()});
+document.getElementById("fMq").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msg5");
+ if(!user){pendAdd="mosque";show("login");return}
+ var nm=F.nm.value.trim(),ad=F.ad.value.trim(),ct=F.ct.value.trim(),wa=F.wa.value.trim()||ct,mo=F.mo.value;
+ if(nm.length<2||ad.length<2||ct.replace(/\D/g,"").length<10||!mo){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ MOSQ.unshift({ty:F.ty.value,nm:nm,ad:ad,ct:ct,wa:wa,id:user.id,mo:mo});F.reset();m.classList.remove("bad");m.innerHTML=html("mqOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("mosques")},1200)});
+document.addEventListener("change",function(e){if(e.target.id==="scFilter")renderSchools()});
+document.getElementById("fSc").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msg6");
+ if(!user){pendAdd="school";show("login");return}
+ var nm=F.nm.value.trim(),ow=F.ow.value.trim(),lc=F.lc.value.trim(),ct=F.ct.value.trim(),wa=F.wa.value.trim()||ct;
+ if(nm.length<2||ow.length<2||lc.length<2||ct.replace(/\D/g,"").length<10){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ SCH.unshift({ty:F.ty.value,nm:nm,ow:ow,lc:lc,ct:ct,wa:wa,id:user.id});F.reset();m.classList.remove("bad");m.innerHTML=html("mqOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("schools")},1200)});
+document.addEventListener("click",function(e){var t=e.target;
+ if(t.closest("#locAllow")){sset("fk-loc-consent","yes");document.getElementById("locDlg").classList.add("hide");getPos();return}
+ if(t.closest("#locNo")){sset("fk-loc-consent","no");document.getElementById("locDlg").classList.add("hide");storedLoc();return}
+ if(t.closest("#locReset")){sdel("fk-loc-consent");renderWeather();openLocDlg();return}
+ if(t.closest("#locAsk")){if(sget("fk-loc-consent")==="yes")getPos();else openLocDlg();return}
+ if(t.closest("#wxChange")){var sel=document.getElementById("chgSel");sel.innerHTML=PLACES.map(function(p,i){return '<option value="'+i+'">'+esc(p.n)+' — '+esc(p.u)+'</option>'}).join("");
+  if(LOC){PLACES.forEach(function(p,i){if(p.n===LOC.n)sel.value=i})}document.getElementById("chgDlg").classList.remove("hide");return}
+ if(t.closest("#chgCancel")){document.getElementById("chgDlg").classList.add("hide");return}
+ if(t.closest("#chgApply")){var p=PLACES[+document.getElementById("chgSel").value];LOC={n:p.n,u:p.u,la:p.la,lo:p.lo,ts:Date.now()};LOCSTATE="manual";sset("fk-loc-last",JSON.stringify(LOC));document.getElementById("chgDlg").classList.add("hide");renderWeather();return}});
+document.addEventListener("visibilitychange",function(){if(!document.hidden&&sget("fk-loc-consent")==="yes")getPos()});
+setTimeout(refreshLoc,600);
+document.addEventListener("change",function(e){if(e.target.id==="vnFilter")renderVans()});
+document.getElementById("fVn").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msg7");
+ if(!user){pendAdd="van";show("login");return}
+ var sc=F.sc.value,dr=F.dr.value.trim(),ty=F.ty.value,no=F.no.value.trim(),ct=F.ct.value.trim(),wa=F.wa.value.trim()||ct;
+ if(!sc||dr.length<2||!ty||ty==="__new"||no.length<3||ct.replace(/\D/g,"").length<10){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ VANS.unshift({sc:sc,dr:dr,ty:ty,no:no,ct:ct,wa:wa,id:user.id});F.reset();fillLists();m.classList.remove("bad");m.innerHTML=html("mqOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("vans")},1200)});
+document.addEventListener("change",function(e){if(e.target.id==="bkFilter")renderBook()});
+document.getElementById("fBk").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msg8");
+ if(!user){pendAdd="book";show("login");return}
+ var ty=F.ty.value,dr=F.dr.value.trim(),no=F.no.value.trim(),ct=F.ct.value.trim(),wa=F.wa.value.trim()||ct;
+ if(!ty||ty==="__new"||dr.length<2||no.length<3||ct.replace(/\D/g,"").length<10){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ BOOK.unshift({dr:dr,ty:ty,no:no,ct:ct,wa:wa,id:user.id});F.reset();fillLists();m.classList.remove("bad");m.innerHTML=html("mqOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("book")},1200)});
+document.addEventListener("change",function(e){if(e.target.id==="rtFilter")renderRent()});
+document.getElementById("fRt").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msg9");
+ if(!user){pendAdd="rent";show("login");return}
+ var dr=F.dr.value.trim(),ty=F.ty.value,no=F.no.value.trim(),ds=F.ds.value,ct=F.ct.value.trim(),wa=F.wa.value.trim()||ct;
+ if(dr.length<2||!ty||ty==="__new"||no.length<3||!ds||ds==="__new"||ct.replace(/\D/g,"").length<10){m.innerHTML=html("reqErr");m.classList.add("bad");m.classList.remove("hide");return}
+ RENT.unshift({dr:dr,ty:ty,no:no,ds:ds,ct:ct,wa:wa,id:user.id});F.reset();fillLists();m.classList.remove("bad");m.innerHTML=html("mqOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");show("rent")},1200)});
+document.getElementById("fdQ").addEventListener("input",renderFind);
+document.addEventListener("change",function(e){if(e.target.id==="fdCat")renderFind()});
+document.addEventListener("change",function(e){if(e.target.id==="pdFilter")renderDir()});
+document.getElementById("fSug").addEventListener("submit",function(e){e.preventDefault();var F=this,m=document.getElementById("msgS"),s=F.s.value.trim(),d=F.d.value.trim();
+ if(!user){closeSug();pendAdd="suggest";show("login");return}
+ if(s.length<3||d.length<5){m.innerHTML=html("sugErr");m.classList.add("bad");m.classList.remove("hide");return}
+ SUG.unshift({h:s,t:d,ts:new Date(),id:user.id,name:user.name,st:"pend"});F.reset();document.getElementById("sgId").value=user.id;document.getElementById("sgName").value=user.name;m.classList.remove("bad");m.innerHTML=html("sugOk");m.classList.remove("hide");render();
+ setTimeout(function(){m.classList.add("hide");closeSug()},1500)});
+document.addEventListener("change",function(e){if(e.target.id==="hdFilter")renderHelp()});
+setInterval(function(){if(view==="home"&&EM.filter(function(m){return m.st==="ok"}).length>1&&document.getElementById("dlg").classList.contains("hide")){hotIdx++;render()}},8000);
+document.addEventListener("click",function(e){var t=e.target,b;
+ if(t.closest("#setLogout")){user=null;show("home");return}
+ if(b=t.closest("[data-col]")){applyCol(b.dataset.col);return}
+ if(b=t.closest("[data-open]")){var d=document.getElementById(b.dataset.open);if(d){d.open=true;show("set");d.scrollIntoView({behavior:"smooth",block:"start"})}return}
+ if(t.closest("#bkMake")){bkMake();return}
+ if(t.closest("#bkCopy")){try{navigator.clipboard.writeText(document.getElementById("bkTxt").value)}catch(x){}return}
+ if(t.closest("#bkRestore")){doRestore();return}
+ if(t.closest("#shNative")){var sm=document.getElementById("shMsg");if(navigator.share){navigator.share({title:"Technical Welfare Fareed Kassar",text:"Our Village, Our Community, Our Responsibility.",url:location.href}).catch(function(){})}else{sm.classList.remove("hide");sm.textContent=location.href}return}
+ if(t.closest("#shCopy")){var sm2=document.getElementById("shMsg");try{navigator.clipboard.writeText(location.href).then(function(){sm2.innerHTML=html("shOk");sm2.classList.remove("hide")},function(){sm2.textContent=location.href;sm2.classList.remove("hide")})}catch(x){sm2.textContent=location.href;sm2.classList.remove("hide")}return}
+ if(b=t.closest("[data-t]"))sset("fk-theme",b.dataset.t);
+ if(b=t.closest("[data-s]"))sset("fk-size",b.dataset.s);
+ if(b=t.closest("[data-m]"))sset("fk-mode",b.dataset.m)});
+document.addEventListener("change",function(e){var t=e.target;
+ if(t.id==="setShow"&&user){user.p=user.p||{};user.p.show=t.checked;var a=ACC.filter(function(c){return c.id===user.id})[0];if(a){a.p=a.p||{};a.p.show=t.checked}renderDir()}
+ if(t.dataset&&t.dataset.nt)sset("fk-nt-"+t.dataset.nt,t.checked?"1":"0")});
+var fPw=document.getElementById("fPw");if(fPw)fPw.addEventListener("submit",function(e){e.preventDefault();var m=document.getElementById("pwMsg"),v=this.np.value;
+ if(!user){m.classList.add("bad");m.innerHTML=html("pwLogin");m.classList.remove("hide");return}
+ if(v.length<8){m.classList.add("bad");m.innerHTML=html("errPwShort");m.classList.remove("hide");return}
+ var a=ACC.filter(function(c){return c.id===user.id})[0];if(a)a.pw=v;this.reset();m.classList.remove("bad");m.innerHTML=html("pwOk");m.classList.remove("hide")});
+(function(){var th=sget("fk-theme");if(th)document.documentElement.dataset.theme=th;var sz=sget("fk-size");if(sz)document.documentElement.style.setProperty("--fs",sz);var md=sget("fk-mode");if(md)mode=md;var cl=sget("fk-col");if(cl)applyCol(cl)})();
+fillLists();syncTog();
+render();
+</script>
+</body>
+</html>
